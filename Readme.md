@@ -1,3 +1,5 @@
+# IIIT_Pune-KrrishSwarnkar-Hackathon-CodetoConnect2026
+Solution repository built for Code to Connect: S&amp;P Global and Crisil | Hackathon 2026. 
 1. Set Up the mock data source for demo mode:
 
 put the data files as it is in the folder: src/mock_data_store
