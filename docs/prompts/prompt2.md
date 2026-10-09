@@ -1,6 +1,3 @@
-
-
-
 An AI/NLP Risk Engine
 The primary task is to build a robust data pipeline and NLP model that can ingest text from various sources and output structured, machine-readable risk signals. This engine would work as CPU of the system. there would be two modes, demo mode and work mode. In demo mode, the data source would be the mock data store created using the code file earlier shared with you, in work mode the data would be collected in real time from the bigdata.com's api, newsapi.org api and gdelt api. the data to be fetched is of the selected 20 mock indexes, as listed in the code file attached. 
 Engine Requirements:
