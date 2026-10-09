@@ -13,6 +13,7 @@ if CURRENT_DIR not in sys.path:
 
 from risk_engine import FinBERTRiskEngine, RiskSignal
 from gen_mock_source import RawDataIngestor, TOP_20_SP100_TICKERS
+from rebalancing_engine import BlackLittermanEngine
 
 # Output directories and file locations
 OUTPUT_DIR = os.path.join(CURRENT_DIR, "output", "risk_engine_outputs")
@@ -320,6 +321,17 @@ class RiskEnginePipeline:
         print(f"  2. Stream Ledger (.jsonl)-> {STREAM_LOG_FILE}")
         print(f"  3. Risk Summary Report  -> {SUMMARY_REPORT_FILE}")
         print(f"==================================================================\n")
+
+        # ----------------------------------------------------
+        # Run Rebalancing Engine (Module 2)
+        # ----------------------------------------------------
+        print("\n[*] Running Tactical Index Rebalancing (Module 2)...")
+        bl_engine = BlackLittermanEngine()
+        rebalance_events = bl_engine.rebalance(summary_report["ticker_summaries"])
+        
+        rebalancing_out_dir = os.path.join(CURRENT_DIR, "output", "rebalancing_outputs")
+        bl_engine.save_ledger(rebalance_events, rebalancing_out_dir)
+        print(f"[*] Rebalancing complete. Ledger saved to: {rebalancing_out_dir}\n")
 
         return processed_signals
 
