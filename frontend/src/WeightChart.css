@@ -1,0 +1,112 @@
+/* ═══ Weight Chart ═══ */
+.chart-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.chart-area {
+  padding: 16px 12px 8px;
+}
+
+.chart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+
+.chart-empty .material-icons-outlined {
+  font-size: 40px;
+  opacity: 0.4;
+}
+
+.chart-empty p {
+  font-size: 0.88rem;
+}
+
+/* Tooltip */
+.chart-tooltip {
+  background: #fcfbf8;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-md);
+  min-width: 140px;
+}
+
+.chart-tooltip-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.chart-tooltip-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+.chart-tooltip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.chart-tooltip-ticker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.chart-tooltip-value {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* Major change badges */
+.major-change-badges {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.major-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: #fffbeb;
+  color: var(--accent-orange);
+  border: 1px solid #fde68a;
+}
+
+.major-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+/* Recharts overrides */
+.recharts-legend-item-text {
+  color: var(--text-secondary) !important;
+  font-size: 11px !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: var(--text-muted) !important;
+}

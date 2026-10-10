@@ -1,0 +1,167 @@
+/* ═══════════════════════════════════════════════════════════════
+   S&P 100 NLP Risk Engine — Design System
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Custom Properties (Institutional Soft Warm Theme) ────────── */
+:root {
+  /* Palette */
+  --bg-primary: #f5f3ee;
+  --bg-secondary: #fcfbf8;
+  --bg-card: #fcfbf8;
+  --bg-card-hover: #eeebe3;
+  --bg-surface: #ede9e1;
+  --bg-glass: rgba(252, 251, 248, 0.95);
+  --bg-glass-border: #e2ddd3;
+  --bg-modal-overlay: rgba(24, 24, 27, 0.45);
+
+  /* Text */
+  --text-primary: #1c1917;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+  --text-accent: #1e40af;
+
+  /* Accents */
+  --accent-blue: #1e3a8a;
+  --accent-blue-light: #1d4ed8;
+  --accent-blue-glow: rgba(29, 78, 216, 0.06);
+  --accent-green: #15803d;
+  --accent-green-bg: #f0fdf4;
+  --accent-red: #b91c1c;
+  --accent-red-bg: #fef2f2;
+  --accent-orange: #c2410c;
+  --accent-orange-bg: #fffbeb;
+  --accent-purple: #4f46e5;
+  --accent-purple-bg: #f5f3ff;
+  --accent-cyan: #0d9488;
+  --accent-cyan-bg: #f0fdfa;
+
+  /* Gradients & Subdued Soft Warm Fills */
+  --gradient-card-blue: linear-gradient(180deg, #fcfbf8 0%, #f5f3ee 100%);
+  --gradient-card-green: linear-gradient(180deg, #fcfbf8 0%, #f0fdf4 100%);
+  --gradient-card-red: linear-gradient(180deg, #fcfbf8 0%, #fef2f2 100%);
+  --gradient-card-purple: linear-gradient(180deg, #fcfbf8 0%, #f5f3ff 100%);
+  --gradient-card-orange: linear-gradient(180deg, #fcfbf8 0%, #fffbeb 100%);
+  --gradient-card-cyan: linear-gradient(180deg, #fcfbf8 0%, #f0fdfa 100%);
+  --gradient-header: linear-gradient(135deg, #1c1917 0%, #1e3a8a 100%);
+  --gradient-danger: #dc2626;
+
+  /* Borders */
+  --border-color: #e5e1d8;
+  --border-color-subtle: #eeebe3;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(28, 25, 23, 0.05), 0 2px 4px -2px rgba(28, 25, 23, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(28, 25, 23, 0.08), 0 4px 6px -4px rgba(28, 25, 23, 0.02);
+  --shadow-glow-blue: 0 0 0 1px rgba(29, 78, 216, 0.15);
+  --shadow-glow-green: 0 0 0 1px rgba(21, 128, 61, 0.15);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* ── Utility animations ─────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 4px rgba(29, 78, 216, 0.1); }
+  50% { box-shadow: 0 0 10px rgba(29, 78, 216, 0.2); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out both;
+}
+
+/* ── Toast overrides ─────────────────────────────────────────── */
+div[role="status"] {
+  font-family: var(--font-sans) !important;
+}

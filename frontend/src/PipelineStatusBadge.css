@@ -1,0 +1,55 @@
+/* ═══ Pipeline Status Badge ═══ */
+.pipeline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: #f5f3ee;
+  border: 1px solid var(--border-color);
+  position: relative;
+  cursor: default;
+  transition: border-color var(--transition-fast);
+}
+
+.pipeline-badge:hover {
+  border-color: var(--badge-color);
+}
+
+.badge-icon {
+  font-size: 15px;
+  color: var(--badge-color);
+}
+
+.badge-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--badge-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Spinning icon for running state */
+.badge-icon.spin {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse ring around badge when running */
+.pipeline-badge.pulse::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 99px;
+  border: 2px solid var(--badge-color);
+  animation: pulseRing 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.3); }
+}
