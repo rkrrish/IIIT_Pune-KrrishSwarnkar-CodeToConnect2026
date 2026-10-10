@@ -344,7 +344,7 @@ async def next_timestep_endpoint(background_tasks: BackgroundTasks):
                 sys.path.insert(0, src_dir)
             from pipeline import RiskEnginePipeline
             pipeline = RiskEnginePipeline(mode="demo")
-            pipeline.run_pipeline(max_events=1, clear_previous_stream=False)
+            pipeline.run_pipeline(max_payloads=1, clear_previous_stream=False)
             with _pipeline_lock:
                 _pipeline_status["status"] = "idle"
                 _pipeline_status["message"] = "Timestep processed"

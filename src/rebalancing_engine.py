@@ -30,7 +30,17 @@ class BlackLittermanEngine:
         self.cov_matrix = COV_MATRIX_DF.values
         # Implied Equilibrium Returns: Pi = risk_aversion * Sigma * w_mkt
         self.pi = self.risk_aversion * np.dot(self.cov_matrix, self.w_mkt)
-        self.current_weights = self.w_mkt.copy()
+        
+        latest_path = os.path.join(CURRENT_DIR, "output", "rebalancing_outputs", "latest_weights.json")
+        if os.path.exists(latest_path):
+            try:
+                with open(latest_path, "r", encoding="utf-8") as f:
+                    lw = json.load(f)
+                    self.current_weights = np.array([float(lw.get(t, self.w_mkt[i])) for i, t in enumerate(self.tickers)])
+            except Exception:
+                self.current_weights = self.w_mkt.copy()
+        else:
+            self.current_weights = self.w_mkt.copy()
         
     def rebalance(self, ticker_summaries: Dict[str, dict]) -> List[RebalanceEvent]:
         """

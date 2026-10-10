@@ -22,14 +22,35 @@ STREAM_LOG_FILE = os.path.join(OUTPUT_DIR, "signals_history_ledger.jsonl")
 SUMMARY_REPORT_FILE = os.path.join(OUTPUT_DIR, "risk_summary_report.json")
 
 
+STATE_FILE = os.path.join(OUTPUT_DIR, "pipeline_state.json")
+
+
+def load_pipeline_state() -> Dict[str, Any]:
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"current_payload_index": 0}
+
+
+def save_pipeline_state(state: Dict[str, Any]):
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    with open(STATE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2)
+
+
 class MockStoreReader:
     """
     Reads time-series payloads from data/mock_store_2 in chronological / stream order,
     resolving raw payload paths robustly across operating systems.
     """
 
-    def __init__(self, mock_dir: Optional[str] = r"data\mock_store_2"):
-        self.mock_dir = mock_dir
+    def __init__(self, mock_dir: Optional[str] = None):
+        if mock_dir is None or not os.path.exists(mock_dir):
+            mock_dir = os.path.join(os.path.dirname(CURRENT_DIR), "data", "mock_store_2")
+        self.mock_dir = os.path.abspath(mock_dir)
         self.index_file = os.path.join(self.mock_dir, "index.json")
 
         if not os.path.exists(self.index_file):
@@ -38,9 +59,15 @@ class MockStoreReader:
         with open(self.index_file, "r", encoding="utf-8") as f:
             self.catalog: List[Dict[str, Any]] = json.load(f)
 
-    def stream_events(self) -> Generator[Dict[str, Any], None, None]:
+    def stream_events(
+        self, start_index: int = 0, count: Optional[int] = None
+    ) -> Generator[Dict[str, Any], None, None]:
         """Yields raw catalog metadata and content dictionaries."""
-        for entry in self.catalog:
+        catalog_slice = self.catalog[start_index:]
+        if count is not None:
+            catalog_slice = catalog_slice[:count]
+
+        for entry in catalog_slice:
             rel_or_abs_path = entry["filepath"]
             # Handle Windows vs Unix relative path delimiters
             filename = entry.get("file_id") or os.path.basename(rel_or_abs_path)
@@ -82,11 +109,9 @@ class RiskEnginePipeline:
     ):
         self.mode = mode.lower()
         self.batch_size = batch_size
-        self.mock_store_dir = r"./data/mock_store_2"
+        self.mock_store_dir = os.path.join(os.path.dirname(CURRENT_DIR), "data", "mock_store_2")
         os.makedirs(OUTPUT_DIR, exist_ok=True)
-        # Initialize persistent MockStoreReader for incremental processing
         self._reader = MockStoreReader(self.mock_store_dir)
-        self._reader_iter = self._reader.stream_events()
 
         print(f"[+] Initializing RiskEnginePipeline (Mode: {self.mode.upper()})")
         print(f"[+] Mock Store Directory: {self.mock_store_dir}")
@@ -165,6 +190,7 @@ class RiskEnginePipeline:
     def run_pipeline(
         self,
         max_events: Optional[int] = None,
+        max_payloads: Optional[int] = None,
         clear_previous_stream: bool = True,
     ) -> List[Dict[str, Any]]:
         """
@@ -174,25 +200,50 @@ class RiskEnginePipeline:
         print(f"  RUNNING NLP RISK ENGINE [{self.mode.upper()}] PIPELINE")
         print(f"==================================================================\n")
 
-        if clear_previous_stream and os.path.exists(STREAM_LOG_FILE):
-            open(STREAM_LOG_FILE, "w").close()
+        rebal_dir = os.path.join(CURRENT_DIR, "output", "rebalancing_outputs")
+        rebal_ledger = os.path.join(rebal_dir, "rebalance_ledger.jsonl")
+        latest_weights = os.path.join(rebal_dir, "latest_weights.json")
+
+        if clear_previous_stream:
+            if os.path.exists(STREAM_LOG_FILE):
+                open(STREAM_LOG_FILE, "w").close()
+            if os.path.exists(rebal_ledger):
+                open(rebal_ledger, "w").close()
+            if os.path.exists(latest_weights):
+                try:
+                    os.remove(latest_weights)
+                except Exception:
+                    pass
+            state = {"current_payload_index": 0}
+            save_pipeline_state(state)
+        else:
+            state = load_pipeline_state()
 
         processed_signals: List[Dict[str, Any]] = []
         event_count = 0
         start_time = time.time()
 
         if self.mode == "demo":
+            start_payload_index = 0 if clear_previous_stream else state.get("current_payload_index", 0)
+            total_catalog_payloads = len(self._reader.catalog)
 
+            if start_payload_index >= total_catalog_payloads:
+                print(f"[!] All {total_catalog_payloads} mock payloads have already been processed.")
+                all_signals = []
+                if os.path.exists(STREAM_LOG_FILE):
+                    with open(STREAM_LOG_FILE, "r", encoding="utf-8") as f:
+                        for line in f:
+                            if line.strip():
+                                try:
+                                    all_signals.append(json.loads(line))
+                                except Exception:
+                                    pass
+                return all_signals
 
-            # Build incoming_queue from persistent iterator
             incoming_queue: List[Dict[str, Any]] = []
-            while True:
-                if max_events is not None and len(incoming_queue) >= max_events:
-                    break
-                try:
-                    item = next(self._reader_iter)
-                except StopIteration:
-                    break
+            payloads_processed_count = 0
+
+            for item in self._reader.stream_events(start_index=start_payload_index, count=max_payloads):
                 meta = item["meta"]
                 payload = item["payload"]
                 ticker = meta.get("ticker", "UNKNOWN")
@@ -200,6 +251,7 @@ class RiskEnginePipeline:
                 comp_info = next((c for c in TOP_20_SP100_TICKERS if c["ticker"] == ticker), {"name": ticker})
                 company_name = comp_info["name"]
                 extracted = self.extract_articles_from_payload(source, ticker, payload)
+
                 for art in extracted:
                     incoming_queue.append({
                         "event_id": f"evt_{source}_{ticker}_{len(incoming_queue)+1:04d}",
@@ -216,7 +268,12 @@ class RiskEnginePipeline:
                     })
                     if max_events is not None and len(incoming_queue) >= max_events:
                         break
-            print(f"[+] Ingested {len(incoming_queue)} total items from mock feed. Running parallel inference...")
+
+                payloads_processed_count += 1
+                if max_events is not None and len(incoming_queue) >= max_events:
+                    break
+
+            print(f"[+] Ingested {len(incoming_queue)} items from {payloads_processed_count} payload file(s) (starting at index {start_payload_index}). Running parallel inference...")
 
             # Run batch inference for performance
             for i in range(0, len(incoming_queue), self.batch_size):
@@ -239,6 +296,10 @@ class RiskEnginePipeline:
                         f"Event: {sig.event_classification:22s} | "
                         f"Impact: {sig.impact_score:4.1f}/10"
                     )
+
+            # Update state with newly processed payload index
+            state["current_payload_index"] = start_payload_index + payloads_processed_count
+            save_pipeline_state(state)
 
         elif self.mode == "work":
             raw_ingestor = RawDataIngestor()
@@ -284,23 +345,38 @@ class RiskEnginePipeline:
                     with open(STREAM_LOG_FILE, "a", encoding="utf-8") as f:
                         f.write(json.dumps(sig_dict) + "\n")
 
+        # Read ALL cumulative signals from STREAM_LOG_FILE
+        all_signals: List[Dict[str, Any]] = []
+        if os.path.exists(STREAM_LOG_FILE):
+            with open(STREAM_LOG_FILE, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        try:
+                            all_signals.append(json.loads(line))
+                        except Exception:
+                            pass
+        else:
+            all_signals = processed_signals
+
         elapsed = round(time.time() - start_time, 2)
 
         # ----------------------------------------------------
         # Generate Aggregated Summary Report & JSON Output
         # ----------------------------------------------------
-        summary_report = self._build_summary_report(processed_signals, elapsed)
+        summary_report = self._build_summary_report(all_signals, elapsed)
 
         output_payload = {
             "metadata": {
                 "generated_at": datetime.now(timezone.utc).isoformat(),
                 "mode": self.mode,
-                "total_signals_generated": len(processed_signals),
+                "total_signals_generated": len(all_signals),
+                "new_signals_this_run": len(processed_signals),
+                "current_payload_index": state.get("current_payload_index", 0),
                 "processing_time_seconds": elapsed,
                 "throughput_events_per_sec": round(len(processed_signals) / max(0.001, elapsed), 2),
             },
             "ticker_summaries": summary_report["ticker_summaries"],
-            "signals": processed_signals,
+            "signals": all_signals,
         }
 
         # Write latest risk signals JSON
@@ -312,7 +388,7 @@ class RiskEnginePipeline:
             json.dump(summary_report, f, indent=2)
 
         print(f"\n==================================================================")
-        print(f"  PROCESSING COMPLETE: {len(processed_signals)} signals in {elapsed}s")
+        print(f"  PROCESSING COMPLETE: {len(processed_signals)} new signals ({len(all_signals)} total) in {elapsed}s")
         print(f"  1. Latest Risk Signals  -> {STRUCTURED_SIGNALS_FILE}")
         print(f"  2. Stream Ledger (.jsonl)-> {STREAM_LOG_FILE}")
         print(f"  3. Risk Summary Report  -> {SUMMARY_REPORT_FILE}")
@@ -324,12 +400,12 @@ class RiskEnginePipeline:
         print("\n[*] Running Tactical Index Rebalancing (Module 2)...")
         bl_engine = BlackLittermanEngine()
         rebalance_events = bl_engine.rebalance(summary_report["ticker_summaries"])
-        
+
         rebalancing_out_dir = os.path.join(CURRENT_DIR, "output", "rebalancing_outputs")
         bl_engine.save_ledger(rebalance_events, rebalancing_out_dir)
         print(f"[*] Rebalancing complete. Ledger saved to: {rebalancing_out_dir}\n")
 
-        return processed_signals
+        return all_signals
 
     def _build_summary_report(
         self, signals: List[Dict[str, Any]], elapsed_time: float
