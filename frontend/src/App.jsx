@@ -193,13 +193,10 @@ function App() {
 
         {/* Weight Chart */}
         <section className="dashboard-section">
-          <WeightChart selectedTicker={selectedTicker} />
-          {selectedTicker && (
-            <button className="clear-filter-btn" onClick={() => setSelectedTicker(null)}>
-              <span className="material-icons-outlined">close</span>
-              Clear filter: {selectedTicker}
-            </button>
-          )}
+          <WeightChart
+            selectedTicker={selectedTicker}
+            onSelectTicker={handleTickerClick}
+          />
         </section>
 
         {/* Ledger */}

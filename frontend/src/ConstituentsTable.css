@@ -122,6 +122,45 @@ td.negative {
   font-weight: 600;
 }
 
+/* Rank / Index Movement Indicators */
+.rank-movement {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.rank-up {
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.rank-down {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.rank-neutral {
+  color: #71717a;
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+}
+
+.triangle-up {
+  font-size: 0.65rem;
+  color: #16a34a;
+}
+
+.triangle-down {
+  font-size: 0.65rem;
+  color: #dc2626;
+}
+
 .empty-state {
   text-align: center !important;
   color: var(--text-muted) !important;

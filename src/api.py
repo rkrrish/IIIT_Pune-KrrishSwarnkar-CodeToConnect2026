@@ -138,19 +138,19 @@ async def dashboard_summary():
 
 @app.get("/api/dashboard/index")
 async def dashboard_index():
-    """Return S&P100 mock index constituents with current weights from latest pipeline output."""
+    """Return S&P100 mock index constituents with current weights and rank movements."""
     # Load latest weights if available
     latest_weights = {}
     if LATEST_WEIGHTS_PATH.exists():
         with LATEST_WEIGHTS_PATH.open("r", encoding="utf-8") as f:
             latest_weights = json.load(f)
 
-    result = []
+    raw_list = []
     for item in TOP_20_SP100_TICKERS:
         ticker = item["ticker"]
         base_weight = MOCK_MARKET_CAPS.get(ticker, 0) / _total_cap
         current_weight = latest_weights.get(ticker, base_weight)
-        result.append({
+        raw_list.append({
             "ticker": ticker,
             "name": item["name"],
             "sector": item["sector"],
@@ -159,7 +159,25 @@ async def dashboard_index():
             "weight_change": round(current_weight - base_weight, 6),
         })
 
-    return JSONResponse(content=result)
+    # Compute initial ranks (sorted by base_weight descending)
+    sorted_by_base = sorted(raw_list, key=lambda x: x["base_weight"], reverse=True)
+    initial_ranks = {item["ticker"]: rank + 1 for rank, item in enumerate(sorted_by_base)}
+
+    # Compute current ranks (sorted by current_weight descending)
+    sorted_by_current = sorted(raw_list, key=lambda x: x["current_weight"], reverse=True)
+    current_ranks = {item["ticker"]: rank + 1 for rank, item in enumerate(sorted_by_current)}
+
+    # Attach rank information
+    for item in raw_list:
+        t = item["ticker"]
+        init_r = initial_ranks[t]
+        curr_r = current_ranks[t]
+        item["initial_rank"] = init_r
+        item["current_rank"] = curr_r
+        # Positive rank_change means ticker moved UP in index (e.g. initial rank 3 -> current rank 1 = +2)
+        item["rank_change"] = init_r - curr_r
+
+    return JSONResponse(content=raw_list)
 
 
 @app.get("/api/pipeline/status")
@@ -263,28 +281,54 @@ async def dashboard_graph(ticker: str = None):
 
 @app.get("/api/dashboard/weight-history")
 async def weight_history():
-    """Return weight evolution data grouped by ticker for multi-line charting."""
+    """Return weight evolution data grouped by ticker for multi-line and bar charting."""
     entries = _read_ledger()
-    if not entries:
-        return {"tickers": [], "series": {}}
 
-    # Group entries by ticker, tracking weight over time
-    from collections import defaultdict
-    ticker_series = defaultdict(list)
+    all_tickers = [item["ticker"] for item in TOP_20_SP100_TICKERS]
+    base_weights = {item["ticker"]: MOCK_MARKET_CAPS.get(item["ticker"], 0) / _total_cap for item in TOP_20_SP100_TICKERS}
 
-    for i, e in enumerate(entries):
-        ticker = e.get("ticker", "")
-        ticker_series[ticker].append({
-            "step": i,
-            "timestamp": e.get("timestamp", ""),
-            "weight": e.get("new_weight", 0),
-            "old_weight": e.get("old_weight", 0),
-            "sentiment": e.get("rolling_sentiment_avg", 0),
-        })
+    # Step 0: Initial state (Base Weights for all 20 tickers)
+    step_0 = {t: base_weights[t] for t in all_tickers}
+    steps = [step_0]
+
+    if entries:
+        current_step_weights = dict(step_0)
+        last_timestamp = None
+
+        for e in entries:
+            ts = e.get("timestamp")
+            ticker = e.get("ticker")
+            new_w = e.get("new_weight")
+
+            if ticker and new_w is not None:
+                # If timestamp changed, push completed step snapshot
+                if last_timestamp is not None and ts != last_timestamp:
+                    steps.append(dict(current_step_weights))
+                
+                current_step_weights[ticker] = new_w
+                last_timestamp = ts
+        
+        # Append final step state
+        steps.append(dict(current_step_weights))
+
+    # Construct ticker_series where each ticker has a point for every step 0..N
+    ticker_series = {t: [] for t in all_tickers}
+
+    for step_idx, step_weights in enumerate(steps):
+        for t in all_tickers:
+            curr_w = step_weights.get(t, base_weights.get(t, 0))
+            base_w = base_weights.get(t, 0)
+            ticker_series[t].append({
+                "step": step_idx,
+                "weight": round(curr_w, 6),
+                "base_weight": round(base_w, 6),
+                "weight_change": round(curr_w - base_w, 6),
+            })
 
     return {
-        "tickers": list(ticker_series.keys()),
-        "series": dict(ticker_series),
+        "tickers": all_tickers,
+        "series": ticker_series,
+        "total_steps": len(steps) - 1,
     }
 
 
