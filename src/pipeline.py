@@ -84,6 +84,9 @@ class RiskEnginePipeline:
         self.batch_size = batch_size
         self.mock_store_dir = r"./data/mock_store_2"
         os.makedirs(OUTPUT_DIR, exist_ok=True)
+        # Initialize persistent MockStoreReader for incremental processing
+        self._reader = MockStoreReader(self.mock_store_dir)
+        self._reader_iter = self._reader.stream_events()
 
         print(f"[+] Initializing RiskEnginePipeline (Mode: {self.mode.upper()})")
         print(f"[+] Mock Store Directory: {self.mock_store_dir}")
@@ -179,29 +182,27 @@ class RiskEnginePipeline:
         start_time = time.time()
 
         if self.mode == "demo":
-            reader = MockStoreReader(self.mock_store_dir)
-            incoming_queue: List[Dict[str, Any]] = []
 
-            for item in reader.stream_events():
+
+            # Build incoming_queue from persistent iterator
+            incoming_queue: List[Dict[str, Any]] = []
+            while True:
+                if max_events is not None and len(incoming_queue) >= max_events:
+                    break
+                try:
+                    item = next(self._reader_iter)
+                except StopIteration:
+                    break
                 meta = item["meta"]
                 payload = item["payload"]
                 ticker = meta.get("ticker", "UNKNOWN")
                 source = meta.get("source", "newsapi")
-
-                comp_info = next(
-                    (c for c in TOP_20_SP100_TICKERS if c["ticker"] == ticker),
-                    {"name": ticker, "ticker": ticker},
-                )
+                comp_info = next((c for c in TOP_20_SP100_TICKERS if c["ticker"] == ticker), {"name": ticker})
                 company_name = comp_info["name"]
-
                 extracted = self.extract_articles_from_payload(source, ticker, payload)
-
                 for art in extracted:
-                    event_count += 1
-                    event_id = f"evt_{source}_{ticker}_{event_count:04d}"
-
                     incoming_queue.append({
-                        "event_id": event_id,
+                        "event_id": f"evt_{source}_{ticker}_{len(incoming_queue)+1:04d}",
                         "text": art["text"],
                         "ticker": ticker,
                         "company_name": company_name,
@@ -213,13 +214,8 @@ class RiskEnginePipeline:
                             "raw_file": meta.get("file_id", ""),
                         },
                     })
-
-                    if max_events and event_count >= max_events:
+                    if max_events is not None and len(incoming_queue) >= max_events:
                         break
-
-                if max_events and event_count >= max_events:
-                    break
-
             print(f"[+] Ingested {len(incoming_queue)} total items from mock feed. Running parallel inference...")
 
             # Run batch inference for performance
