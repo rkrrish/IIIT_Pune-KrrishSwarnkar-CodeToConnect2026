@@ -69,7 +69,7 @@ The platform ensures end-to-end transparency through a deterministic event ledge
     ├── train_event_classifier_finbert.py  # FinBERT event classification training
     ├── bert.py                       # Baseline exploratory multi-task modeling
     └── output/                       # Generated run outputs, ledgers & model weights
-        ├── deberta_event_classifier/ # Fine-tuned DeBERTa model artifacts (Production)
+        ├── deberta_event_classifier/ # Fine-tuned DeBERTa model artifacts (Production) ***PUT THE MODEL WEIGHTS FILE FROM DRIVE HERE***
         │   ├── best_model.pt         # Fine-tuned model checkpoint
         │   ├── deberta_event_classifier.pt # Final production PyTorch weights
         │   ├── event_label_mapping.json    # 20 financial event category mapping
@@ -139,13 +139,25 @@ The platform ensures end-to-end transparency through a deterministic event ledge
 
 **Runtime:** Python 3.10+ on Windows / macOS / Linux, or **Docker** (recommended for instant replication).
 
-### Quickstart with Docker
+### Setup
 
 
 ```bash
 git clone https://github.com/rkrrish/IIIT_Pune-KrrishSwarnkar-CodeToConnect2026.git
 cd IIIT_Pune-KrrishSwarnkar-CodeToConnect2026
+```
 
+**Note:** After cloning, extract and put the output weights file from the drive link provided below, into `src/output/deberta_event_classifier/`.
+
+The files  `src/output/deberta_event_classifier/deberta_event_classifier.pt`, `src/output/deberta_event_classifier/best_model.pt` and `src/output/deberta_event_classifier/event_label_mapping.json` are the weights file for the fine-tuned DeBERTa model and they should be placed there. 
+
+Due to storage limitations of GitHUB, I could not upload the model weights files directly, so I have uploaded them on Google Drive and provided the link below. You can download the files from the link and place them in the `src/output/deberta_event_classifier/` directory.
+
+**Link:** https://drive.google.com/drive/folders/1WneWbt0SqSmPzfSOzWgvOabsA2TnCqbj?usp=sharing
+
+
+#### Method 1: Using Docker
+```bash
 # Build the frontend static bundle once
 cd frontend && npm install && npm run build && cd ..
 
@@ -163,28 +175,24 @@ Or run the one-click scripts in `scripts/`:
 
 ---
 
-### Step-by-step Local Run
+#### Method 2: Step-by-step Local Run
 
 ```bash
-# 1. Clone & navigate
-git clone https://github.com/rkrrish/IIIT_Pune-KrrishSwarnkar-CodeToConnect2026
-cd IIIT_Pune-KrrishSwarnkar-CodeToConnect2026
-
-# 2. Create & activate environment (skip if you use only base environment or if you are already in the virtual environment)
+# 1. Create & activate environment (skip if you use only base environment or if you are already in the virtual environment)
 conda create -n pysnp python=3.10 -y
 conda activate pysnp
 
-# 3. Install all dependencies
+# 2. Install all dependencies
 pip install -r requirements.txt
 
-# 4. Set up API keys (optional — for Live Mode only)
+# 3. Set up API keys (optional — for Live Mode only)
 cp .env.example src/.env
 # Edit src/.env and add: NEWSAPI_KEY, BIGDATA_KEY
 
-# 5. Run the FastAPI backend
+# 4. Run the FastAPI backend
 uvicorn src.api:app --host 0.0.0.0 --port 8000 --reload
 
-# 6. Run the frontend (in a second terminal)
+# 5. Run the frontend (in a second terminal)
 cd frontend
 npm install
 npm run dev
