@@ -1054,5 +1054,93 @@
     "ticker": "AVGO",
     "ingested_at": "2026-10-11T04:59:07.439866+00:00",
     "record_count": 1
+  },
+  {
+    "file_id": "newsapi_NVDA_20261011_170440.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_NVDA_20261011_170440.json",
+    "source": "newsapi",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T17:04:40.703196+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_NVDA_20261011_170547.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_NVDA_20261011_170547.json",
+    "source": "bigdata",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T17:05:47.411912+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AAPL_20261011_170548.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AAPL_20261011_170548.json",
+    "source": "newsapi",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T17:05:48.235635+00:00",
+    "record_count": 48
+  },
+  {
+    "file_id": "bigdata_AAPL_20261011_170654.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AAPL_20261011_170654.json",
+    "source": "bigdata",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T17:06:54.648649+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_MSFT_20261011_170655.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_MSFT_20261011_170655.json",
+    "source": "newsapi",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T17:06:55.451744+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_MSFT_20261011_170801.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_MSFT_20261011_170801.json",
+    "source": "bigdata",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T17:08:01.784131+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AMZN_20261011_170802.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AMZN_20261011_170802.json",
+    "source": "newsapi",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T17:08:02.399489+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_AMZN_20261011_170907.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AMZN_20261011_170907.json",
+    "source": "bigdata",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T17:09:07.698207+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_GOOGL_20261011_170908.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_GOOGL_20261011_170908.json",
+    "source": "newsapi",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T17:09:08.306518+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_GOOGL_20261011_171011.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_GOOGL_20261011_171011.json",
+    "source": "bigdata",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T17:10:11.451130+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_META_20261011_171012.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_META_20261011_171012.json",
+    "source": "newsapi",
+    "ticker": "META",
+    "ingested_at": "2026-10-11T17:10:12.305505+00:00",
+    "record_count": 50
   }
 ]
