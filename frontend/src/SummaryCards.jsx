@@ -115,7 +115,11 @@ export default function SummaryCards() {
             </div>
             <div className="kpi-content">
               <span className="kpi-label">{card.label}</span>
-              <span className="kpi-value" style={{ color: card.accent }}>
+              <span
+                className={`kpi-value ${card.isTimestamp ? 'kpi-value-timestamp' : ''}`}
+                style={{ color: card.accent }}
+                title={card.isTimestamp && rawValue ? (formatTimestamp(rawValue) || String(rawValue)) : undefined}
+              >
                 {isNumber ? (
                   <AnimatedNumber value={rawValue} />
                 ) : card.isTimestamp ? (

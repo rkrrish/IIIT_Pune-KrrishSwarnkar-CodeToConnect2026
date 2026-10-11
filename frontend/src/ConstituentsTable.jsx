@@ -109,7 +109,7 @@ export default function ConstituentsTable({ onTickerClick }) {
     <div className="constituents-container">
       <div className="section-header">
         <span className="material-icons-outlined section-icon">analytics</span>
-        <h2>S&P 100 Index Constituents</h2>
+        <h2>Index Constituents</h2>
         <span className="badge">{constituents.length} tickers</span>
       </div>
       <div className="table-wrapper">

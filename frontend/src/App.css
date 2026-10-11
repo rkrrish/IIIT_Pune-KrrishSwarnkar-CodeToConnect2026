@@ -140,6 +140,15 @@
   color: #dc2626;
 }
 
+/* Stress Test tab — distinct amber/orange accent */
+.mode-tab.mode-tab-stress {
+  color: #1c1917;
+}
+
+.mode-tab.mode-tab-stress .tab-icon {
+  color: #c2410c;
+}
+
 .btn-live-refresh {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
   color: #ffffff;

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import {
-  LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer,
+  AreaChart, Area, LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer,
   CartesianGrid, Legend, ReferenceLine
 } from 'recharts';
 import useStore from './store';
@@ -8,27 +8,31 @@ import './WeightChart.css';
 
 // Curated institutional color palette for 20 tickers
 const COLORS = [
-  '#1e40af', // Navy
-  '#0d9488', // Soft Teal
-  '#b91c1c', // Restrained Red
-  '#d97706', // Restrained Amber
-  '#4f46e5', // Indigo
-  '#0284c7', // Slate Blue
-  '#15803d', // Restrained Green
-  '#7c3aed', // Violet
-  '#c05621', // Terracotta
-  '#0891b2', // Muted Cyan
-  '#475569', // Slate
-  '#9f1239', // Rose
-  '#047857', // Emerald
-  '#4338ca', // Cobalt
-  '#b45309', // Dark Amber
-  '#0369a1', // Ocean Blue
-  '#6b21a8', // Deep Purple
-  '#334155', // Dark Slate
-  '#0e7490', // Teal-Blue
-  '#a16207', // Dark Gold
+  '#1e40af', '#0d9488', '#b91c1c', '#d97706', '#4f46e5',
+  '#0284c7', '#15803d', '#7c3aed', '#c05621', '#0891b2',
+  '#475569', '#9f1239', '#047857', '#4338ca', '#b45309',
+  '#0369a1', '#6b21a8', '#334155', '#0e7490', '#a16207',
 ];
+
+function GFTooltip({ active, payload, label, baseValue }) {
+  if (!active || !payload?.length) return null;
+  const currentVal = payload[0].value;
+  const diff = currentVal - baseValue;
+  const pctChange = baseValue !== 0 ? (diff / baseValue) * 100 : 0;
+  const isPos = diff >= 0;
+
+  return (
+    <div className="gf-tooltip">
+      <div className="gf-tooltip-header">Pipeline Step {label} {label === 0 ? '(Base)' : ''}</div>
+      <div className="gf-tooltip-body">
+        <span className="gf-tooltip-price">{(currentVal * 100).toFixed(2)}%</span>
+        <span className={`gf-tooltip-change ${isPos ? 'pos' : 'neg'}`}>
+          {isPos ? '+' : ''}{pctChange.toFixed(2)}%
+        </span>
+      </div>
+    </div>
+  );
+}
 
 function LineTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null;
@@ -81,10 +85,9 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
   const constituents = useStore((s) => s.constituents);
   const { tickers = [], series = {} } = weightHistory;
 
-  const [chartMode, setChartMode] = useState('line'); // 'line' | 'bar'
+  const [chartMode, setChartMode] = useState('line');
   const [internalTickerFilter, setInternalTickerFilter] = useState('ALL');
 
-  // Combined ticker filter (prop takes precedence if selected via table/ledger, else internal selector)
   const activeTicker = selectedTicker || (internalTickerFilter !== 'ALL' ? internalTickerFilter : null);
 
   const handleTickerSelect = (t) => {
@@ -94,7 +97,52 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
     }
   };
 
-  // Build unified time-series for Line Chart: row = { step, NVDA: weight, AAPL: weight, ... }
+  // 1. Data for Top Single Line Index Area Chart
+  const { gfChartData, baseIndexValue, latestValue, netChangePct, isPositive } = useMemo(() => {
+    if (!tickers.length) {
+      return { gfChartData: [], baseIndexValue: 1, latestValue: 1, netChangePct: 0, isPositive: true };
+    }
+
+    let maxSteps = 0;
+    for (const t of tickers) {
+      const points = series[t] || [];
+      if (points.length > maxSteps) maxSteps = points.length;
+    }
+
+    const data = [];
+    for (let s = 0; s < maxSteps; s++) {
+      let stepTotalWeight = 0;
+      for (const t of tickers) {
+        const points = series[t] || [];
+        const pt = points.find((p) => p.step === s);
+        if (activeTicker) {
+          if (t === activeTicker && pt) stepTotalWeight = pt.weight;
+        } else {
+          if (pt) stepTotalWeight += pt.weight;
+        }
+      }
+
+      data.push({
+        step: s,
+        value: stepTotalWeight,
+      });
+    }
+
+    const first = data[0]?.value || 0;
+    const last = data[data.length - 1]?.value || 0;
+    const diff = last - first;
+    const pct = first !== 0 ? (diff / first) * 100 : 0;
+
+    return {
+      gfChartData: data,
+      baseIndexValue: first,
+      latestValue: last,
+      netChangePct: pct,
+      isPositive: diff >= 0,
+    };
+  }, [tickers, series, activeTicker]);
+
+  // 2. Data for Multi-Ticker Line Chart (Reverted to original single-line structure per ticker)[cite: 1]
   const lineChartData = useMemo(() => {
     if (!tickers.length) return [];
 
@@ -122,10 +170,9 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
     return Array.from(stepMap.values()).sort((a, b) => a.step - b.step);
   }, [tickers, series]);
 
-  // Build data for Bar Chart
+  // 3. Data for Bar Chart
   const barChartData = useMemo(() => {
     if (activeTicker) {
-      // Bar Chart for a specific ticker across pipeline steps
       const points = series[activeTicker] || [];
       return points.map((pt) => ({
         stepLabel: `Step ${pt.step}`,
@@ -137,7 +184,6 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
       }));
     }
 
-    // Bar Chart for ALL tickers (showing current vs base change)
     if (constituents.length > 0) {
       return constituents.map((item) => ({
         ticker: item.ticker,
@@ -148,7 +194,6 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
       })).sort((a, b) => b.weight_change - a.weight_change);
     }
 
-    // Fallback from weightHistory
     return tickers.map((t) => {
       const points = series[t] || [];
       const latest = points[points.length - 1] || {};
@@ -165,7 +210,6 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
     ? tickers.filter((t) => t === activeTicker)
     : tickers;
 
-  // Major change tickers (> 1.5% delta)
   const majorChangeTickers = useMemo(() => {
     const result = new Set();
     for (const t of tickers) {
@@ -195,103 +239,39 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
   }
 
   return (
-    <div className="chart-container">
-      {/* ── Section Header with Controls ────────────────────────────── */}
-      <div className="section-header chart-header-responsive">
-        <div className="chart-title-group">
-          <span className="material-icons-outlined section-icon">
-            {chartMode === 'line' ? 'show_chart' : 'bar_chart'}
-          </span>
-          <h2>
-            {activeTicker
-              ? `${chartMode === 'line' ? 'Weight Evolution' : 'Weight Allocation'} — ${activeTicker}`
-              : chartMode === 'line'
-              ? 'Portfolio Weight Evolution'
-              : 'Ticker Weight Changes (Relative to Base Index)'}
-          </h2>
-        </div>
-
-        <div className="chart-controls">
-          {/* Ticker Filter Selector */}
-          <div className="control-group">
-            <label htmlFor="ticker-select" className="control-label">Ticker:</label>
-            <select
-              id="ticker-select"
-              className="ticker-select-dropdown"
-              value={activeTicker || 'ALL'}
-              onChange={(e) => handleTickerSelect(e.target.value)}
-            >
-              <option value="ALL">All Tickers (20)</option>
-              {tickers.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
+    <div className="charts-wrapper">
+      {/* ══════════════════════════════════════════════════════════ */}
+      {/* CHART 1: Single-Line Market Graph (Website Theme Matching)  */}
+      {/* ══════════════════════════════════════════════════════════ */}
+      <div className="gf-chart-container">
+        <div className="gf-header">
+          <div className="gf-ticker-title">
+            <h2>{activeTicker ? `${activeTicker} Market Trajectory` : 'Market Overview'}</h2>
+            {activeTicker && (
+              <button className="gf-clear-btn" onClick={() => handleTickerSelect('ALL')}>
+                Reset View
+              </button>
+            )}
           </div>
 
-          {/* Mode Switcher */}
-          <div className="mode-toggle-group">
-            <button
-              className={`mode-btn ${chartMode === 'line' ? 'active' : ''}`}
-              onClick={() => setChartMode('line')}
-              title="Line Chart: Weight evolution over time steps"
-            >
-              <span className="material-icons-outlined btn-icon">show_chart</span>
-              Line Graph
-            </button>
-            <button
-              className={`mode-btn ${chartMode === 'bar' ? 'active' : ''}`}
-              onClick={() => setChartMode('bar')}
-              title="Bar Chart: Compare ticker weight changes"
-            >
-              <span className="material-icons-outlined btn-icon">bar_chart</span>
-              Bar Graph
-            </button>
+          <div className="gf-metrics">
+            <span className="gf-main-price">{(latestValue * 100).toFixed(2)}%</span>
+            <span className={`gf-badge ${isPositive ? 'pos' : 'neg'}`}>
+              {isPositive ? '↑' : '↓'} {Math.abs(netChangePct).toFixed(2)}%
+            </span>
           </div>
         </div>
-      </div>
 
-      {/* ── Ticker Filter Pills ──────────────────────────────────────── */}
-      <div className="ticker-pills-bar">
-        <span className="pills-label">Quick Filter:</span>
-        <button
-          className={`ticker-pill ${!activeTicker ? 'active' : ''}`}
-          onClick={() => handleTickerSelect('ALL')}
-        >
-          All
-        </button>
-        {tickers.slice(0, 12).map((t, idx) => {
-          const color = COLORS[idx % COLORS.length];
-          const isSelected = activeTicker === t;
-          const isMajor = majorChangeTickers.has(t);
-          return (
-            <button
-              key={t}
-              className={`ticker-pill ${isSelected ? 'active' : ''} ${isMajor ? 'major' : ''}`}
-              onClick={() => handleTickerSelect(t)}
-              style={{
-                borderColor: isSelected ? color : undefined,
-                color: isSelected ? '#ffffff' : undefined,
-                backgroundColor: isSelected ? color : undefined,
-              }}
-            >
-              {t} {isMajor && <span className="pill-dot" />}
-            </button>
-          );
-        })}
-        {activeTicker && (
-          <button className="clear-pill" onClick={() => handleTickerSelect('ALL')}>
-            <span className="material-icons-outlined">close</span> Clear Filter
-          </button>
-        )}
-      </div>
+        <div className="gf-chart-area">
+          <ResponsiveContainer width="100%" height={260}>
+            <AreaChart data={gfChartData} margin={{ top: 15, right: 15, left: -20, bottom: 0 }}>
+              <defs>
+                <linearGradient id="themeBlueGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#2563eb" stopOpacity={0.25} />
+                  <stop offset="95%" stopColor="#2563eb" stopOpacity={0.0} />
+                </linearGradient>
+              </defs>
 
-      {/* ── Chart Area ──────────────────────────────────────────────── */}
-      <div className="chart-area">
-        <ResponsiveContainer width="100%" height={380}>
-          {chartMode === 'line' ? (
-            <LineChart data={lineChartData} margin={{ top: 15, right: 25, left: 10, bottom: 15 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e1d8" vertical={false} />
               <XAxis
                 dataKey="step"
@@ -299,7 +279,6 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
                 axisLine={{ stroke: '#d6d0c4' }}
                 tickLine={false}
                 tickFormatter={(v) => (v === 0 ? 'Base' : `Step ${v}`)}
-                label={{ value: 'Pipeline Step', position: 'insideBottom', offset: -8, fill: '#71717a', fontSize: 11 }}
               />
               <YAxis
                 tick={{ fill: '#71717a', fontSize: 11 }}
@@ -308,79 +287,207 @@ export default function WeightChart({ selectedTicker, onSelectTicker }) {
                 tickFormatter={(v) => `${(v * 100).toFixed(1)}%`}
                 domain={['auto', 'auto']}
               />
-              <Tooltip content={<LineTooltip />} />
-              <Legend
-                wrapperStyle={{ fontSize: 11, color: '#52525b', paddingTop: 12 }}
-                iconType="circle"
-                iconSize={8}
-                onClick={(e) => handleTickerSelect(e.dataKey)}
+              <Tooltip content={<GFTooltip baseValue={baseIndexValue} />} />
+              <ReferenceLine
+                y={baseIndexValue}
+                stroke="#94a3b8"
+                strokeDasharray="2 2"
+                label={{ value: 'Baseline Benchmark', fill: '#71717a', fontSize: 10, position: 'right' }}
               />
-              {visibleTickers.map((ticker) => {
-                const colorIndex = tickers.indexOf(ticker);
-                const isSelected = activeTicker === ticker;
-                const isMajor = majorChangeTickers.has(ticker);
-                const strokeColor = COLORS[colorIndex % COLORS.length];
+              <Area
+                type="monotone"
+                dataKey="value"
+                stroke="#1d4ed8"
+                strokeWidth={2.5}
+                fillOpacity={1}
+                fill="url(#themeBlueGradient)"
+                activeDot={{ r: 5, stroke: '#1d4ed8', strokeWidth: 2, fill: '#ffffff' }}
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
 
-                return (
-                  <Line
-                    key={ticker}
-                    type="monotone"
-                    dataKey={ticker}
-                    stroke={strokeColor}
-                    strokeWidth={isSelected ? 3.5 : isMajor ? 2.5 : 1.5}
-                    dot={{ r: isSelected ? 4 : 2, fill: strokeColor }}
-                    activeDot={{
-                      r: 6,
-                      stroke: strokeColor,
-                      strokeWidth: 2,
-                      fill: '#ffffff',
-                    }}
-                    opacity={activeTicker ? (isSelected ? 1 : 0.25) : isMajor ? 0.95 : 0.7}
-                    connectNulls
-                  />
-                );
-              })}
-            </LineChart>
-          ) : (
-            <BarChart
-              data={barChartData}
-              margin={{ top: 15, right: 25, left: 10, bottom: 25 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#e5e1d8" vertical={false} />
-              <XAxis
-                dataKey={activeTicker ? 'stepLabel' : 'ticker'}
-                tick={{ fill: '#475569', fontSize: 11, fontWeight: 500 }}
-                axisLine={{ stroke: '#d6d0c4' }}
-                tickLine={false}
-                interval={0}
-              />
-              <YAxis
-                tick={{ fill: '#71717a', fontSize: 11 }}
-                axisLine={{ stroke: '#d6d0c4' }}
-                tickLine={false}
-                tickFormatter={(v) => `${(v * 100).toFixed(1)}%`}
-              />
-              <Tooltip content={<BarTooltip />} />
-              <ReferenceLine y={0} stroke="#94a3b8" />
-              <Bar
-                dataKey={activeTicker ? 'current_weight' : 'weight_change'}
-                name={activeTicker ? `${activeTicker} Weight` : 'Weight Change (%)'}
-                radius={[4, 4, 0, 0]}
+      {/* ══════════════════════════════════════════════════════════ */}
+      {/* CHART 2: Multi-Ticker Line / Bar Section (Original Style)  */}
+      {/* ══════════════════════════════════════════════════════════ */}
+      <div className="chart-container">
+        <div className="section-header chart-header-responsive">
+          <div className="chart-title-group">
+            <span className="material-icons-outlined section-icon">
+              {chartMode === 'line' ? 'show_chart' : 'bar_chart'}
+            </span>
+            <h2>
+              {activeTicker
+                ? `${chartMode === 'line' ? 'Weight Evolution' : 'Weight Allocation'} — ${activeTicker}`
+                : chartMode === 'line'
+                  ? 'Portfolio Weight Evolution'
+                  : 'Ticker Weight Changes (Relative to Base Index)'}
+            </h2>
+          </div>
+
+          <div className="chart-controls">
+            <div className="control-group">
+              <label htmlFor="ticker-select" className="control-label">Ticker:</label>
+              <select
+                id="ticker-select"
+                className="ticker-select-dropdown"
+                value={activeTicker || 'ALL'}
+                onChange={(e) => handleTickerSelect(e.target.value)}
               >
-                {barChartData.map((entry, index) => {
-                  if (activeTicker) {
-                    // For single ticker steps: color by index palette
-                    return <Cell key={`cell-${index}`} fill={COLORS[tickers.indexOf(activeTicker) % COLORS.length]} />;
-                  }
-                  // For all tickers: Green if positive weight change, Red if negative
-                  const val = entry.weight_change;
-                  const barColor = val > 0 ? '#15803d' : val < 0 ? '#b91c1c' : '#94a3b8';
-                  return <Cell key={`cell-${index}`} fill={barColor} />;
-                })}
-              </Bar>
-            </BarChart>
+                <option value="ALL">All Tickers (20)</option>
+                {tickers.map((t) => (
+                  <option key={t} value={t}>{t}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="mode-toggle-group">
+              <button
+                className={`mode-btn ${chartMode === 'line' ? 'active' : ''}`}
+                onClick={() => setChartMode('line')}
+                title="Line Chart: Weight evolution over time steps"
+              >
+                <span className="material-icons-outlined btn-icon">show_chart</span>
+                Line Graph
+              </button>
+              <button
+                className={`mode-btn ${chartMode === 'bar' ? 'active' : ''}`}
+                onClick={() => setChartMode('bar')}
+                title="Bar Chart: Compare ticker weight changes"
+              >
+                <span className="material-icons-outlined btn-icon">bar_chart</span>
+                Bar Graph
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Filter Pills */}
+        <div className="ticker-pills-bar">
+          <span className="pills-label">Quick Filter:</span>
+          <button
+            className={`ticker-pill ${!activeTicker ? 'active' : ''}`}
+            onClick={() => handleTickerSelect('ALL')}
+          >
+            All
+          </button>
+          {tickers.slice(0, 12).map((t, idx) => {
+            const color = COLORS[idx % COLORS.length];
+            const isSelected = activeTicker === t;
+            const isMajor = majorChangeTickers.has(t);
+            return (
+              <button
+                key={t}
+                className={`ticker-pill ${isSelected ? 'active' : ''} ${isMajor ? 'major' : ''}`}
+                onClick={() => handleTickerSelect(t)}
+                style={{
+                  borderColor: isSelected ? color : undefined,
+                  color: isSelected ? '#ffffff' : undefined,
+                  backgroundColor: isSelected ? color : undefined,
+                }}
+              >
+                {t} {isMajor && <span className="pill-dot" />}
+              </button>
+            );
+          })}
+          {activeTicker && (
+            <button className="clear-pill" onClick={() => handleTickerSelect('ALL')}>
+              <span className="material-icons-outlined">close</span> Clear Filter
+            </button>
           )}
-        </ResponsiveContainer>
+        </div>
+
+        {/* Chart Area */}
+        <div className="chart-area">
+          <ResponsiveContainer width="100%" height={380}>
+            {chartMode === 'line' ? (
+              <LineChart data={lineChartData} margin={{ top: 15, right: 25, left: 10, bottom: 15 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e5e1d8" vertical={false} />
+                <XAxis
+                  dataKey="step"
+                  tick={{ fill: '#71717a', fontSize: 11 }}
+                  axisLine={{ stroke: '#d6d0c4' }}
+                  tickLine={false}
+                  tickFormatter={(v) => (v === 0 ? 'Base' : `Step ${v}`)}
+                  label={{ value: 'Pipeline Step', position: 'insideBottom', offset: -8, fill: '#71717a', fontSize: 11 }}
+                />
+                <YAxis
+                  tick={{ fill: '#71717a', fontSize: 11 }}
+                  axisLine={{ stroke: '#d6d0c4' }}
+                  tickLine={false}
+                  tickFormatter={(v) => `${(v * 100).toFixed(1)}%`}
+                  domain={['auto', 'auto']}
+                />
+                <Tooltip content={<LineTooltip />} />
+                <Legend
+                  wrapperStyle={{ fontSize: 11, color: '#52525b', paddingTop: 12 }}
+                  iconType="circle"
+                  iconSize={8}
+                  onClick={(e) => handleTickerSelect(e.dataKey)}
+                />
+                {visibleTickers.map((ticker) => {
+                  const colorIndex = tickers.indexOf(ticker);
+                  const isSelected = activeTicker === ticker;
+                  const isMajor = majorChangeTickers.has(ticker);
+                  const strokeColor = COLORS[colorIndex % COLORS.length];
+
+                  return (
+                    <Line
+                      key={ticker}
+                      type="monotone"
+                      dataKey={ticker}
+                      stroke={strokeColor}
+                      strokeWidth={isSelected ? 3.5 : isMajor ? 2.5 : 1.5}
+                      dot={{ r: isSelected ? 4 : 2, fill: strokeColor }}
+                      activeDot={{
+                        r: 6,
+                        stroke: strokeColor,
+                        strokeWidth: 2,
+                        fill: '#ffffff',
+                      }}
+                      opacity={activeTicker ? (isSelected ? 1 : 0.25) : isMajor ? 0.95 : 0.7}
+                      connectNulls
+                    />
+                  );
+                })}
+              </LineChart>
+            ) : (
+              <BarChart data={barChartData} margin={{ top: 15, right: 25, left: 10, bottom: 25 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e5e1d8" vertical={false} />
+                <XAxis
+                  dataKey={activeTicker ? 'stepLabel' : 'ticker'}
+                  tick={{ fill: '#475569', fontSize: 11, fontWeight: 500 }}
+                  axisLine={{ stroke: '#d6d0c4' }}
+                  tickLine={false}
+                  interval={0}
+                />
+                <YAxis
+                  tick={{ fill: '#71717a', fontSize: 11 }}
+                  axisLine={{ stroke: '#d6d0c4' }}
+                  tickLine={false}
+                  tickFormatter={(v) => `${(v * 100).toFixed(1)}%`}
+                />
+                <Tooltip content={<BarTooltip />} />
+                <ReferenceLine y={0} stroke="#94a3b8" />
+                <Bar
+                  dataKey={activeTicker ? 'current_weight' : 'weight_change'}
+                  name={activeTicker ? `${activeTicker} Weight` : 'Weight Change (%)'}
+                  radius={[4, 4, 0, 0]}
+                >
+                  {barChartData.map((entry, index) => {
+                    if (activeTicker) {
+                      return <Cell key={`cell-${index}`} fill={COLORS[tickers.indexOf(activeTicker) % COLORS.length]} />;
+                    }
+                    const val = entry.weight_change;
+                    const barColor = val > 0 ? '#15803d' : val < 0 ? '#b91c1c' : '#94a3b8';
+                    return <Cell key={`cell-${index}`} fill={barColor} />;
+                  })}
+                </Bar>
+              </BarChart>
+            )}
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );

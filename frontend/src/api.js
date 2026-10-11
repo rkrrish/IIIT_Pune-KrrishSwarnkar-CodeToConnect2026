@@ -55,3 +55,12 @@ export function createLedgerStream(onMessage, onError) {
 
   return source;
 }
+
+// ── Module B: Stress Test ────────────────────────────────────────
+export const fetchStressTestLatest = () => request('/api/stress-test/latest').catch(() => null);
+export const fetchStressTestScenarios = () => request('/api/stress-test/scenarios');
+export const runStressTest = (force = true, scenario = null) => {
+  const params = new URLSearchParams({ force });
+  if (scenario) params.append('scenario', scenario);
+  return request(`/api/stress-test/run?${params}`, { method: 'POST' });
+};

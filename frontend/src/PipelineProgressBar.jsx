@@ -3,10 +3,10 @@ import useStore from './store';
 import './PipelineProgressBar.css';
 
 const STAGES = [
-  { id: 'fetching_live_data', label: '1. Ingest Live Feeds', icon: 'cloud_download' },
-  { id: 'deduplicating_data', label: '2. De-duplicate Articles', icon: 'filter_alt' },
-  { id: 'nlp_risk_engine', label: '3. FinBERT Risk Engine', icon: 'psychology' },
-  { id: 'rebalancing_portfolio', label: '4. Black-Litterman Rebalance', icon: 'tune' },
+  { id: 'fetching_live_data', label: '1. Data Ingestion', icon: 'cloud_download' },
+  { id: 'deduplicating_data', label: '2. Deduplication', icon: 'filter_alt' },
+  { id: 'nlp_risk_engine', label: '3. AI Risk Engine', icon: 'psychology' },
+  { id: 'rebalancing_portfolio', label: '4. Rebalancing', icon: 'tune' },
 ];
 
 function getStageIndex(stageId) {

@@ -514,3 +514,94 @@ async def reset_demo_endpoint():
 @app.get("/api/ping")
 async def ping():
     return {"ping": "pong"}
+
+
+# ── Module B: Stress Test endpoints ────────────────────────────────────────
+
+@app.get("/api/stress-test/latest")
+async def stress_test_latest():
+    """
+    Return the most recently computed stress test result from disk.
+    Returns 404 if no result has been generated yet.
+    """
+    try:
+        import sys as _sys
+        _src = str(Path(__file__).parent)
+        if _src not in _sys.path:
+            _sys.path.insert(0, _src)
+        from module_b_stress_test import get_latest_stress_result
+        result = get_latest_stress_result()
+        if result is None:
+            return JSONResponse(status_code=404, content={"error": "No stress test result yet. Run the pipeline first, then trigger a stress test."})
+        return result
+    except Exception as exc:
+        return JSONResponse(status_code=500, content={"error": str(exc)})
+
+
+@app.post("/api/stress-test/run")
+async def stress_test_run(
+    background_tasks: BackgroundTasks,
+    force: bool = True,
+    scenario: str = None,
+):
+    """
+    Trigger a stress test simulation.
+    - force=true  : always apply shocks (manual dashboard trigger).
+    - scenario    : override which shock scenario to apply.
+    Runs synchronously (fast — no ML inference needed).
+    """
+    try:
+        import sys as _sys
+        _src = str(Path(__file__).parent)
+        if _src not in _sys.path:
+            _sys.path.insert(0, _src)
+        from module_b_stress_test import run_stress_test, SHOCK_SCENARIOS
+        # Validate scenario name
+        if scenario and scenario not in SHOCK_SCENARIOS:
+            return JSONResponse(
+                status_code=422,
+                content={"error": f"Unknown scenario '{scenario}'. Valid: {list(SHOCK_SCENARIOS.keys())}"}
+            )
+        result = run_stress_test(force_trigger=force, forced_scenario=scenario)
+        from dataclasses import asdict
+        return asdict(result)
+    except Exception as exc:
+        return JSONResponse(status_code=500, content={"error": str(exc)})
+
+
+@app.get("/api/stress-test/scenarios")
+async def stress_test_scenarios():
+    """Return the catalog of available stress scenarios for the frontend dropdown."""
+    try:
+        import sys as _sys
+        _src = str(Path(__file__).parent)
+        if _src not in _sys.path:
+            _sys.path.insert(0, _src)
+        from module_b_stress_test import list_scenarios
+        return list_scenarios()
+    except Exception as exc:
+        return JSONResponse(status_code=500, content={"error": str(exc)})
+
+#---------------------last changes
+# ── Static Frontend Serving (Standalone / Single-Container mode) ───────────
+FRONTEND_DIST = BASE_DIR / "frontend" / "dist"
+if FRONTEND_DIST.exists():
+    from fastapi.staticfiles import StaticFiles
+    from starlette.responses import FileResponse
+
+    assets_dir = FRONTEND_DIST / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        if full_path.startswith("api"):
+            return JSONResponse(status_code=404, content={"detail": "API endpoint not found"})
+        target = FRONTEND_DIST / full_path
+        if target.is_file():
+            return FileResponse(target)
+        index_file = FRONTEND_DIST / "index.html"
+        if index_file.is_file():
+            return FileResponse(index_file)
+        return JSONResponse(status_code=404, content={"detail": "Frontend not found"})
+

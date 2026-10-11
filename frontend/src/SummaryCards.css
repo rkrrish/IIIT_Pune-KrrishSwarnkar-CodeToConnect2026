@@ -66,6 +66,17 @@
   text-overflow: ellipsis;
 }
 
+.kpi-value-timestamp {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
 @media (max-width: 768px) {
   .kpi-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -76,6 +87,9 @@
   }
   .kpi-value {
     font-size: 1.2rem;
+  }
+  .kpi-value-timestamp {
+    font-size: 0.85rem;
   }
 }
 

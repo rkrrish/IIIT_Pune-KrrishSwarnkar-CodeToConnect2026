@@ -29,3 +29,6 @@ plotly>=5.22.0
 
 # Data ingestion
 pyyaml>=6.0.0
+
+# Module B — Market data (yfinance used as optional anchor for stress test portfolio valuations)
+yfinance>=0.2.40

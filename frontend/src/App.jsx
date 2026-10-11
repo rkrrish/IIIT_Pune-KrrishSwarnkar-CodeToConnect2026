@@ -10,7 +10,9 @@ import WeightChart from './WeightChart';
 import InspectModal from './InspectModal';
 import PipelineStatusBadge from './PipelineStatusBadge';
 import PipelineProgressBar from './PipelineProgressBar';
+import StressTestPanel from './StressTestPanel';
 import './App.css';
+
 
 function App() {
   const refreshAll = useStore((s) => s.refreshAll);
@@ -198,6 +200,13 @@ function App() {
             <span className="material-icons-outlined tab-icon">sensors</span>
             LIVE MODE
           </button>
+          <button
+            className={`mode-tab ${activeMode === 'stress' ? 'active mode-tab-stress' : ''}`}
+            onClick={() => setActiveMode('stress')}
+          >
+            <span className="material-icons-outlined tab-icon">crisis_alert</span>
+            STRESS TEST
+          </button>
         </div>
 
         <div className="header-right">
@@ -244,39 +253,52 @@ function App() {
           </div>
         </div>
       </header>
-
       {/* ── Main Content ──────────────────────────────────── */}
       <main className="dashboard-main">
-        {/* Progress Bar & Stage Notification */}
-        <PipelineProgressBar
-          onRetry={activeMode === 'live' ? handleRefreshLive : handleRunPipeline}
-        />
-
-        {/* KPI Cards */}
-        <section className="dashboard-section">
-          <SummaryCards />
-        </section>
-
-        {/* Constituents Table */}
-        <section className="dashboard-section">
-          <ConstituentsTable onTickerClick={handleTickerClick} />
-        </section>
-
-        {/* Weight Chart */}
-        <section className="dashboard-section">
-          <WeightChart
-            selectedTicker={selectedTicker}
-            onSelectTicker={handleTickerClick}
+        {/* Progress Bar & Stage Notification — only in demo/live modes */}
+        {activeMode !== 'stress' && (
+          <PipelineProgressBar
+            onRetry={activeMode === 'live' ? handleRefreshLive : handleRunPipeline}
           />
-        </section>
+        )}
 
-        {/* Ledger */}
-        <section className="dashboard-section">
-          <LedgerList
-            onInspect={handleInspect}
-            onTickerClick={handleTickerClick}
-          />
-        </section>
+        {/* ── DEMO / LIVE Content ─────────────────────────── */}
+        {activeMode !== 'stress' && (
+          <>
+            {/* KPI Cards */}
+            <section className="dashboard-section">
+              <SummaryCards />
+            </section>
+
+            {/* Constituents Table */}
+            <section className="dashboard-section">
+              <ConstituentsTable onTickerClick={handleTickerClick} />
+            </section>
+
+            {/* Weight Chart */}
+            <section className="dashboard-section">
+              <WeightChart
+                selectedTicker={selectedTicker}
+                onSelectTicker={handleTickerClick}
+              />
+            </section>
+
+            {/* Ledger */}
+            <section className="dashboard-section">
+              <LedgerList
+                onInspect={handleInspect}
+                onTickerClick={handleTickerClick}
+              />
+            </section>
+          </>
+        )}
+
+        {/* ── MODULE B — Stress Test ───────────────────────── */}
+        {activeMode === 'stress' && (
+          <section className="dashboard-section">
+            <StressTestPanel />
+          </section>
+        )}
       </main>
 
       {/* ── Footer ─────────────────────────────────────────── */}
