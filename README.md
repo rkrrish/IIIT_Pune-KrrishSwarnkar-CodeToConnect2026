@@ -159,7 +159,10 @@ Due to storage limitations of GitHUB, I could not upload the model weights files
 #### Method 1: Using Docker
 ```bash
 # Build the frontend static bundle once
-cd frontend && npm install && npm run build && cd ..
+cd frontend 
+npm install
+npm run build
+cd ..
 
 # Start containers
 docker compose up -d
