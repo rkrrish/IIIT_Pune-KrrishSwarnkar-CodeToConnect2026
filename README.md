@@ -43,7 +43,8 @@ The platform ensures end-to-end transparency through a deterministic event ledge
 │
 ├── docs/                             # Documentation assets
 │   ├── architecture.png              # System design & data flow diagram
-│   └── prompts/                      # LLM & prompt engineering notes
+│   ├── presentation.pdf              # Presentation deck
+│   └── prompts/                      # prompts I had used for bulding some of the modules 
 │
 ├── frontend/                         # React + Vite interactive dashboard
 │   ├── src/                          # Dashboard components (WeightChart, StressTestPanel, etc.)
