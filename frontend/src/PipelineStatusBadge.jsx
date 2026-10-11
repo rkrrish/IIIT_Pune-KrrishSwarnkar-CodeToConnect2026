@@ -11,19 +11,29 @@ const STATUS_CONFIG = {
 export default function PipelineStatusBadge() {
   const pipelineStatus = useStore((s) => s.pipelineStatus);
   const pipelineMessage = useStore((s) => s.pipelineMessage);
+  const activeMode = useStore((s) => s.activeMode);
   const config = STATUS_CONFIG[pipelineStatus] || STATUS_CONFIG.idle;
 
   return (
-    <div
-      className={`pipeline-badge ${config.pulse ? 'pulse' : ''}`}
-      style={{ '--badge-color': config.color }}
-      title={pipelineMessage || config.label}
-    >
-      <span className={`material-icons-outlined badge-icon ${config.pulse ? 'spin' : ''}`}>
-        {config.icon}
-      </span>
-      <span className="badge-label">{config.label}</span>
-      {config.pulse && <span className="pulse-ring" />}
+    <div className="status-badges-group" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+      <div className={`mode-badge ${activeMode}`}>
+        <span className="material-icons-outlined badge-icon">
+          {activeMode === 'live' ? 'sensors' : 'science'}
+        </span>
+        <span className="badge-label">{activeMode === 'live' ? 'LIVE MODE' : 'DEMO MODE'}</span>
+      </div>
+
+      <div
+        className={`pipeline-badge ${config.pulse ? 'pulse' : ''}`}
+        style={{ '--badge-color': config.color }}
+        title={pipelineMessage || config.label}
+      >
+        <span className={`material-icons-outlined badge-icon ${config.pulse ? 'spin' : ''}`}>
+          {config.icon}
+        </span>
+        <span className="badge-label">{config.label}</span>
+        {config.pulse && <span className="pulse-ring" />}
+      </div>
     </div>
   );
 }

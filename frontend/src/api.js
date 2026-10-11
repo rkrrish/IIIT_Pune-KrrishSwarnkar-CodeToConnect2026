@@ -29,6 +29,7 @@ export const fetchLedgerEntry = (id) => request(`/api/ledger/${id}`);
 
 // ── Pipeline control ────────────────────────────────────────────
 export const runPipeline = () => request('/api/pipeline/run', { method: 'POST' });
+export const runLivePipeline = () => request('/api/pipeline/live/run', { method: 'POST' });
 export const nextTimestep = () => request('/api/pipeline/next', { method: 'POST' });
 export const resetPipeline = () => request('/api/pipeline/reset', { method: 'POST' });
 export const fetchPipelineStatus = () => request('/api/pipeline/status');

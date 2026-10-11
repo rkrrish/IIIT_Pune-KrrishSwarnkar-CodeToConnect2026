@@ -29,7 +29,24 @@ LATEST_WEIGHTS_PATH = OUTPUT_DIR / "rebalancing_outputs" / "latest_weights.json"
 
 # ── Pipeline state (thread-safe) ───────────────────────────────────────────
 _pipeline_lock = threading.Lock()
-_pipeline_status = {"status": "idle", "message": "", "last_run": None}
+_pipeline_status = {
+    "status": "idle",
+    "mode": "demo",
+    "stage": "idle",
+    "progress": 0,
+    "message": "",
+    "failed_stage": None,
+    "error_message": None,
+    "last_run": None,
+}
+
+
+def _update_status_cb(stage: str, progress: int, message: str):
+    with _pipeline_lock:
+        _pipeline_status["stage"] = stage
+        _pipeline_status["progress"] = progress
+        _pipeline_status["message"] = message
+
 
 TOP_20_SP100_TICKERS = [
     {"ticker": "NVDA", "name": "NVIDIA", "sector": "Technology"},
@@ -106,6 +123,7 @@ async def dashboard_summary():
     if not entries:
         with _pipeline_lock:
             status = _pipeline_status["status"]
+            mode = _pipeline_status["mode"]
         return {
             "num_active_tickers": 0,
             "changed_weights_latest": 0,
@@ -113,6 +131,7 @@ async def dashboard_summary():
             "neg_sentiment_events": 0,
             "latest_timestamp": None,
             "pipeline_status": status,
+            "mode": mode,
             "total_events_processed": 0,
         }
 
@@ -124,6 +143,7 @@ async def dashboard_summary():
 
     with _pipeline_lock:
         status = _pipeline_status["status"]
+        mode = _pipeline_status["mode"]
 
     return {
         "num_active_tickers": active_tickers,
@@ -132,6 +152,7 @@ async def dashboard_summary():
         "neg_sentiment_events": neg_sentiment,
         "latest_timestamp": latest.get("timestamp"),
         "pipeline_status": status,
+        "mode": mode,
         "total_events_processed": len(entries),
     }
 
@@ -174,7 +195,7 @@ async def dashboard_index():
         curr_r = current_ranks[t]
         item["initial_rank"] = init_r
         item["current_rank"] = curr_r
-        # Positive rank_change means ticker moved UP in index (e.g. initial rank 3 -> current rank 1 = +2)
+        # Positive rank_change means ticker moved UP in index
         item["rank_change"] = init_r - curr_r
 
     return JSONResponse(content=raw_list)
@@ -193,7 +214,6 @@ async def pipeline_status():
 async def get_ledger():
     """Read the rebalance ledger JSONL and return as list of objects with IDs."""
     entries = _read_ledger()
-    # Add an index-based ID for inspection
     for i, entry in enumerate(entries):
         entry["_id"] = i
     return entries
@@ -215,7 +235,6 @@ async def get_ledger_entry(entry_id: int):
     ticker_signals = []
     if "signals" in risk_data:
         ticker_signals = [s for s in risk_data["signals"] if s.get("ticker") == ticker]
-        # Only keep most recent 20 signals for the modal
         ticker_signals = ticker_signals[-20:]
 
     # Enrich with ticker summary from risk report
@@ -254,7 +273,7 @@ async def ledger_stream():
 
 @app.get("/api/dashboard/graph")
 async def dashboard_graph(ticker: str = None):
-    """Return weight history over time for charting. Optionally filter by ticker."""
+    """Return weight history over time for charting."""
     entries = _read_ledger()
     if not entries:
         return []
@@ -262,7 +281,6 @@ async def dashboard_graph(ticker: str = None):
     if ticker:
         entries = [e for e in entries if e.get("ticker") == ticker]
 
-    # Build time-series: group by timestamp, each group has weights per ticker
     result = []
     for i, e in enumerate(entries):
         result.append({
@@ -281,13 +299,12 @@ async def dashboard_graph(ticker: str = None):
 
 @app.get("/api/dashboard/weight-history")
 async def weight_history():
-    """Return weight evolution data grouped by ticker for multi-line and bar charting."""
+    """Return weight evolution data grouped by ticker."""
     entries = _read_ledger()
 
     all_tickers = [item["ticker"] for item in TOP_20_SP100_TICKERS]
     base_weights = {item["ticker"]: MOCK_MARKET_CAPS.get(item["ticker"], 0) / _total_cap for item in TOP_20_SP100_TICKERS}
 
-    # Step 0: Initial state (Base Weights for all 20 tickers)
     step_0 = {t: base_weights[t] for t in all_tickers}
     steps = [step_0]
 
@@ -301,17 +318,14 @@ async def weight_history():
             new_w = e.get("new_weight")
 
             if ticker and new_w is not None:
-                # If timestamp changed, push completed step snapshot
                 if last_timestamp is not None and ts != last_timestamp:
                     steps.append(dict(current_step_weights))
                 
                 current_step_weights[ticker] = new_w
                 last_timestamp = ts
         
-        # Append final step state
         steps.append(dict(current_step_weights))
 
-    # Construct ticker_series where each ticker has a point for every step 0..N
     ticker_series = {t: [] for t in all_tickers}
 
     for step_idx, step_weights in enumerate(steps):
@@ -336,7 +350,7 @@ async def weight_history():
 
 @app.post("/api/pipeline/run")
 async def run_pipeline_endpoint(background_tasks: BackgroundTasks):
-    """Run the full pipeline (demo mode) in background and return immediate ack."""
+    """Run the full pipeline (demo mode) in background with status tracking."""
     with _pipeline_lock:
         if _pipeline_status["status"] == "running":
             return JSONResponse(
@@ -344,7 +358,12 @@ async def run_pipeline_endpoint(background_tasks: BackgroundTasks):
                 content={"status": "error", "message": "Pipeline already running"}
             )
         _pipeline_status["status"] = "running"
-        _pipeline_status["message"] = "Full pipeline batch started"
+        _pipeline_status["mode"] = "demo"
+        _pipeline_status["stage"] = "nlp_risk_engine"
+        _pipeline_status["progress"] = 10
+        _pipeline_status["message"] = "Demo pipeline batch started"
+        _pipeline_status["failed_stage"] = None
+        _pipeline_status["error_message"] = None
 
     def _run():
         try:
@@ -354,15 +373,20 @@ async def run_pipeline_endpoint(background_tasks: BackgroundTasks):
                 sys.path.insert(0, src_dir)
             from pipeline import RiskEnginePipeline
             pipeline = RiskEnginePipeline(mode="demo")
-            pipeline.run_pipeline()
+            pipeline.run_pipeline(status_callback=_update_status_cb)
             with _pipeline_lock:
                 _pipeline_status["status"] = "idle"
+                _pipeline_status["stage"] = "complete"
+                _pipeline_status["progress"] = 100
                 _pipeline_status["message"] = "Pipeline completed successfully"
                 _pipeline_status["last_run"] = datetime.now(timezone.utc).isoformat()
         except Exception as ex:
             with _pipeline_lock:
+                current_stage = _pipeline_status.get("stage", "unknown")
                 _pipeline_status["status"] = "error"
-                _pipeline_status["message"] = str(ex)
+                _pipeline_status["failed_stage"] = current_stage
+                _pipeline_status["error_message"] = str(ex)
+                _pipeline_status["message"] = f"Pipeline error during {current_stage}: {str(ex)}"
 
     background_tasks.add_task(_run)
     return {"status": "pipeline started"}
@@ -378,7 +402,12 @@ async def next_timestep_endpoint(background_tasks: BackgroundTasks):
                 content={"status": "error", "message": "Pipeline already running"}
             )
         _pipeline_status["status"] = "running"
+        _pipeline_status["mode"] = "demo"
+        _pipeline_status["stage"] = "nlp_risk_engine"
+        _pipeline_status["progress"] = 20
         _pipeline_status["message"] = "Processing next timestep..."
+        _pipeline_status["failed_stage"] = None
+        _pipeline_status["error_message"] = None
 
     def _run():
         try:
@@ -388,30 +417,81 @@ async def next_timestep_endpoint(background_tasks: BackgroundTasks):
                 sys.path.insert(0, src_dir)
             from pipeline import RiskEnginePipeline
             pipeline = RiskEnginePipeline(mode="demo")
-            pipeline.run_pipeline(max_payloads=1, clear_previous_stream=False)
+            pipeline.run_pipeline(max_payloads=1, clear_previous_stream=False, status_callback=_update_status_cb)
             with _pipeline_lock:
                 _pipeline_status["status"] = "idle"
+                _pipeline_status["stage"] = "complete"
+                _pipeline_status["progress"] = 100
                 _pipeline_status["message"] = "Timestep processed"
                 _pipeline_status["last_run"] = datetime.now(timezone.utc).isoformat()
         except Exception as ex:
             with _pipeline_lock:
+                current_stage = _pipeline_status.get("stage", "unknown")
                 _pipeline_status["status"] = "error"
-                _pipeline_status["message"] = str(ex)
+                _pipeline_status["failed_stage"] = current_stage
+                _pipeline_status["error_message"] = str(ex)
+                _pipeline_status["message"] = f"Timestep error during {current_stage}: {str(ex)}"
 
     background_tasks.add_task(_run)
     return {"status": "next timestep started"}
 
 
+@app.post("/api/pipeline/live/run")
+async def run_live_pipeline_endpoint(background_tasks: BackgroundTasks):
+    """
+    Triggers Live Mode execution:
+    Fetches real-time market articles (NewsAPI, GDELT, BigData) for the 20 tickers,
+    deduplicates them, saves raw payloads to data/live_mode_fetched, and rebalances portfolio.
+    """
+    with _pipeline_lock:
+        if _pipeline_status["status"] == "running":
+            return JSONResponse(
+                status_code=409,
+                content={"status": "error", "message": "Pipeline execution already in progress"}
+            )
+        _pipeline_status["status"] = "running"
+        _pipeline_status["mode"] = "live"
+        _pipeline_status["stage"] = "fetching_live_data"
+        _pipeline_status["progress"] = 10
+        _pipeline_status["message"] = "Live mode started: fetching real-time market feeds..."
+        _pipeline_status["failed_stage"] = None
+        _pipeline_status["error_message"] = None
+
+    def _run():
+        try:
+            import sys, os
+            src_dir = os.path.dirname(os.path.abspath(__file__))
+            if src_dir not in sys.path:
+                sys.path.insert(0, src_dir)
+            from pipeline import RiskEnginePipeline
+            pipeline = RiskEnginePipeline(mode="live")
+            pipeline.run_pipeline(status_callback=_update_status_cb)
+            with _pipeline_lock:
+                _pipeline_status["status"] = "idle"
+                _pipeline_status["stage"] = "complete"
+                _pipeline_status["progress"] = 100
+                _pipeline_status["message"] = "Live Mode pipeline completed successfully"
+                _pipeline_status["last_run"] = datetime.now(timezone.utc).isoformat()
+        except Exception as ex:
+            with _pipeline_lock:
+                current_stage = _pipeline_status.get("stage", "unknown")
+                _pipeline_status["status"] = "error"
+                _pipeline_status["failed_stage"] = current_stage
+                _pipeline_status["error_message"] = str(ex)
+                _pipeline_status["message"] = f"Live Mode failed at stage '{current_stage}': {str(ex)}"
+
+    background_tasks.add_task(_run)
+    return {"status": "live pipeline started"}
+
+
 @app.post("/api/pipeline/reset")
 async def reset_demo_endpoint():
     """Reset the demo by deleting ledger and clearing output directories."""
-    # Clear rebalancing outputs
     rebal_dir = OUTPUT_DIR / "rebalancing_outputs"
     if rebal_dir.exists():
         for f in rebal_dir.iterdir():
             f.unlink()
 
-    # Clear risk engine outputs
     risk_dir = OUTPUT_DIR / "risk_engine_outputs"
     if risk_dir.exists():
         for f in risk_dir.iterdir():
@@ -420,7 +500,12 @@ async def reset_demo_endpoint():
 
     with _pipeline_lock:
         _pipeline_status["status"] = "idle"
+        _pipeline_status["mode"] = "demo"
+        _pipeline_status["stage"] = "idle"
+        _pipeline_status["progress"] = 0
         _pipeline_status["message"] = "Demo reset completed"
+        _pipeline_status["failed_stage"] = None
+        _pipeline_status["error_message"] = None
         _pipeline_status["last_run"] = None
 
     return {"status": "reset completed"}

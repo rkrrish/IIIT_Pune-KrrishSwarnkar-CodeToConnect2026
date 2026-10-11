@@ -25,13 +25,27 @@ const useStore = create((set, get) => ({
     }
   },
 
-  // ── Pipeline status ─────────────────────────────────────────
+  // ── Mode Switcher & Pipeline status ─────────────────────────
+  activeMode: 'demo',
+  setActiveMode: (mode) => set({ activeMode: mode }),
+
   pipelineStatus: 'idle',
+  pipelineStage: 'idle',
+  pipelineProgress: 0,
   pipelineMessage: '',
+  failedStage: null,
+  errorMessage: null,
   fetchPipelineStatus: async () => {
     try {
       const data = await api.fetchPipelineStatus();
-      set({ pipelineStatus: data.status, pipelineMessage: data.message || '' });
+      set({
+        pipelineStatus: data.status,
+        pipelineStage: data.stage || 'idle',
+        pipelineProgress: data.progress || 0,
+        pipelineMessage: data.message || '',
+        failedStage: data.failed_stage || null,
+        errorMessage: data.error_message || null,
+      });
     } catch (e) {
       console.error('Failed to fetch pipeline status:', e);
     }

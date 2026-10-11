@@ -12,7 +12,7 @@ if CURRENT_DIR not in sys.path:
     sys.path.insert(0, CURRENT_DIR)
 
 from risk_engine import FinBERTRiskEngine, RiskSignal
-from gen_mock_source import RawDataIngestor, TOP_20_SP100_TICKERS
+from gen_mock_source import RawDataIngestor, TOP_20_SP100_TICKERS, deduplicate_articles
 from rebalancing_engine import BlackLittermanEngine
 
 # Output directories and file locations
@@ -20,9 +20,10 @@ OUTPUT_DIR = os.path.join(CURRENT_DIR, "output", "risk_engine_outputs")
 STRUCTURED_SIGNALS_FILE = os.path.join(OUTPUT_DIR, "latest_risk_signals.json")
 STREAM_LOG_FILE = os.path.join(OUTPUT_DIR, "signals_history_ledger.jsonl")
 SUMMARY_REPORT_FILE = os.path.join(OUTPUT_DIR, "risk_summary_report.json")
-
-
 STATE_FILE = os.path.join(OUTPUT_DIR, "pipeline_state.json")
+
+LIVE_STORE_DIR = os.path.join(os.path.dirname(CURRENT_DIR), "data", "live_mode_fetched")
+LIVE_FETCHED_FILE = os.path.join(LIVE_STORE_DIR, "live_mode_fetched.json")
 
 
 def load_pipeline_state() -> Dict[str, Any]:
@@ -43,7 +44,7 @@ def save_pipeline_state(state: Dict[str, Any]):
 
 class MockStoreReader:
     """
-    Reads time-series payloads from data/mock_store_2 in chronological / stream order,
+    Reads time-series payloads from a store directory (mock_store_2 or live_mode_fetched),
     resolving raw payload paths robustly across operating systems.
     """
 
@@ -54,7 +55,7 @@ class MockStoreReader:
         self.index_file = os.path.join(self.mock_dir, "index.json")
 
         if not os.path.exists(self.index_file):
-            raise FileNotFoundError(f"Mock store index not found at: {self.index_file}")
+            raise FileNotFoundError(f"Store index not found at: {self.index_file}")
 
         with open(self.index_file, "r", encoding="utf-8") as f:
             self.catalog: List[Dict[str, Any]] = json.load(f)
@@ -98,7 +99,7 @@ class RiskEnginePipeline:
     """
     Main Risk Engine execution pipeline supporting:
     - DEMO mode: Replay from data/mock_store_2 time-series stream.
-    - WORK mode: Real-time ingestion from live news & financial APIs.
+    - LIVE mode: Real-time ingestion from live news & financial APIs into data/live_mode_fetched.
     """
 
     def __init__(
@@ -109,12 +110,19 @@ class RiskEnginePipeline:
     ):
         self.mode = mode.lower()
         self.batch_size = batch_size
-        self.mock_store_dir = os.path.join(os.path.dirname(CURRENT_DIR), "data", "mock_store_2")
+        if self.mode in ["live", "work"]:
+            self.store_dir = LIVE_STORE_DIR
+        else:
+            self.store_dir = os.path.join(os.path.dirname(CURRENT_DIR), "data", "mock_store_2")
+            
         os.makedirs(OUTPUT_DIR, exist_ok=True)
-        self._reader = MockStoreReader(self.mock_store_dir)
+        if os.path.exists(os.path.join(self.store_dir, "index.json")):
+            self._reader = MockStoreReader(self.store_dir)
+        else:
+            self._reader = None
 
         print(f"[+] Initializing RiskEnginePipeline (Mode: {self.mode.upper()})")
-        print(f"[+] Mock Store Directory: {self.mock_store_dir}")
+        print(f"[+] Store Directory: {self.store_dir}")
         print(f"[+] Output Directory: {OUTPUT_DIR}")
 
         self.engine = FinBERTRiskEngine(device=device)
@@ -142,6 +150,7 @@ class RiskEnginePipeline:
                         "url": art.get("url", ""),
                         "source": "newsapi",
                         "title": title,
+                        "ticker": ticker,
                     })
 
         elif source == "gdelt":
@@ -155,6 +164,7 @@ class RiskEnginePipeline:
                         "url": art.get("url", ""),
                         "source": "gdelt",
                         "title": title,
+                        "ticker": ticker,
                     })
 
         elif source == "bigdata":
@@ -170,6 +180,7 @@ class RiskEnginePipeline:
                         "url": f"https://bigdata.com/{res.get('id')}",
                         "source": "bigdata",
                         "title": headline,
+                        "ticker": ticker,
                     })
 
         else:
@@ -183,6 +194,7 @@ class RiskEnginePipeline:
                     "url": itm.get("url", ""),
                     "source": source,
                     "title": itm.get("title", ""),
+                    "ticker": ticker,
                 })
 
         return articles
@@ -192,10 +204,15 @@ class RiskEnginePipeline:
         max_events: Optional[int] = None,
         max_payloads: Optional[int] = None,
         clear_previous_stream: bool = True,
+        status_callback=None,
     ) -> List[Dict[str, Any]]:
         """
         Executes the full risk signal generation pipeline and exports structured results.
         """
+        def update_status(stage: str, progress: int, msg: str):
+            if status_callback:
+                status_callback(stage, progress, msg)
+
         print(f"\n==================================================================")
         print(f"  RUNNING NLP RISK ENGINE [{self.mode.upper()}] PIPELINE")
         print(f"==================================================================\n")
@@ -220,10 +237,12 @@ class RiskEnginePipeline:
             state = load_pipeline_state()
 
         processed_signals: List[Dict[str, Any]] = []
-        event_count = 0
         start_time = time.time()
 
         if self.mode == "demo":
+            update_status("nlp_risk_engine", 20, "Ingesting mock data payloads...")
+            if not self._reader:
+                self._reader = MockStoreReader(self.store_dir)
             start_payload_index = 0 if clear_previous_stream else state.get("current_payload_index", 0)
             total_catalog_payloads = len(self._reader.catalog)
 
@@ -273,9 +292,10 @@ class RiskEnginePipeline:
                 if max_events is not None and len(incoming_queue) >= max_events:
                     break
 
-            print(f"[+] Ingested {len(incoming_queue)} items from {payloads_processed_count} payload file(s) (starting at index {start_payload_index}). Running parallel inference...")
+            print(f"[+] Ingested {len(incoming_queue)} items from {payloads_processed_count} payload file(s). Running inference...")
+            update_status("nlp_risk_engine", 50, f"Analyzing {len(incoming_queue)} events with FinBERT...")
 
-            # Run batch inference for performance
+            # Run batch inference
             for i in range(0, len(incoming_queue), self.batch_size):
                 batch_items = incoming_queue[i : i + self.batch_size]
                 signals = self.engine.analyze_batch(batch_items)
@@ -284,61 +304,76 @@ class RiskEnginePipeline:
                     sig_dict = sig.to_dict()
                     processed_signals.append(sig_dict)
 
-                    # Append to streaming ledger
                     with open(STREAM_LOG_FILE, "a", encoding="utf-8") as f:
                         f.write(json.dumps(sig_dict) + "\n")
 
-                    # Live log
-                    print(
-                        f"[{sig.source.upper():7s}] {sig.ticker:5s} | "
-                        f"Sent: {sig.sentiment_score:+0.2f} ({sig.sentiment_label:8s}) | "
-                        f"EWMA: {sig.ewma_sentiment:+0.2f} | "
-                        f"Event: {sig.event_classification:22s} | "
-                        f"Impact: {sig.impact_score:4.1f}/10"
-                    )
-
-            # Update state with newly processed payload index
             state["current_payload_index"] = start_payload_index + payloads_processed_count
             save_pipeline_state(state)
 
-        elif self.mode == "work":
-            raw_ingestor = RawDataIngestor()
-            print("[*] Ingesting live feeds for Top 20 S&P 100 Companies...")
+        elif self.mode in ["live", "work"]:
+            update_status("fetching_live_data", 10, "Fetching live market news from NewsAPI, GDELT, and BigData...")
+            os.makedirs(LIVE_STORE_DIR, exist_ok=True)
+            raw_ingestor = RawDataIngestor(store_dir=LIVE_STORE_DIR)
 
-            for comp in TOP_20_SP100_TICKERS:
-                print(f"[*] Ingesting: {comp['ticker']} ({comp['name']})")
+            total_tickers = len(TOP_20_SP100_TICKERS)
+            for idx, comp in enumerate(TOP_20_SP100_TICKERS):
+                prog = 10 + int((idx / total_tickers) * 25)
+                update_status("fetching_live_data", prog, f"Fetching live feeds for {comp['ticker']} ({comp['name']})...")
+                print(f"[*] Ingesting live data for {comp['ticker']} ({comp['name']})")
                 raw_ingestor.fetch_newsapi(comp)
                 raw_ingestor.fetch_gdelt(comp)
                 raw_ingestor.fetch_bigdata_stub(comp)
-                time.sleep(1)
 
-            # Replay ingested items
-            reader = MockStoreReader(self.mock_store_dir)
+            # Deduplication phase
+            update_status("deduplicating_data", 40, "Deduplicating incoming articles across sources...")
+            reader = MockStoreReader(LIVE_STORE_DIR)
+            all_extracted = []
+
             for item in reader.stream_events():
                 meta = item["meta"]
                 payload = item["payload"]
-                ticker = meta["ticker"]
-                source = meta["source"]
-
-                comp_info = next(
-                    (c for c in TOP_20_SP100_TICKERS if c["ticker"] == ticker),
-                    {"name": ticker},
-                )
+                ticker = meta.get("ticker", "UNKNOWN")
+                source = meta.get("source", "newsapi")
                 extracted = self.extract_articles_from_payload(source, ticker, payload)
+                all_extracted.extend(extracted)
 
-                for idx, art in enumerate(extracted):
-                    event_count += 1
-                    event_id = f"evt_live_{source}_{ticker}_{event_count:04d}"
+            deduped_articles = deduplicate_articles(all_extracted)
+            print(f"[+] Deduplication complete: {len(all_extracted)} raw articles -> {len(deduped_articles)} unique articles.")
 
-                    sig = self.engine.analyze_text(
-                        text=art["text"],
-                        ticker=ticker,
-                        company_name=comp_info["name"],
-                        source=source,
-                        published_at=art["published_at"],
-                        event_id=event_id,
-                        metadata={"article_url": art["url"]},
-                    )
+            # Save deduplicated articles into live_mode_fetched.json
+            with open(LIVE_FETCHED_FILE, "w", encoding="utf-8") as f:
+                json.dump({
+                    "fetched_at": datetime.now(timezone.utc).isoformat(),
+                    "total_raw_articles": len(all_extracted),
+                    "total_deduped_articles": len(deduped_articles),
+                    "articles": deduped_articles,
+                }, f, indent=2)
+
+            update_status("nlp_risk_engine", 55, f"Running FinBERT Risk Engine on {len(deduped_articles)} deduplicated live articles...")
+
+            incoming_queue = []
+            for idx, art in enumerate(deduped_articles):
+                ticker = art["ticker"]
+                source = art["source"]
+                comp_info = next((c for c in TOP_20_SP100_TICKERS if c["ticker"] == ticker), {"name": ticker})
+                incoming_queue.append({
+                    "event_id": f"evt_live_{source}_{ticker}_{idx+1:04d}",
+                    "text": art["text"],
+                    "ticker": ticker,
+                    "company_name": comp_info["name"],
+                    "source": source,
+                    "published_at": art["published_at"],
+                    "metadata": {
+                        "article_url": art.get("url", ""),
+                        "title": art.get("title", ""),
+                    },
+                })
+
+            for i in range(0, len(incoming_queue), self.batch_size):
+                batch_items = incoming_queue[i : i + self.batch_size]
+                signals = self.engine.analyze_batch(batch_items)
+
+                for sig in signals:
                     sig_dict = sig.to_dict()
                     processed_signals.append(sig_dict)
 
@@ -363,6 +398,7 @@ class RiskEnginePipeline:
         # ----------------------------------------------------
         # Generate Aggregated Summary Report & JSON Output
         # ----------------------------------------------------
+        update_status("rebalancing_portfolio", 80, "Calculating tactical Black-Litterman index rebalancing...")
         summary_report = self._build_summary_report(all_signals, elapsed)
 
         output_payload = {
@@ -389,22 +425,18 @@ class RiskEnginePipeline:
 
         print(f"\n==================================================================")
         print(f"  PROCESSING COMPLETE: {len(processed_signals)} new signals ({len(all_signals)} total) in {elapsed}s")
-        print(f"  1. Latest Risk Signals  -> {STRUCTURED_SIGNALS_FILE}")
-        print(f"  2. Stream Ledger (.jsonl)-> {STREAM_LOG_FILE}")
-        print(f"  3. Risk Summary Report  -> {SUMMARY_REPORT_FILE}")
         print(f"==================================================================\n")
 
         # ----------------------------------------------------
         # Run Rebalancing Engine (Module 2)
         # ----------------------------------------------------
-        print("\n[*] Running Tactical Index Rebalancing (Module 2)...")
         bl_engine = BlackLittermanEngine()
         rebalance_events = bl_engine.rebalance(summary_report["ticker_summaries"])
 
         rebalancing_out_dir = os.path.join(CURRENT_DIR, "output", "rebalancing_outputs")
         bl_engine.save_ledger(rebalance_events, rebalancing_out_dir)
-        print(f"[*] Rebalancing complete. Ledger saved to: {rebalancing_out_dir}\n")
 
+        update_status("complete", 100, f"Pipeline execution completed successfully ({len(processed_signals)} signals processed).")
         return all_signals
 
     def _build_summary_report(

@@ -89,6 +89,70 @@
   flex-wrap: wrap;
 }
 
+/* ── Mode Switcher Segmented Control ───────────────────────── */
+.mode-switcher-container {
+  display: flex;
+  background: #ede9e1;
+  border: 1px solid #d6d0c4;
+  border-radius: 10px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.mode-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #78716c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.mode-tab:hover:not(.active) {
+  color: #1c1917;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.mode-tab.active {
+  background: #ffffff;
+  color: #1c1917;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.mode-tab.active:hover {
+  background: #ffffff;
+}
+
+.mode-tab .tab-icon {
+  font-size: 16px;
+}
+
+.mode-tab.active[onClick*="live"] .tab-icon,
+.mode-tab.active:nth-child(2) .tab-icon {
+  color: #dc2626;
+}
+
+.btn-live-refresh {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #ffffff;
+  border-color: #dc2626;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+}
+
+.btn-live-refresh:hover:not(:disabled) {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+}
+
 /* ── Buttons ─────────────────────────────────────────────────── */
 .btn {
   display: inline-flex;

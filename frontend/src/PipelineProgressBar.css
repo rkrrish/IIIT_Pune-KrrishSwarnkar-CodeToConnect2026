@@ -1,0 +1,223 @@
+.pipeline-progress-container {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.pipeline-running-card {
+  background: #ffffff;
+  border: 1px solid #e5e1d8;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(28, 25, 23, 0.05);
+}
+
+.progress-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.header-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spin-icon {
+  font-size: 20px;
+  color: #2563eb;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.running-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1c1917;
+}
+
+.progress-percentage {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2563eb;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 10px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  transition: width 0.4s ease-in-out;
+  border-radius: 6px;
+}
+
+.progress-message {
+  font-size: 0.85rem;
+  color: #57534e;
+  margin-bottom: 16px;
+}
+
+.pipeline-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.step-item.active {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #1e40af;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.step-item.completed {
+  background: #f0fdf4;
+  border-color: #86efac;
+  color: #166534;
+}
+
+.step-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon-wrapper .material-icons-outlined {
+  font-size: 18px;
+}
+
+/* ── Error Card ────────────────────────────────────────────── */
+
+.pipeline-error-card {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+}
+
+.error-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.error-badge-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #991b1b;
+}
+
+.error-badge-title h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.error-icon {
+  font-size: 24px;
+  color: #dc2626;
+}
+
+.btn-retry {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-retry:hover {
+  background: #b91c1c;
+}
+
+.error-details-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.error-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.field-label {
+  font-weight: 600;
+  color: #7f1d1d;
+  min-width: 110px;
+}
+
+.stage-tag {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.error-text-box {
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #991b1b;
+  font-family: monospace;
+  font-size: 0.82rem;
+  flex: 1;
+  word-break: break-word;
+}
+
+.error-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #991b1b;
+  opacity: 0.9;
+}
+
+.note-icon {
+  font-size: 16px;
+}
