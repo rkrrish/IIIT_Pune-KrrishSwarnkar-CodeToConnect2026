@@ -3,7 +3,7 @@
 **Candidate Name:** Krrish Swarnkar\
 **College Email ID:** 112415109@cse.iiitp.ac.in\
 **College / Campus:** Indian Institute of Information Technology, Pune\
-**Demo Video Link:** https://youtu.be/So_4VRuOlZw \
+**Demo Video Link:** https://youtu.be/LXFkk9zTnVs \
 **Slide Deck Link:** https://docs.google.com/presentation/d/1MNXn83g2X4EZNzPk7pnN4YpO3Rtb_lZi3s5vk1COfYs/edit?usp=sharing
 
 
