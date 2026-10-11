@@ -1,0 +1,70 @@
+# Git & VCS
+.git
+.gitignore
+.github
+
+# Python caches & virtual environments
+__pycache__
+*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+conda_envs/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Secrets and local configurations (do not bake into portable images)
+.env
+src/.env
+*.env.local
+
+# IDE & Editor folders
+.vscode/
+.idea/
+.gemini/
+*.swp
+*.swo
+
+# Node & Frontend build artifacts
+node_modules/
+frontend/node_modules/
+frontend/.oxlintrc.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Documentation & scratch files
+docs/
+*.log
+
+# Legacy exploratory data (saves >4GB of context transfer)
+data/FinancialPhraseBank/
+data/all-data.csv
+data/mock_store/
+
+# Legacy experimental model weights (production model uses deberta_event_classifier/best_model.pt)
+src/output/bert_results/
+src/output/finbert_event_classifier/
+src/output/finbert_event_classifier_claude/
+src/output/finbert_event_classifier_official_split/
+src/output/finbert_event_classifier_v2/
+src/output/finbert_multitask_weights/
+# Deduplicate: best_model.pt is identical to deberta_event_classifier.pt
+src/output/deberta_event_classifier/deberta_event_classifier.pt

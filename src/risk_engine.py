@@ -340,7 +340,10 @@ class FinBERTRiskEngine:
         )
 
         checkpoint_file = self._find_checkpoint_file(deberta_dir)
-        self._load_deberta_weights(checkpoint_file)
+        if checkpoint_file:
+            self._load_deberta_weights(checkpoint_file)
+        else:
+            print(f"[!] Notice: Fine-tuned checkpoint (.pt) not found in '{deberta_dir}'. Using initialized DeBERTa classification weights (lightweight mode).")
         self.deberta_model = self.deberta_model.to(self.device)
         self.deberta_model.eval()
 
@@ -367,7 +370,7 @@ class FinBERTRiskEngine:
         return "src/output/deberta_event_classifier"
 
     @staticmethod
-    def _find_checkpoint_file(directory: str) -> str:
+    def _find_checkpoint_file(directory: str) -> Optional[str]:
         if os.path.isfile(directory):
             return directory
         candidates = ["best_model.pt", "deberta_event_classifier.pt"]
@@ -646,4 +649,4 @@ class FinBERTRiskEngine:
             )
             results.append(signal)
 
-        return results
+        return results

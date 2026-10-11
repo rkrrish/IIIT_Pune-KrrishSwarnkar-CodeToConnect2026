@@ -1,0 +1,109 @@
+# ==============================================================================
+# S&P 100 NLP Risk Engine — Multi-Container Docker Compose
+# Orchestrates Backend (FastAPI + PyTorch) and Frontend (Nginx + React)
+# ==============================================================================
+
+services:
+  # ----------------------------------------------------------------------------
+  # MODULE 1: NLP Risk Engine Backend (FastAPI, FinBERT, DeBERTa, Rebalancer)
+  # ----------------------------------------------------------------------------
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+      args:
+        # Default: CPU PyTorch for universal compatibility.
+        # For NVIDIA GPU: use https://download.pytorch.org/whl/cu121
+        TORCH_INDEX: https://download.pytorch.org/whl/cpu
+    container_name: snp-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - NEWSAPI_KEY=${NEWSAPI_KEY:-}
+      - BIGDATA_KEY=${BIGDATA_KEY:-}
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # Named volumes ensure generated signals, ledger, and stress results persist
+      - snp-risk-outputs:/app/src/output/risk_engine_outputs
+      - snp-rebal-outputs:/app/src/output/rebalancing_outputs
+      - snp-stress-outputs:/app/src/output/stress_test_outputs
+      - snp-live-data:/app/data/live_mode_fetched
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 25s
+    networks:
+      - snp-network
+
+  # ----------------------------------------------------------------------------
+  # MODULE 2: Interactive React Dashboard (Vite SPA served by Nginx)
+  # ----------------------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: snp-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"   # Standard Vite port for instant browser access (http://localhost:5173)
+      - "80:80"     # Standard HTTP port (http://localhost)
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/healthz"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    networks:
+      - snp-network
+
+  # ----------------------------------------------------------------------------
+  # MODULE 3: CLI Utility Runner (Optional profile for batch jobs)
+  # Usage:
+  #   docker compose run --rm pipeline-cli python src/pipeline.py --mode demo
+  #   docker compose run --rm pipeline-cli python src/module_b_stress_test.py --force
+  # ----------------------------------------------------------------------------
+  pipeline-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: snp-pipeline-cli
+    profiles:
+      - cli
+    environment:
+      - PYTHONUNBUFFERED=1
+      - NEWSAPI_KEY=${NEWSAPI_KEY:-}
+      - BIGDATA_KEY=${BIGDATA_KEY:-}
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - snp-risk-outputs:/app/src/output/risk_engine_outputs
+      - snp-rebal-outputs:/app/src/output/rebalancing_outputs
+      - snp-stress-outputs:/app/src/output/stress_test_outputs
+      - snp-live-data:/app/data/live_mode_fetched
+    networks:
+      - snp-network
+
+volumes:
+  snp-risk-outputs:
+    name: snp-risk-outputs
+  snp-rebal-outputs:
+    name: snp-rebal-outputs
+  snp-stress-outputs:
+    name: snp-stress-outputs
+  snp-live-data:
+    name: snp-live-data
+
+networks:
+  snp-network:
+    name: snp-network
+    driver: bridge
