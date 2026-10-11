@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "totalResults": 2,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "Coinpaper.com"
+      },
+      "author": "Ethan Mercer",
+      "title": "Humana Stock Surges 14% as Medicare Ratings Hit CVS Health",
+      "description": "Humana stock jumps 14% as 95% of Medicare Advantage members move into high-rated plans, while CVS's Aetna faces declining ratings.",
+      "url": "https://coinpaper.com/37064/humana-stock-surges-14-as-medicare-ratings-hit-cvs-health",
+      "urlToImage": "https://imagecodex.com/v1/coinpaper/media/8af79374-b18f-4441-bdcd-f0091b8c44e0.jpg",
+      "publishedAt": "2026-10-09T17:40:44Z",
+      "content": "Humana stock surged approximately 14% in Friday's premarket trading after newly released Medicare Advantage quality ratings showed a dramatic improvement for the insurer, while rival CVS Health faced\u2026 [+1854 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "247wallst.com",
+      "title": "Humana Soars 16% on Improved Medicare Advantage Star Ratings; CVS Slides 3%, UnitedHealth Holds Steady",
+      "description": "The post Humana Soars 16% on Improved Medicare Advantage Star Ratings; CVS Slides 3%, UnitedHealth Holds Steady appeared first on 24/7 Wall St..\nBetter Medicare quality scores are reordering the managed care rankings, and shares of Humana (NYSE:HUM) are setti\u2026",
+      "url": "https://biztoc.com/x/1a270554da16d958",
+      "urlToImage": "https://biztoc.com/cdn/1a270554da16d958_s.webp",
+      "publishedAt": "2026-10-09T12:54:59Z",
+      "content": "The post Humana Soars 16% on Improved Medicare Advantage Star Ratings; CVS Slides 3%, UnitedHealth Holds Steady appeared first on 24/7 Wall St..Better Medicare quality scores are reordering the manag\u2026 [+146 chars]"
+    }
+  ]
+}

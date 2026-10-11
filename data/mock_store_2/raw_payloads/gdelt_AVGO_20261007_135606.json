@@ -1,0 +1,54 @@
+{
+  "articles": [
+    {
+      "url": "https://www.ibtimes.com.au/japan-nikkei-closes-above-70000-1876319",
+      "url_mobile": "",
+      "title": "Nikkei Tops 70 , 000 at Close , Hits Three - Month High as Wall Street Rally and Cheaper Oil Lift Tokyo Stocks",
+      "seendate": "20261006T083000Z",
+      "socialimage": "https://d.ibtimes.com.au/en/full/1895331/10-nikkei-225-stocks-analysts-are-watching-2026.jpg",
+      "domain": "ibtimes.com.au",
+      "language": "English",
+      "sourcecountry": "Australia"
+    },
+    {
+      "url": "https://www.wral.com/news/ap/e8285-asian-shares-are-mixed-after-wall-street-gains-oil-price-steadies/",
+      "url_mobile": "",
+      "title": "Asian shares mostly advance after Wall Street gains and oil prices fall",
+      "seendate": "20261006T083000Z",
+      "socialimage": "https://images.wral.com/f201766d-803d-5045-9c2a-20814f992a55",
+      "domain": "wral.com",
+      "language": "English",
+      "sourcecountry": "United States"
+    },
+    {
+      "url": "https://www.union-bulletin.com/news/world/asian-shares-mostly-advance-after-wall-street-gains-and-oil-prices-fall/article_3e2a9d1a-d521-5045-900a-48c3a6688b98.html",
+      "url_mobile": "",
+      "title": "Asian shares mostly advance after Wall Street gains and oil prices fall",
+      "seendate": "20261006T083000Z",
+      "socialimage": "https://bloximages.newyork1.vip.townnews.com/union-bulletin.com/content/tncms/assets/v3/editorial/3/c2/3c297312-52f5-5d00-a818-8393bd355992/6ac48f8de9d69.image.jpg?crop=1763%2C926%2C0%2C124",
+      "domain": "union-bulletin.com",
+      "language": "English",
+      "sourcecountry": "United States"
+    },
+    {
+      "url": "https://www.fool.com/investing/2026/10/06/anthropic-is-aiming-for-the-biggest-ipo-ever-here-s-the-chip-stock-to-buy-before-it-lists/?source=iedfolrf0000001",
+      "url_mobile": "",
+      "title": "Anthropic Is Aiming for the Biggest IPO Ever -- Here the Chip Stock to Buy Before It Lists",
+      "seendate": "20261006T083000Z",
+      "socialimage": "https://cdn.content.foolcdn.com/images/1umn9qeh/production/cf184378e1fdb65090e99ad4537d019dd5601998-3840x2160.jpg?&q=75&fit=max&auto=format",
+      "domain": "fool.com",
+      "language": "English",
+      "sourcecountry": "United States"
+    },
+    {
+      "url": "https://santamariatimes.com/ap/business/asian-shares-mostly-advance-after-wall-street-gains-and-oil-prices-fall/article_519ad095-a5c6-5e50-a178-aa4e4e58865b.html",
+      "url_mobile": "",
+      "title": "Asian shares mostly advance after Wall Street gains and oil prices fall",
+      "seendate": "20261006T083000Z",
+      "socialimage": "https://bloximages.chicago2.vip.townnews.com/santamariatimes.com/content/tncms/custom/image/b9c888ca-59a2-11eb-a31f-0b4d74fa96dc.jpg",
+      "domain": "santamariatimes.com",
+      "language": "English",
+      "sourcecountry": "United States"
+    }
+  ]
+}

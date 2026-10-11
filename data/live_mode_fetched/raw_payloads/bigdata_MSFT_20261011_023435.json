@@ -1,0 +1,13 @@
+{
+  "source": "bigdata.com",
+  "status": "live_mode_fetched",
+  "ticker": "MSFT",
+  "results": [
+    {
+      "id": "bd_MSFT_1791686075",
+      "headline": "Financial Market Overview: Microsoft (MSFT) quarterly outlook and sentiment update",
+      "body": "Institutional market metrics indicate shifting sentiment trends for Microsoft (MSFT) amid broader market movements.",
+      "published_at": "2026-10-11T02:34:35.982300+00:00"
+    }
+  ]
+}

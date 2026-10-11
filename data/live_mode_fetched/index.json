@@ -1,0 +1,1058 @@
+[
+  {
+    "file_id": "newsapi_NVDA_20261011_014323.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_NVDA_20261011_014323.json",
+    "source": "newsapi",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T01:43:23.138758+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_NVDA_20261011_014423.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_NVDA_20261011_014423.json",
+    "source": "bigdata",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T01:44:23.044336+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AAPL_20261011_014423.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AAPL_20261011_014423.json",
+    "source": "newsapi",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T01:44:23.700941+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_AAPL_20261011_014532.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AAPL_20261011_014532.json",
+    "source": "bigdata",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T01:45:32.347795+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_MSFT_20261011_014532.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_MSFT_20261011_014532.json",
+    "source": "newsapi",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T01:45:32.773648+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_MSFT_20261011_014634.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_MSFT_20261011_014634.json",
+    "source": "bigdata",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T01:46:34.522955+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AMZN_20261011_014635.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AMZN_20261011_014635.json",
+    "source": "newsapi",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T01:46:35.018353+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_AMZN_20261011_014738.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AMZN_20261011_014738.json",
+    "source": "bigdata",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T01:47:38.509901+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_GOOGL_20261011_014739.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_GOOGL_20261011_014739.json",
+    "source": "newsapi",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T01:47:39.357653+00:00",
+    "record_count": 41
+  },
+  {
+    "file_id": "bigdata_GOOGL_20261011_014842.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_GOOGL_20261011_014842.json",
+    "source": "bigdata",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T01:48:42.562628+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_META_20261011_014843.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_META_20261011_014843.json",
+    "source": "newsapi",
+    "ticker": "META",
+    "ingested_at": "2026-10-11T01:48:43.236130+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_META_20261011_014939.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_META_20261011_014939.json",
+    "source": "bigdata",
+    "ticker": "META",
+    "ingested_at": "2026-10-11T01:49:39.405991+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_TSLA_20261011_014939.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_TSLA_20261011_014939.json",
+    "source": "newsapi",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T01:49:39.844413+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "gdelt_TSLA_20261011_015032.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_TSLA_20261011_015032.json",
+    "source": "gdelt",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T01:50:32.821719+00:00",
+    "record_count": 2
+  },
+  {
+    "file_id": "bigdata_TSLA_20261011_015033.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_TSLA_20261011_015033.json",
+    "source": "bigdata",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T01:50:33.719485+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_BRK.B_20261011_015034.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_BRK.B_20261011_015034.json",
+    "source": "newsapi",
+    "ticker": "BRK.B",
+    "ingested_at": "2026-10-11T01:50:34.141447+00:00",
+    "record_count": 7
+  },
+  {
+    "file_id": "bigdata_BRK.B_20261011_015135.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_BRK.B_20261011_015135.json",
+    "source": "bigdata",
+    "ticker": "BRK.B",
+    "ingested_at": "2026-10-11T01:51:35.678063+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_LLY_20261011_015136.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_LLY_20261011_015136.json",
+    "source": "newsapi",
+    "ticker": "LLY",
+    "ingested_at": "2026-10-11T01:51:36.299909+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_LLY_20261011_015236.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_LLY_20261011_015236.json",
+    "source": "bigdata",
+    "ticker": "LLY",
+    "ingested_at": "2026-10-11T01:52:36.176390+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_JPM_20261011_015236.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_JPM_20261011_015236.json",
+    "source": "newsapi",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T01:52:36.614374+00:00",
+    "record_count": 44
+  },
+  {
+    "file_id": "gdelt_JPM_20261011_015326.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_JPM_20261011_015326.json",
+    "source": "gdelt",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T01:53:26.151244+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_JPM_20261011_015326.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_JPM_20261011_015326.json",
+    "source": "bigdata",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T01:53:26.960160+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_WMT_20261011_015327.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_WMT_20261011_015327.json",
+    "source": "newsapi",
+    "ticker": "WMT",
+    "ingested_at": "2026-10-11T01:53:27.445216+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_WMT_20261011_015424.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_WMT_20261011_015424.json",
+    "source": "bigdata",
+    "ticker": "WMT",
+    "ingested_at": "2026-10-11T01:54:25.001578+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_V_20261011_015425.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_V_20261011_015425.json",
+    "source": "newsapi",
+    "ticker": "V",
+    "ingested_at": "2026-10-11T01:54:25.640265+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_V_20261011_015511.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_V_20261011_015511.json",
+    "source": "bigdata",
+    "ticker": "V",
+    "ingested_at": "2026-10-11T01:55:11.609740+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_XOM_20261011_015512.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_XOM_20261011_015512.json",
+    "source": "newsapi",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-11T01:55:12.050439+00:00",
+    "record_count": 6
+  },
+  {
+    "file_id": "bigdata_XOM_20261011_015617.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_XOM_20261011_015617.json",
+    "source": "bigdata",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-11T01:56:17.492649+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_JNJ_20261011_015617.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_JNJ_20261011_015617.json",
+    "source": "newsapi",
+    "ticker": "JNJ",
+    "ingested_at": "2026-10-11T01:56:17.951702+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_JNJ_20261011_015714.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_JNJ_20261011_015714.json",
+    "source": "bigdata",
+    "ticker": "JNJ",
+    "ingested_at": "2026-10-11T01:57:14.475078+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_COST_20261011_015715.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_COST_20261011_015715.json",
+    "source": "newsapi",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T01:57:15.308399+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_COST_20261011_015809.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_COST_20261011_015809.json",
+    "source": "bigdata",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T01:58:09.517856+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_MA_20261011_015809.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_MA_20261011_015809.json",
+    "source": "newsapi",
+    "ticker": "MA",
+    "ingested_at": "2026-10-11T01:58:09.983111+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_MA_20261011_015823.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_MA_20261011_015823.json",
+    "source": "bigdata",
+    "ticker": "MA",
+    "ingested_at": "2026-10-11T01:58:23.560864+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_PG_20261011_015823.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_PG_20261011_015823.json",
+    "source": "newsapi",
+    "ticker": "PG",
+    "ingested_at": "2026-10-11T01:58:23.988498+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_PG_20261011_015836.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_PG_20261011_015836.json",
+    "source": "bigdata",
+    "ticker": "PG",
+    "ingested_at": "2026-10-11T01:58:37.001453+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_UNH_20261011_015837.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_UNH_20261011_015837.json",
+    "source": "newsapi",
+    "ticker": "UNH",
+    "ingested_at": "2026-10-11T01:58:37.411414+00:00",
+    "record_count": 2
+  },
+  {
+    "file_id": "bigdata_UNH_20261011_015935.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_UNH_20261011_015935.json",
+    "source": "bigdata",
+    "ticker": "UNH",
+    "ingested_at": "2026-10-11T01:59:35.481535+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_HD_20261011_015935.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_HD_20261011_015935.json",
+    "source": "newsapi",
+    "ticker": "HD",
+    "ingested_at": "2026-10-11T01:59:35.919495+00:00",
+    "record_count": 48
+  },
+  {
+    "file_id": "bigdata_HD_20261011_020038.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_HD_20261011_020038.json",
+    "source": "bigdata",
+    "ticker": "HD",
+    "ingested_at": "2026-10-11T02:00:38.324769+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AVGO_20261011_020038.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AVGO_20261011_020038.json",
+    "source": "newsapi",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-11T02:00:38.713238+00:00",
+    "record_count": 17
+  },
+  {
+    "file_id": "bigdata_AVGO_20261011_020143.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AVGO_20261011_020143.json",
+    "source": "bigdata",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-11T02:01:43.612240+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_NVDA_20261011_023153.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_NVDA_20261011_023153.json",
+    "source": "newsapi",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T02:31:53.992608+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_NVDA_20261011_023256.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_NVDA_20261011_023256.json",
+    "source": "bigdata",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T02:32:56.056321+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AAPL_20261011_023256.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AAPL_20261011_023256.json",
+    "source": "newsapi",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T02:32:56.520544+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_AAPL_20261011_023402.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AAPL_20261011_023402.json",
+    "source": "bigdata",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T02:34:02.156561+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_MSFT_20261011_023402.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_MSFT_20261011_023402.json",
+    "source": "newsapi",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T02:34:02.641503+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "gdelt_MSFT_20261011_023435.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_MSFT_20261011_023435.json",
+    "source": "gdelt",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T02:34:35.108750+00:00",
+    "record_count": 12
+  },
+  {
+    "file_id": "bigdata_MSFT_20261011_023435.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_MSFT_20261011_023435.json",
+    "source": "bigdata",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T02:34:35.982300+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AMZN_20261011_023436.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AMZN_20261011_023436.json",
+    "source": "newsapi",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T02:34:36.415044+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "gdelt_AMZN_20261011_023506.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_AMZN_20261011_023506.json",
+    "source": "gdelt",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T02:35:06.574528+00:00",
+    "record_count": 5
+  },
+  {
+    "file_id": "bigdata_AMZN_20261011_023507.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AMZN_20261011_023507.json",
+    "source": "bigdata",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T02:35:07.506037+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_GOOGL_20261011_023508.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_GOOGL_20261011_023508.json",
+    "source": "newsapi",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T02:35:08.032535+00:00",
+    "record_count": 41
+  },
+  {
+    "file_id": "bigdata_GOOGL_20261011_023611.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_GOOGL_20261011_023611.json",
+    "source": "bigdata",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T02:36:11.493816+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_META_20261011_023612.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_META_20261011_023612.json",
+    "source": "newsapi",
+    "ticker": "META",
+    "ingested_at": "2026-10-11T02:36:12.346729+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_META_20261011_023713.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_META_20261011_023713.json",
+    "source": "bigdata",
+    "ticker": "META",
+    "ingested_at": "2026-10-11T02:37:13.983744+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_TSLA_20261011_023714.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_TSLA_20261011_023714.json",
+    "source": "newsapi",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T02:37:14.473342+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "gdelt_TSLA_20261011_023732.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_TSLA_20261011_023732.json",
+    "source": "gdelt",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T02:37:32.976831+00:00",
+    "record_count": 2
+  },
+  {
+    "file_id": "bigdata_TSLA_20261011_023733.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_TSLA_20261011_023733.json",
+    "source": "bigdata",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T02:37:33.742178+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_BRK.B_20261011_023734.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_BRK.B_20261011_023734.json",
+    "source": "newsapi",
+    "ticker": "BRK.B",
+    "ingested_at": "2026-10-11T02:37:34.141760+00:00",
+    "record_count": 8
+  },
+  {
+    "file_id": "bigdata_BRK.B_20261011_023819.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_BRK.B_20261011_023819.json",
+    "source": "bigdata",
+    "ticker": "BRK.B",
+    "ingested_at": "2026-10-11T02:38:19.732465+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_LLY_20261011_023820.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_LLY_20261011_023820.json",
+    "source": "newsapi",
+    "ticker": "LLY",
+    "ingested_at": "2026-10-11T02:38:20.207684+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_LLY_20261011_023833.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_LLY_20261011_023833.json",
+    "source": "bigdata",
+    "ticker": "LLY",
+    "ingested_at": "2026-10-11T02:38:33.162009+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_JPM_20261011_023833.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_JPM_20261011_023833.json",
+    "source": "newsapi",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T02:38:33.594610+00:00",
+    "record_count": 44
+  },
+  {
+    "file_id": "gdelt_JPM_20261011_023922.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_JPM_20261011_023922.json",
+    "source": "gdelt",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T02:39:22.725726+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_JPM_20261011_023923.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_JPM_20261011_023923.json",
+    "source": "bigdata",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T02:39:23.648186+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_WMT_20261011_023924.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_WMT_20261011_023924.json",
+    "source": "newsapi",
+    "ticker": "WMT",
+    "ingested_at": "2026-10-11T02:39:24.300583+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_WMT_20261011_024021.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_WMT_20261011_024021.json",
+    "source": "bigdata",
+    "ticker": "WMT",
+    "ingested_at": "2026-10-11T02:40:21.864811+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_V_20261011_024022.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_V_20261011_024022.json",
+    "source": "newsapi",
+    "ticker": "V",
+    "ingested_at": "2026-10-11T02:40:22.336290+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_V_20261011_024125.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_V_20261011_024125.json",
+    "source": "bigdata",
+    "ticker": "V",
+    "ingested_at": "2026-10-11T02:41:25.495554+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_XOM_20261011_024126.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_XOM_20261011_024126.json",
+    "source": "newsapi",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-11T02:41:26.488652+00:00",
+    "record_count": 6
+  },
+  {
+    "file_id": "gdelt_XOM_20261011_024139.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_XOM_20261011_024139.json",
+    "source": "gdelt",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-11T02:41:39.178586+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_XOM_20261011_024140.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_XOM_20261011_024140.json",
+    "source": "bigdata",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-11T02:41:40.030924+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_JNJ_20261011_024140.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_JNJ_20261011_024140.json",
+    "source": "newsapi",
+    "ticker": "JNJ",
+    "ingested_at": "2026-10-11T02:41:40.552876+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_JNJ_20261011_024206.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_JNJ_20261011_024206.json",
+    "source": "bigdata",
+    "ticker": "JNJ",
+    "ingested_at": "2026-10-11T02:42:06.297826+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_COST_20261011_024206.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_COST_20261011_024206.json",
+    "source": "newsapi",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T02:42:06.996264+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "gdelt_COST_20261011_024234.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_COST_20261011_024234.json",
+    "source": "gdelt",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T02:42:34.558627+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_COST_20261011_024235.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_COST_20261011_024235.json",
+    "source": "bigdata",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T02:42:35.521881+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_MA_20261011_024235.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_MA_20261011_024235.json",
+    "source": "newsapi",
+    "ticker": "MA",
+    "ingested_at": "2026-10-11T02:42:35.963450+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_MA_20261011_024335.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_MA_20261011_024335.json",
+    "source": "bigdata",
+    "ticker": "MA",
+    "ingested_at": "2026-10-11T02:43:35.270392+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_PG_20261011_024335.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_PG_20261011_024335.json",
+    "source": "newsapi",
+    "ticker": "PG",
+    "ingested_at": "2026-10-11T02:43:35.722090+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_PG_20261011_024348.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_PG_20261011_024348.json",
+    "source": "bigdata",
+    "ticker": "PG",
+    "ingested_at": "2026-10-11T02:43:48.350863+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_UNH_20261011_024348.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_UNH_20261011_024348.json",
+    "source": "newsapi",
+    "ticker": "UNH",
+    "ingested_at": "2026-10-11T02:43:48.728551+00:00",
+    "record_count": 2
+  },
+  {
+    "file_id": "bigdata_UNH_20261011_024435.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_UNH_20261011_024435.json",
+    "source": "bigdata",
+    "ticker": "UNH",
+    "ingested_at": "2026-10-11T02:44:35.589336+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_HD_20261011_024436.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_HD_20261011_024436.json",
+    "source": "newsapi",
+    "ticker": "HD",
+    "ingested_at": "2026-10-11T02:44:36.154660+00:00",
+    "record_count": 48
+  },
+  {
+    "file_id": "bigdata_HD_20261011_024536.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_HD_20261011_024536.json",
+    "source": "bigdata",
+    "ticker": "HD",
+    "ingested_at": "2026-10-11T02:45:36.535095+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AVGO_20261011_024536.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AVGO_20261011_024536.json",
+    "source": "newsapi",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-11T02:45:36.943802+00:00",
+    "record_count": 17
+  },
+  {
+    "file_id": "bigdata_AVGO_20261011_024640.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AVGO_20261011_024640.json",
+    "source": "bigdata",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-11T02:46:40.012465+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_NVDA_20261011_030703.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_NVDA_20261011_030703.json",
+    "source": "newsapi",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T03:07:03.016735+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_NVDA_20261011_044435.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_NVDA_20261011_044435.json",
+    "source": "newsapi",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T04:44:35.120116+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "gdelt_NVDA_20261011_044524.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_NVDA_20261011_044524.json",
+    "source": "gdelt",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T04:45:24.969427+00:00",
+    "record_count": 4
+  },
+  {
+    "file_id": "bigdata_NVDA_20261011_044525.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_NVDA_20261011_044525.json",
+    "source": "bigdata",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-11T04:45:25.892207+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AAPL_20261011_044526.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AAPL_20261011_044526.json",
+    "source": "newsapi",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T04:45:26.279673+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_AAPL_20261011_044627.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AAPL_20261011_044627.json",
+    "source": "bigdata",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-11T04:46:27.979180+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_MSFT_20261011_044628.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_MSFT_20261011_044628.json",
+    "source": "newsapi",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T04:46:28.432718+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_MSFT_20261011_044731.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_MSFT_20261011_044731.json",
+    "source": "bigdata",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-11T04:47:31.524084+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AMZN_20261011_044731.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AMZN_20261011_044731.json",
+    "source": "newsapi",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T04:47:31.971957+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_AMZN_20261011_044840.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AMZN_20261011_044840.json",
+    "source": "bigdata",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-11T04:48:40.015750+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_GOOGL_20261011_044840.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_GOOGL_20261011_044840.json",
+    "source": "newsapi",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T04:48:40.403903+00:00",
+    "record_count": 43
+  },
+  {
+    "file_id": "bigdata_GOOGL_20261011_044935.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_GOOGL_20261011_044935.json",
+    "source": "bigdata",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-11T04:49:35.695092+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_META_20261011_044936.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_META_20261011_044936.json",
+    "source": "newsapi",
+    "ticker": "META",
+    "ingested_at": "2026-10-11T04:49:36.214218+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_META_20261011_045040.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_META_20261011_045040.json",
+    "source": "bigdata",
+    "ticker": "META",
+    "ingested_at": "2026-10-11T04:50:40.152558+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_TSLA_20261011_045040.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_TSLA_20261011_045040.json",
+    "source": "newsapi",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T04:50:40.568492+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "gdelt_TSLA_20261011_045132.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_TSLA_20261011_045132.json",
+    "source": "gdelt",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T04:51:32.673697+00:00",
+    "record_count": 2
+  },
+  {
+    "file_id": "bigdata_TSLA_20261011_045133.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_TSLA_20261011_045133.json",
+    "source": "bigdata",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-11T04:51:33.600220+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_BRK.B_20261011_045134.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_BRK.B_20261011_045134.json",
+    "source": "newsapi",
+    "ticker": "BRK.B",
+    "ingested_at": "2026-10-11T04:51:34.068002+00:00",
+    "record_count": 8
+  },
+  {
+    "file_id": "bigdata_BRK.B_20261011_045149.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_BRK.B_20261011_045149.json",
+    "source": "bigdata",
+    "ticker": "BRK.B",
+    "ingested_at": "2026-10-11T04:51:49.685689+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_LLY_20261011_045150.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_LLY_20261011_045150.json",
+    "source": "newsapi",
+    "ticker": "LLY",
+    "ingested_at": "2026-10-11T04:51:50.144251+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_LLY_20261011_045254.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_LLY_20261011_045254.json",
+    "source": "bigdata",
+    "ticker": "LLY",
+    "ingested_at": "2026-10-11T04:52:54.564034+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_JPM_20261011_045254.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_JPM_20261011_045254.json",
+    "source": "newsapi",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T04:52:54.983681+00:00",
+    "record_count": 45
+  },
+  {
+    "file_id": "bigdata_JPM_20261011_045357.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_JPM_20261011_045357.json",
+    "source": "bigdata",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-11T04:53:57.667644+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_WMT_20261011_045358.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_WMT_20261011_045358.json",
+    "source": "newsapi",
+    "ticker": "WMT",
+    "ingested_at": "2026-10-11T04:53:58.120806+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_WMT_20261011_045411.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_WMT_20261011_045411.json",
+    "source": "bigdata",
+    "ticker": "WMT",
+    "ingested_at": "2026-10-11T04:54:11.755555+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_V_20261011_045412.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_V_20261011_045412.json",
+    "source": "newsapi",
+    "ticker": "V",
+    "ingested_at": "2026-10-11T04:54:12.193730+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_V_20261011_045424.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_V_20261011_045424.json",
+    "source": "bigdata",
+    "ticker": "V",
+    "ingested_at": "2026-10-11T04:54:24.898999+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_XOM_20261011_045425.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_XOM_20261011_045425.json",
+    "source": "newsapi",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-11T04:54:25.383980+00:00",
+    "record_count": 6
+  },
+  {
+    "file_id": "bigdata_XOM_20261011_045532.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_XOM_20261011_045532.json",
+    "source": "bigdata",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-11T04:55:32.755132+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_JNJ_20261011_045533.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_JNJ_20261011_045533.json",
+    "source": "newsapi",
+    "ticker": "JNJ",
+    "ingested_at": "2026-10-11T04:55:33.234002+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "bigdata_JNJ_20261011_045548.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_JNJ_20261011_045548.json",
+    "source": "bigdata",
+    "ticker": "JNJ",
+    "ingested_at": "2026-10-11T04:55:48.323493+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_COST_20261011_045549.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_COST_20261011_045549.json",
+    "source": "newsapi",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T04:55:49.009250+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "gdelt_COST_20261011_045620.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\gdelt_COST_20261011_045620.json",
+    "source": "gdelt",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T04:56:20.920357+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_COST_20261011_045621.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_COST_20261011_045621.json",
+    "source": "bigdata",
+    "ticker": "COST",
+    "ingested_at": "2026-10-11T04:56:21.727677+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_MA_20261011_045622.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_MA_20261011_045622.json",
+    "source": "newsapi",
+    "ticker": "MA",
+    "ingested_at": "2026-10-11T04:56:22.479437+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_MA_20261011_045720.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_MA_20261011_045720.json",
+    "source": "bigdata",
+    "ticker": "MA",
+    "ingested_at": "2026-10-11T04:57:20.909279+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_PG_20261011_045721.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_PG_20261011_045721.json",
+    "source": "newsapi",
+    "ticker": "PG",
+    "ingested_at": "2026-10-11T04:57:21.252136+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "bigdata_PG_20261011_045750.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_PG_20261011_045750.json",
+    "source": "bigdata",
+    "ticker": "PG",
+    "ingested_at": "2026-10-11T04:57:50.803835+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_UNH_20261011_045751.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_UNH_20261011_045751.json",
+    "source": "newsapi",
+    "ticker": "UNH",
+    "ingested_at": "2026-10-11T04:57:51.243415+00:00",
+    "record_count": 4
+  },
+  {
+    "file_id": "bigdata_UNH_20261011_045815.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_UNH_20261011_045815.json",
+    "source": "bigdata",
+    "ticker": "UNH",
+    "ingested_at": "2026-10-11T04:58:15.006166+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_HD_20261011_045815.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_HD_20261011_045815.json",
+    "source": "newsapi",
+    "ticker": "HD",
+    "ingested_at": "2026-10-11T04:58:15.454144+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "bigdata_HD_20261011_045842.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_HD_20261011_045842.json",
+    "source": "bigdata",
+    "ticker": "HD",
+    "ingested_at": "2026-10-11T04:58:42.822487+00:00",
+    "record_count": 1
+  },
+  {
+    "file_id": "newsapi_AVGO_20261011_045843.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\newsapi_AVGO_20261011_045843.json",
+    "source": "newsapi",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-11T04:58:43.179085+00:00",
+    "record_count": 17
+  },
+  {
+    "file_id": "bigdata_AVGO_20261011_045907.json",
+    "filepath": "D:\\Dev\\projects\\python\\snp\\data\\live_mode_fetched\\raw_payloads\\bigdata_AVGO_20261011_045907.json",
+    "source": "bigdata",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-11T04:59:07.439866+00:00",
+    "record_count": 1
+  }
+]

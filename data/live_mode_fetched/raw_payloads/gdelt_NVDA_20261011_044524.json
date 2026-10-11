@@ -1,0 +1,44 @@
+{
+  "articles": [
+    {
+      "url": "http://www.argentinastar.com/news/279358260/microsoft-nvidia-push-ai-agents-onto-personal-computers",
+      "url_mobile": "",
+      "title": "Microsoft , Nvidia push AI agents onto personal computers",
+      "seendate": "20261010T064500Z",
+      "socialimage": "https://chitra-api.kreatio.com/api/v1/wps/93282c7/8869c0d7-c236-4f8c-9216-098fcbdbbc0c/1/Microsoft-4-600x315.jpg",
+      "domain": "argentinastar.com",
+      "language": "English",
+      "sourcecountry": "Argentina"
+    },
+    {
+      "url": "http://www.bangladeshsun.com/news/279358260/microsoft-nvidia-push-ai-agents-onto-personal-computers",
+      "url_mobile": "",
+      "title": "Microsoft , Nvidia push AI agents onto personal computers",
+      "seendate": "20261010T064500Z",
+      "socialimage": "https://chitra-api.kreatio.com/api/v1/wps/93282c7/8869c0d7-c236-4f8c-9216-098fcbdbbc0c/1/Microsoft-4-600x315.jpg",
+      "domain": "bangladeshsun.com",
+      "language": "English",
+      "sourcecountry": "Bangladesh"
+    },
+    {
+      "url": "http://www.pakistantelegraph.com/news/279358260/microsoft-nvidia-push-ai-agents-onto-personal-computers",
+      "url_mobile": "",
+      "title": "Microsoft , Nvidia push AI agents onto personal computers",
+      "seendate": "20261010T064500Z",
+      "socialimage": "https://chitra-api.kreatio.com/api/v1/wps/93282c7/8869c0d7-c236-4f8c-9216-098fcbdbbc0c/1/Microsoft-4-600x315.jpg",
+      "domain": "pakistantelegraph.com",
+      "language": "English",
+      "sourcecountry": "Pakistan"
+    },
+    {
+      "url": "https://www.asiaone.com/world/super-micro-contractor-pleads-guilty-scheme-divert-ai-servers-nvidia-chips-china",
+      "url_mobile": "",
+      "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
+      "seendate": "20261010T064500Z",
+      "socialimage": "https://www.asiaone.com/sites/default/files/styles/article_top_image/public/original_images/Oct2026/101026_nvidia_reuters.jpg?itok=MVJWfD2V",
+      "domain": "asiaone.com",
+      "language": "English",
+      "sourcecountry": "Singapore"
+    }
+  ]
+}

@@ -1,0 +1,643 @@
+{
+  "status": "ok",
+  "totalResults": 973,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "New Zealand Herald"
+      },
+      "author": "Christopher Reive , Samuel Sherry, Alex Powell",
+      "title": "All Blacks v Wallabies: Live updates from Bledisloe Cup test at Eden Park",
+      "description": "Follow the action as the All Blacks host the Wallabies at Eden Park.",
+      "url": "https://www.nzherald.co.nz/sport/rugby/all-blacks/all-blacks-v-wallabies-live-updates-from-bledisloe-cup-test-at-eden-park/MEO57NS77VACPKIK2YDHJ35Z7M/",
+      "urlToImage": "https://www.nzherald.co.nz/resizer/v2/3GDDQKQOSFE7XFMBG2VHEJDJQE.jpg?auth=aab7d8d89c1f0b8b25ddbe390868be229050acf4226c91d804fedfdec5c26b94&width=1200&height=675&quality=70&focal=2837%2C1888&smart=false",
+      "publishedAt": "2026-10-10T02:30:00Z",
+      "content": "Follow the action as the All Blacks host the Wallabies at Eden Park. \r\nThe All Blacks unbeaten 53-match run at Eden Park goes on the line tonight, as they host the Wallabies in the first Bledisloe Cu\u2026 [+4313 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "sunabako added to PyPI",
+      "description": "Container-native Linux sandboxes with a Rust runtime and an E2B-style Python SDK",
+      "url": "https://pypi.org/project/sunabako/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-10T02:27:10Z",
+      "content": "Linux sandboxes inside an existing container, without Docker-in-Docker. A\r\nRust runtime manages resource admission, isolation and lifecycle; a Python SDK\r\nprovides familiar Sandbox.create(), commands\u2026 [+16513 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pravda.sk"
+      },
+      "author": "cestovatel26",
+      "title": "Pr\u00e1ca v Rak\u00fasku 2026 pre Slov\u00e1kov: Meldezettel, e-card, dane a prv\u00fdch 30 dn\u00ed",
+      "description": "Austria is the closest foreign job option for many Slovaks. From Bratislava, Vienna is a leap, from Trnava or Malaciek can be reached daily, and many people from the east go to Tyrol or Salzburg for the season. However, the papers around the onset of work can\u2026",
+      "url": "https://cestovatel26.blog.pravda.sk/2026/10/10/praca-v-rakusku-2026-pre-slovakov-meldezettel-e-card-dane-a-prvych-30-dni/",
+      "urlToImage": "https://blog.pravda.sk/wp-content/default-avatar-blog-256.png",
+      "publishedAt": "2026-10-10T02:15:03Z",
+      "content": "Austria is the closest foreign job option for many Slovaks. From Bratislava, Vienna is a leap, from Trnava or Malaciek can be reached daily, and many people from the east go to Tyrol or Salzburg for \u2026 [+6574 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "doubao-speech-mcp added to PyPI",
+      "description": "\u706b\u5c71\u5f15\u64ce\u8c46\u5305\u8bed\u97f3\u5168\u4ea7\u54c1 HTTP / WebSocket MCP server",
+      "url": "https://pypi.org/project/doubao-speech-mcp/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-10T02:11:17Z",
+      "content": "API stdio MCP server2026-10-10\r\n0.4.0speech_raw_request JSON 18 29 \r\n<table><tr><th></th><th></th><th> / </th></tr>\r\n<tr><td>text_to_speech</td><td>2.0 8 30+ SRT 5000 10 </td><td> HTTP / seed-tts-2.0\u2026 [+5547 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "Hims & Hers Health, Inc. Securities Fraud Class Action Result of Deceptive Privacy and Billing Practices and Over 14% Stock Decline - Investors may Contact Lewis Kahn, Esq., at Kahn Swick & Foti, LLC",
+      "description": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- - Kahn Swick & Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., remind investors with substantial losses that they have until November 2, 2026 to file lead pl\u2026",
+      "url": "https://www.prnewswire.com/news-releases/hims--hers-health-inc-securities-fraud-class-action-result-of-deceptive-privacy-and-billing-practices-and-over-14-stock-decline---investors-may-contact-lewis-kahn-esq-at-kahn-swick--foti-llc-302904946.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS650245/2025-PR-SEC.jpg?id=OA2999561&p=facebook",
+      "publishedAt": "2026-10-10T02:10:00Z",
+      "content": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- - Kahn Swick &amp; Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., remind investors with substant\u2026 [+3264 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "open-industries added to PyPI",
+      "description": "Static Open Industries scene exporter for georeferenced 3D Tiles",
+      "url": "https://pypi.org/project/open-industries/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-10T02:02:06Z",
+      "content": "A small, independently runnable Python converter and local CesiumJS/Three.js\r\ninteroperability demo for issue #18.\r\nIt consumes the geometry already bundled in a portable OI scene. It does not\r\ntesse\u2026 [+7322 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "Duolingo, Inc. Notice of December 7, 2026 Application Deadline for Class Action Lawsuit - Contact Lewis Kahn, Esq. at Kahn Swick & Foti, LLC, Before Application Deadline",
+      "description": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- Kahn Swick & Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in Duolingo, Inc. (NasdaqGS: DUOL) of a class action securities lawsuit. CLAS\u2026",
+      "url": "https://www.prnewswire.com/news-releases/duolingo-inc-notice-of-december-7-2026-application-deadline-for-class-action-lawsuit---contact-lewis-kahn-esq-at-kahn-swick--foti-llc-before-application-deadline-302903926.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS650245/2025-PR-SEC.jpg?id=OA2999542&p=facebook",
+      "publishedAt": "2026-10-10T02:00:00Z",
+      "content": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- Kahn Swick &amp; Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in Duolingo, \u2026 [+3557 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "York Space Systems, Inc. Notice of October 30, 2026 Application Deadline for Class Action Lawsuit - Contact Lewis Kahn, Esq. at Kahn Swick & Foti, LLC, Before Application Deadline",
+      "description": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- Kahn Swick & Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in York Space Systems, Inc. (\"York Space Systems\" or the \"Company\") (NYSE: YS\u2026",
+      "url": "https://www.prnewswire.com/news-releases/york-space-systems-inc-notice-of-october-30-2026-application-deadline-for-class-action-lawsuit---contact-lewis-kahn-esq-at-kahn-swick--foti-llc-before-application-deadline-302903925.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS650245/2025-PR-SEC.jpg?id=OA2999594&p=facebook",
+      "publishedAt": "2026-10-10T02:00:00Z",
+      "content": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ --\u00a0Kahn Swick &amp; Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in York Space\u2026 [+3422 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "Honeywell Aerospace, Inc. Notice of November 23, 2026 Application Deadline for Class Action Lawsuit - Contact Lewis Kahn, Esq. at Kahn Swick & Foti, LLC, Before Application Deadline",
+      "description": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- Kahn Swick & Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in Honeywell Aerospace, Inc. (\"Honeywell Aerospace\" or the \"Company\") (Nasdaq\u2026",
+      "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-inc-notice-of-november-23-2026-application-deadline-for-class-action-lawsuit---contact-lewis-kahn-esq-at-kahn-swick--foti-llc-before-application-deadline-302903929.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS650245/2025-PR-SEC.jpg?id=OA2999578&p=facebook",
+      "publishedAt": "2026-10-10T02:00:00Z",
+      "content": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- Kahn Swick &amp; Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in Honeywell \u2026 [+3247 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "AEVEX Corp. Notice of October 20, 2026 Application Deadline for Class Action Lawsuit - Contact Lewis Kahn, Esq. at Kahn Swick & Foti, LLC, Before Application Deadline",
+      "description": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- - Kahn Swick & Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in AEVEX Corp. (\"Aevex\" or the \"Company\") (NYSE: AVEX) of a class action se\u2026",
+      "url": "https://www.prnewswire.com/news-releases/aevex-corp-notice-of-october-20-2026-application-deadline-for-class-action-lawsuit---contact-lewis-kahn-esq-at-kahn-swick--foti-llc-before-application-deadline-302903919.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS650245/2025-PR-SEC.jpg?id=OA2999514&p=facebook",
+      "publishedAt": "2026-10-10T02:00:00Z",
+      "content": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- - Kahn Swick &amp; Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in AEVEX Co\u2026 [+3403 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "Beta Bionics, Inc. Notice of November 3, 2026 Application Deadline for Class Action Lawsuit - Contact Lewis Kahn, Esq. at Kahn Swick & Foti, LLC, Before Application Deadline",
+      "description": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- Kahn Swick & Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in Beta Bionics, Inc. (\"Beta Bionics\" or the \"Company\") (NasdaqGM: BBNX) of a\u2026",
+      "url": "https://www.prnewswire.com/news-releases/beta-bionics-inc-notice-of-november-3-2026-application-deadline-for-class-action-lawsuit---contact-lewis-kahn-esq-at-kahn-swick--foti-llc-before-application-deadline-302903923.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS650245/2025-PR-SEC.jpg?id=OA2999528&p=facebook",
+      "publishedAt": "2026-10-10T02:00:00Z",
+      "content": "NEW YORK and NEW ORLEANS, Oct. 9, 2026 /PRNewswire/ -- Kahn Swick &amp; Foti, LLC (\"KSF\") and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in Beta Bioni\u2026 [+3774 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slickdeals.net"
+      },
+      "author": "jk6812 | Staff",
+      "title": "WORKPRO 5-Piece Punch and Chisel Set Cr-V Steel Storage Tray $9.99 + Free Shipping w/ Prime or on $35+ (0 replies)",
+      "description": "Amazon [amazon.com] has WORKPRO 5-Piece Punch and Chisel Set Cr-V Steel Storage Tray on sale for $9.99. Shipping is free w/ Prime or on orders $35+.",
+      "url": "https://slickdeals.net/f/20136693-workpro-5-piece-punch-and-chisel-set-cr-v-steel-storage-tray-9-99-free-shipping-w-prime-or-on-35",
+      "urlToImage": "https://slickdeals.net/attachment/1/1/4/9/0/0/1/2/450x450/21905886.thumb",
+      "publishedAt": "2026-10-10T01:29:20Z",
+      "content": "This collaborative space allows users to contribute additional information, tips, and insights to enhance the original deal post. Feel free to share your knowledge and help fellow shoppers make infor\u2026 [+26 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slickdeals.net"
+      },
+      "author": "doublehelixx",
+      "title": "24-Pc Suzume 72-Tooth Metric & SAE Flex Head Ratcheting Wrench Set $58.75 + Free S&H",
+      "description": "SUZUME US via Amazon has 24-Piece SUZUME 180\u00b0 Flex-Head 72-Tooth Ratcheting Wrench Set w/ Organizer (Metric & SAE) for $97.88 - 40% off when you enter promo code P0QRKDI5 at checkout = $58.73. Sh",
+      "url": "https://slickdeals.net/f/20129460-24-piece-suzume-72-tooth-metric-sae-flex-head-ratcheting-wrench-set-58-73-free-shipping",
+      "urlToImage": "https://slickdeals.net/attachment/3/3/7/1/0/1/3/4/450x450/21887178.thumb",
+      "publishedAt": "2026-10-10T01:23:02Z",
+      "content": "SUZUME US via Amazon has 24-Piece SUZUME 180\u00b0 Flex-Head 72-Tooth Ratcheting Wrench Set w/ Organizer (Metric &amp; SAE) for $97.88 - 40% off when you enter promo code P0QRKDI5 at checkout = $58.73. Sh\u2026 [+665 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "New Zealand Herald"
+      },
+      "author": "NZ Herald",
+      "title": "North Harbour v Taranaki live updates, NPC quarter-final",
+      "description": "Live updates of the NPC quarter-final clash between North Harbour and Taranaki.",
+      "url": "https://www.nzherald.co.nz/sport/rugby/npc/north-harbour-v-taranaki-live-updates-npc-quarter-final/IAZA3ZF7BVDDHIVMXNBV66GEGE/",
+      "urlToImage": "https://www.nzherald.co.nz/resizer/v2/XOH4BK4OQRG3XAPTQBFIGK7N6A.jpg?auth=e0a6b5b371ed11ada86b749d78fe4f9082827cd7e705194085a50866a2448bb9&width=1200&height=675&quality=70&focal=538%2C242&smart=false",
+      "publishedAt": "2026-10-10T01:20:00Z",
+      "content": "10 Oct, 2026 01:20 AMQuick Read\r\nNorth Harbour captain Jed Melvin. Photo / Photosport\r\nNorth Harbour captain Jed Melvin. Photo / Photosport\r\nLive updates of the NPC quarter-final clash between North \u2026 [+20 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Lifesciencesworld.com"
+      },
+      "author": "Ava Reynolds",
+      "title": "What group of birds fly together?",
+      "description": "What Group of Birds Fly Together? Unveiling Avian Social Dynamics What group of birds fly together? Birds that fly together form various social aggregations, from family units to massive flocks, depending on species, season, and purpose. Introduction: The Maj\u2026",
+      "url": "https://www.lifesciencesworld.com/what-group-of-birds-fly-together/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-10T01:14:31Z",
+      "content": "What Group of Birds Fly Together? Unveiling Avian Social Dynamics\r\nWhat group of birds fly together? Birds that fly together form various social aggregations, from family units to massive flocks, dep\u2026 [+7526 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CBM (Comic Book Movie)"
+      },
+      "author": "MarkCassidy",
+      "title": "X-Men Production Update: We Now Know When Cameras Will Roll On Long-Awaited MCU Reboot",
+      "description": "A recent report claimed that Marvel Studios' X-Men reboot would likely enter production before the end of the year, but we're now hearing that it'll actually be early 2027...",
+      "url": "https://comicbookmovie.com/x_men/x-men-production-update-we-now-know-when-cameras-will-roll-on-long-awaited-mcu-reboot-a230338",
+      "urlToImage": "https://comicbookmovie.com/images/articles/banners/x-men-production-update-we-now-know-when-cameras-will-roll-on-long-awaited-mcu-reboot-ab230338.jpg",
+      "publishedAt": "2026-10-10T01:10:56Z",
+      "content": "Marvel Studios' X-Men reboot is finally starting to come together, with Thunderbolts* director Jake Schreier set to helm, and writers\u00a0Sonny Lee Sung Jin (Beef) and Joanna Calo (The Bear) currently wo\u2026 [+2815 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Bringatrailer.com"
+      },
+      "author": "bringatrailer",
+      "title": "1939 Alfa Romeo 6C 2500 SS Berlinetta Competizione Re-Creation",
+      "description": "This 1939 Alfa Romeo 6C 2500 began as one of 279 Tourismo five-posti sedans built during two years of production and was delivered new in Poland, where its chassis was later found without an engine by 6C expert Raoul San Giorgi. Chassis 913191 is said to have\u2026",
+      "url": "https://bringatrailer.com/listing/1939-alfa-romeo-6c-2500/",
+      "urlToImage": "https://bringatrailer.com/wp-content/uploads/2026/09/Alex_Mans_-_1939_Alfa_Romeo_2500_6C_SS_Competizone-219-scaled-14674.jpg",
+      "publishedAt": "2026-10-10T00:20:12Z",
+      "content": "This 1939 Alfa Romeo 6C 2500 began as one of 279 Tourismo five-posti sedans built during two years of production and was delivered new in Poland, where its chassis was later found without an engine b\u2026 [+4797 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "devware added to PyPI",
+      "description": "Check environment variables and HTTP service readiness before running agent workloads.",
+      "url": "https://pypi.org/project/devware/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-10T00:11:02Z",
+      "content": "Check that an agent's environment is ready before starting a workload.\r\nDevware checks required environment variables and HTTP health endpoints from a\r\nsmall TOML file. It returns a nonzero exit code\u2026 [+3738 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Omgubuntu.co.uk"
+      },
+      "author": "Joey Sneddon",
+      "title": "Ubuntu now has official desktop images for RISC-V",
+      "description": "Installing the Ubuntu desktop on RISC-V hardware is made easier with 26.10, as Canonical is now building official riscv64 desktop images. Experimental versions of the upcoming Ubuntu 26.10 release are out for testing on a SpacemiT K3 \u2013 the board Canonical has\u2026",
+      "url": "https://www.omgubuntu.co.uk/2026/10/ubuntu-desktop-riscv-iso",
+      "urlToImage": "https://www.omgubuntu.co.uk/wp-content/uploads/2025/07/ESWIN-EBC77-RISC-V-single-board-computer.jpg",
+      "publishedAt": "2026-10-10T00:09:00Z",
+      "content": "Installing the Ubuntu desktop on RISC-V hardware is made easier with 26.10, as Canonical is now building official riscv64 desktop images.\r\nExperimental versions of the upcoming Ubuntu 26.10 release a\u2026 [+2282 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "XDA Developers"
+      },
+      "author": "Abhinav Raj",
+      "title": "I was ready to pay for a remote desktop app, but Windows 11 already ships one for free",
+      "description": "You won't see Microsoft advertise this one, though",
+      "url": "https://www.xda-developers.com/your-windows-11-is-secretly-running-built-in-remote-tools-youve-never-touched-and-theyre-more-useful-than-you-think/",
+      "urlToImage": "https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2026/10/main-fi-2.jpg?w=1600&h=900&fit=crop",
+      "publishedAt": "2026-10-10T00:00:17Z",
+      "content": "For every AI feature of questionable utility that Microsoft advertises relentlessly, there's a useful one hiding in the OS in plain sight. Many of these tools aid productivity or everyday troubleshoo\u2026 [+5293 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Linuxstans.com"
+      },
+      "author": "https://www.facebook.com/LinuxFan5",
+      "title": "11 of 23 Core Open Source Projects Run on 1 or 2 People",
+      "description": "A Redditor counted who wrote every change to xz, sudo, bash, tz and 19 more projects. 11 of 23 rely on one or two people. See who they are and who pays.",
+      "url": "https://linuxstans.com/11-of-23-core-open-source-projects-run-on-1-or-2-people/",
+      "urlToImage": "https://linuxstans.com/wp-content/uploads/2026/10/11-of-23-core-open-source-projects-run-on-1-or-2-people.png",
+      "publishedAt": "2026-10-09T23:56:55Z",
+      "content": "Every alarm, boarding pass and calendar invite on your phone depends on a text file that holds every clock rule a government has ever announced. A UCLA lecturer named Paul Eggert keeps that file curr\u2026 [+17204 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Vippers.jp"
+      },
+      "author": "vipper0004",
+      "title": "\u96fb\u8eca\u5185\u3067\u9ed2\u4eba\u9054\u304b\u3089\u7f75\u5012\u3055\u308c\u305f\u767d\u4eba\u5973\u3055\u3093\u3001\u30db\u30fc\u30e0\u3078\u964d\u308a\u30c9\u30a2\u304c\u9589\u307e\u308b\u77ac\u9593\u3084\u308a\u8fd4\u3059\uff57\uff57\uff57",
+      "description": "1\uff1a\u305d\u308c\u3067\u3082\u52d5\u304f\u540d\u7121\u3057 \uff1a 2026/10/09(\u91d1) 21:08:26.11 ID\uff1a ID:iw2ToMY30\n\u30af\u30ea\u30c3\u30af\u3067\u95b2\u89a7\n\n https://video.twimg.com/ext_tw_video/2081798812230725632/pu/vid/avc1/720x1280/nYbc5WHCQ-v...",
+      "url": "http://vippers.jp/archives/10575529.html",
+      "urlToImage": "https://livedoor.blogimg.jp/vsokuvip/imgs/d/d/ddde155e.jpg",
+      "publishedAt": "2026-10-09T23:42:47Z",
+      "content": "32026/10/09() 21:09:25.99 ID ID:RN5Rj0hu0\r\n42026/10/09() 21:09:58.64 ID ID:c3hs8UJg0\r\n72026/10/09() 21:12:22.64 ID ID:MohsnhfS0\r\n22026/10/09() 21:09:25.64 ID ID:eexE8yVid\r\n112026/10/09() 21:18:04.30 \u2026 [+1383 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "ENSG INVESTOR ALERT: The Ensign Group, Inc. Investors with Substantial Losses May Seek to Lead the Ensign Group Class Action Lawsuit",
+      "description": "SAN DIEGO, Oct. 9, 2026 /PRNewswire/ -- Robbins Geller Rudman & Dowd LLP announces that purchasers or acquirers of The Ensign Group, Inc. (NASDAQ: ENSG) publicly traded securities between February 10, 2022 and June 18, 2026, inclusive (the \"Class Period\"), ha\u2026",
+      "url": "https://www.prnewswire.com/news-releases/ensg-investor-alert-the-ensign-group-inc-investors-with-substantial-losses-may-seek-to-lead-the-ensign-group-class-action-lawsuit-302903893.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS675308/robbins-geller-rudman-and-dowd-llp-logo-v2-Logo.jpg?id=OA2999161&p=facebook",
+      "publishedAt": "2026-10-09T23:38:00Z",
+      "content": "SAN DIEGO, Oct. 9, 2026 /PRNewswire/ -- Robbins Geller Rudman &amp; Dowd LLP\u00a0announces that purchasers or acquirers of The Ensign Group, Inc. (NASDAQ: ENSG) publicly traded securities between Februar\u2026 [+5260 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slickdeals.net"
+      },
+      "author": "iconian",
+      "title": "Onkyo TX-NR7100 9.2-Channel AV Receiver $599 + Free S&H",
+      "description": "Adorama has Onkyo TX-NR7100 9.2-Channel 8K/4K Network A/V Receiver for $749 - $150 when you apply coupon code JHCE9926 at checkout = $599. Shipping is free.\n\nNote: Coupon code is applied at the '",
+      "url": "https://slickdeals.net/f/20136138-onkyo-tx-nr7100-9-2-channel-av-receiver-599-free-s-h",
+      "urlToImage": "https://slickdeals.net/attachment/9/5/3/2/3/450x450/21904806.thumb",
+      "publishedAt": "2026-10-09T23:30:18Z",
+      "content": "Dirac onboard at no extra charge for $599Another slick deals front pager\r\nEven after almost 6 years on the market..I still say its worth the $599 if its at least as sonically capable as the Onkyo RZ5\u2026 [+490 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "TVLine"
+      },
+      "author": "staff@tvline.com (Rebecca Luther)",
+      "title": "Casting News: Survivor Champ On Ghosts, Little House On The Prairie Adds 10, And More",
+      "description": "Survivor winner Parvati Shallow will appear in Ghosts' upcoming 100th episode - plus, Netflix's Little House on the Prairie reboot has added 10 to its cast.",
+      "url": "https://www.tvline.com/2282899/ghosts-parvati-shallow-cast-episode-100-little-house-on-prairie-season-2/",
+      "urlToImage": "https://www.tvline.com/img/gallery/casting-news-survivor-champ-on-ghosts-little-house-on-the-prairie-adds-10-and-more/l-intro-1791585192.jpg",
+      "publishedAt": "2026-10-09T23:30:00Z",
+      "content": "\"Survivor\" winner, Black Widow, author, and... actress?\r\nFan-favorite reality star Parvati Shallow will guest-star in the forthcoming 100th episode of CBS' \"Ghosts\" as Raquel, the host of the ghosts'\u2026 [+781 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Punch"
+      },
+      "author": "Punch Newspapers",
+      "title": "Nigerian man\u2019s nudity arrest sparks US political row",
+      "description": "A Nigerian man, Chimaobim Igbojekwe, has been arrested by US ICE for illegal residency after he was charged with stripping naked in a Pennsylvania park.\n\nRead More: https://punchng.com/nigerian-mans-nudity-arrest-sparks-us-political-row/",
+      "url": "https://punchng.com/nigerian-mans-nudity-arrest-sparks-us-political-row/",
+      "urlToImage": "https://cdn.punchng.com/wp-content/uploads/2026/10/09221408/1003423723_1791580448.webp",
+      "publishedAt": "2026-10-09T23:25:21Z",
+      "content": "The United States Immigration and Customs Enforcement has arrested a Nigerian man, Chimaobim Igbojekwe, for stripping himself naked in public.\r\nIgbojekwe was arrested by police in East Pennsboro Town\u2026 [+1617 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "SFGate"
+      },
+      "author": "Matthew Brown",
+      "title": "Adobe, Microsoft among tech giants suspended from foreign visa program",
+      "description": "All companies targeted in the crackdown have at least one Bay Area office.",
+      "url": "https://www.sfgate.com/tech/article/adobe-visa-suspension-22470789.php",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T23:20:08Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Wccftech"
+      },
+      "author": "Sebastian Castellanos",
+      "title": "NVIDIA App Ultimate Guide \u2014 Best Settings for Modern & Older Games, G-SYNC, DLSS, ShadowPlay, and More",
+      "description": "The NVIDIA App has changed considerably since replacing GeForce Experience. What started as a cleaner launcher for drivers, game optimization, and ShadowPlay has gradually absorbed virtually everything GeForce users previously had to dig through the old NVIDI\u2026",
+      "url": "https://wccftech.com/how-to/nvidia-app-ultimate-guide-best-settings-for-modern-older-games-g-sync-dlss-shadowplay-and-more/",
+      "urlToImage": "https://cdn.wccftech.com/wp-content/uploads/2026/10/Feature-Image-6.jpg",
+      "publishedAt": "2026-10-09T23:03:47Z",
+      "content": "The NVIDIA App has changed considerably since replacing GeForce Experience. What started as a cleaner launcher for drivers, game optimization, and ShadowPlay has gradually absorbed virtually everythi\u2026 [+41653 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Dailymail.com"
+      },
+      "author": "Paul Bracchi",
+      "title": "Yes, some migrants are gay - but ever more of them, aided by Left-wing lawyers, are faking their sexuality to win the right to stay: PAUL BRACCHI",
+      "description": "The corner of Whitechapel High Street, in the bustling heart of London's East End, is where this story of our times begins.",
+      "url": "https://www.dailymail.com/news/article-16197841/Yes-migrants-gay-aided-Left-wing-lawyers-faking-sexuality-win-right-stay-PAUL-BRACCHI.html",
+      "urlToImage": "https://i.dailymail.com/1s/2026/10/09/23/111771945-0-image-a-15_1791586405031.jpg",
+      "publishedAt": "2026-10-09T23:00:46Z",
+      "content": "The corner of Whitechapel High Street, in the bustling heart of London's East End, is where this story of our times begins.\r\nHere, sandwiched between Sports Direct and Betfred, is the office of Apanj\u2026 [+11483 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "PRNewswire"
+      },
+      "author": null,
+      "title": "The Joint Commission has Recognized Genomic Surveillance for the Detection of Transmission in Hospitals",
+      "description": "Honors pioneering work at Presbyterian Hospital in Pittsburgh led by members of NGD Infection Prevention's Scienti\ufb01c Advisory Board CAMBRIDGE, Mass., Oct. 9, 2026 /PRNewswire/ -- NGD Infection Prevention (NGD) today congratulates UPMC Presbyterian Hospital on\u2026",
+      "url": "https://www.prnewswire.com/news-releases/the-joint-commission-has-recognized-genomic-surveillance-for-the-detection-of-transmission-in-hospitals-302903899.html",
+      "urlToImage": "https://mmx.prnewswire.com/media/MS1718065/Next-Gen-Diagnostics-Logo.jpg?id=OA2999557&p=facebook",
+      "publishedAt": "2026-10-09T23:00:00Z",
+      "content": "Honors pioneering work at Presbyterian Hospital in Pittsburgh led by members of NGD Infection Prevention's Scientic Advisory Board\r\nCAMBRIDGE, Mass., Oct. 9, 2026 /PRNewswire/ -- NGD Infection Preven\u2026 [+4926 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Bringatrailer.com"
+      },
+      "author": "bringatrailer",
+      "title": "0-Mile 2023 Aston Martin AMB 001 at No Reserve",
+      "description": "This 2023 Aston Martin AMB 001 is a track-only collaboration between Aston Martin and Brough Superior and is one of 100 examples produced. It was purchased new by its current owner from the manufacturer, SA Boxer Motors of Saint-Jean, France, in September 202\u2026",
+      "url": "https://bringatrailer.com/listing/2023-aston-martin-amb-001-2/",
+      "urlToImage": "https://bringatrailer.com/wp-content/uploads/2026/10/DSC_0953-scaled-copy-2026-10-08-zjq-89307.jpg",
+      "publishedAt": "2026-10-09T22:48:08Z",
+      "content": "This 2023 Aston Martin AMB 001 is a track-only collaboration between Aston Martin and Brough Superior and is one of 100 examples produced. It was purchased new by its current owner from the manufactu\u2026 [+4430 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "NerdWallet"
+      },
+      "author": "Sally French",
+      "title": "The Cheapest Disney Tickets Didn\u2019t Budge, But Dining Costs More",
+      "description": "There\u2019s nothing quite like a Disney park. Whether you\u2019re visiting the original Disneyland or have been swept away by the multiple parks at Disney World, these amusement parks set the\u2026",
+      "url": "https://www.nerdwallet.com/travel/news/disney-food-prices",
+      "urlToImage": "https://www.nerdwallet.com/assets/blog/wp-content/uploads/2026/10/image1-3-1999x1440.jpg",
+      "publishedAt": "2026-10-09T22:41:17Z",
+      "content": "Disney raised ticket prices for certain dates to visit its U.S. parks this week, as it does nearly every October. The cheapest ticket prices didn't move, but the cost of dining at Disney parks over t\u2026 [+8498 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Golf.com"
+      },
+      "author": "Jack Hirsh",
+      "title": "Titleist 2027 Pro V1 golf balls get first reviews from pros | Tour Report",
+      "description": "In this week's Tour Report, players are starting to share their first reviews of the new 2027 Titleist Pro V1 golf balls.",
+      "url": "https://golf.com/gear/golf-balls/titleist-2027-pro-v1-golf-balls-first-reviews/",
+      "urlToImage": "https://s.yimg.com/lo/mysterio/api/7b4f472dcf683571577cf29dfebcb238089b55135e925524bf4b41ee9a67fa1d/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fgolf_articles_613%2Fc605aff3069f6488ad414c35ca231338",
+      "publishedAt": "2026-10-09T22:41:14Z",
+      "content": "Welcome to Fully Equipped's\u00a0weekly Tour equipment report. Every Friday of PGA Tour weeks (plus other times, if news warrants),\u00a0GOLF equipment editor Jack Hirsh\u00a0runs you through some of the biggest ne\u2026 [+5603 chars]"
+    },
+    {
+      "source": {
+        "id": "rte",
+        "name": "RTE"
+      },
+      "author": "RT\u00c9 Sport",
+      "title": "Longergan savouring best month of his footballing life",
+      "description": "Tommy Lonergan struggled to sum it all up after an astonishing week in his career ended with him scoring a goal that helped Waterford reach the FAI Cup final.",
+      "url": "https://www.rte.ie/sport/soccer/2026/1009/1594800-longergan-savouring-best-month-of-his-footballing-life/",
+      "urlToImage": "https://www.rte.ie/images/00252641-1600.jpg",
+      "publishedAt": "2026-10-09T22:34:08Z",
+      "content": "Tommy Lonergan struggled to sum it all up after an astonishing week in his career ended with him scoring a goal that helped Waterford reach the FAI Cup final.\r\nLonergan was in Turners Cross on Tuesda\u2026 [+3696 chars]"
+    },
+    {
+      "source": {
+        "id": "the-times-of-india",
+        "name": "The Times of India"
+      },
+      "author": "TOI World Desk",
+      "title": "In 1967, Georgia man Donnie Peek bought 150 acres and grew his property to 1,600 acres",
+      "description": "Donnie Peek, a landowner in Georgia, is challenging a natural gas pipeline rerouting that impacts his property. The pipeline's path was changed to avoid a utility executive's residence, which raises questions about favoritism. Southern Natural Gas initially p\u2026",
+      "url": "https://timesofindia.indiatimes.com/world/us/in-1967-georgia-man-donnie-peek-bought-150-acres-and-grew-his-property-to-1600-acres-decades-later-a-3-2-billion-pipeline-route-shifted-to-run-2-5-miles-only-through-his-land-alone/articleshow/134645772.cms",
+      "urlToImage": "https://static.toiimg.com/thumb/msid-134646379,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "publishedAt": "2026-10-09T22:20:00Z",
+      "content": "<ul><li>News</li>\r\n<li>World News</li>\r\n<li>US News</li>\r\n<li>In 1967, Georgia man Donnie Peek bought 150 acres and grew his property to 1,600 acres; decades later, a $3.2 billion pipeline route shif\u2026 [+1661 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Yaplakal.com"
+      },
+      "author": "adm@yaplakal.com (vlasoff87)",
+      "title": "\u041e\u0447\u0435\u0440\u0435\u0434\u043d\u0430\u044f \u043f\u043e\u0442\u0440\u0435\u0411\u043b\u044f\u0442\u044c",
+      "description": "\u041f\u0430\u0446\u0430\u043d\u0443 \u043f\u043e\u0432\u0435\u0437\u043b\u043e.<!--Begin Video:https://api.yapfiles.ru/get_player/?v=vMDM3NzY1NTMta2f5&auth_key=8c57d4ce0452720310cad93329d742e3&uid=554421&o=v-->\r\n<!--End Video-->",
+      "url": "https://www.yaplakal.com/forum28/topic3129679.html",
+      "urlToImage": "",
+      "publishedAt": "2026-10-09T22:16:51Z",
+      "content": "<table><tr><td> (archiv @ 10 2026 01:51)</td></tr><tr><td> . ? ? \" \" .. . . </td></tr></table>( ) : , , , . .. , , .. , , ., . , , , . ., , , . . , . , : , , . : , , , , ,..."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Seclists.org"
+      },
+      "author": null,
+      "title": "Re: RFC: a loadable plugin framework for external capture backends",
+      "description": "Posted by Denis Ovsienko on Oct 09Thank you for posting an overview of the problem and the proposed\nsolution Robin.\n\nThere is an important point that Guy and Michael have already made a\nfew times in March in the pull request comments, and which has also\nreeme\u2026",
+      "url": "https://seclists.org/tcpdump/2026/q4/41",
+      "urlToImage": "https://seclists.org/images/tcpdump-img.png",
+      "publishedAt": "2026-10-09T22:12:29Z",
+      "content": "tcpdump\r\nmailing list archives\r\nFrom: Denis Ovsienko &lt;denis () ovsienko info&gt;Date: Fri, 9 Oct 2026 23:12:18 +0100\r\nThank you for posting an overview of the problem and the proposed\r\nsolution Ro\u2026 [+5014 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Lucas Ropek",
+      "title": "Long live the mechanical keyboard | TechCrunch",
+      "description": "Keychron made a name for itself after launching on Kickstarter in 2017. Today, it offers the value K2 model as well as a variety of other versions, including one with an all-wood body.",
+      "url": "https://techcrunch.com/2026/10/09/long-live-the-mechanical-keyboard/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2026/10/IMG_4970.jpeg?resize=1200,900",
+      "publishedAt": "2026-10-09T22:11:32Z",
+      "content": "For a writer, the mechanical keyboard is a beautiful thing. They\u2019re certainly not necessary for everyone, but a well designed mechanical keyboard can turn a tedious day of typing into an aestheticall\u2026 [+3145 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Crypto Briefing"
+      },
+      "author": "Kaye Quema",
+      "title": "Coinbase and Gennius plan ONED USD stablecoin access through Latin American banks",
+      "description": "Coinbase's partnership with Gennius could reshape Latin American banking by integrating stablecoins, enhancing financial inclusion and innovation.\nThe post Coinbase and Gennius plan ONED USD stablecoin access through Latin American banks appeared first on Cry\u2026",
+      "url": "https://cryptobriefing.com/coinbase-gennius-oned-usd-stablecoin-latin-america/",
+      "urlToImage": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/09180730/library-coinbase-and-gennius-plan-oned-usd-stablecoin-access-thr-800x450.png",
+      "publishedAt": "2026-10-09T22:07:34Z",
+      "content": "The Argentina-first program would let bank customers convert eligible deposits into a USDC-backed stablecoin and spend it with Visa cards Coinbase wants to get into Latin American banking. It is not \u2026 [+3295 chars]"
+    },
+    {
+      "source": {
+        "id": "the-times-of-india",
+        "name": "The Times of India"
+      },
+      "author": "TOI World Desk",
+      "title": "Meet Alexander Miller, the 18-year-old California student who built a quantum-error mitigation method that beat two leading approaches across 100,000 test cases and won a $25,000 Davidson scholarship",
+      "description": "Alexander Miller, an 18-year-old student from Irvine, California, has won a $25,000 2026 Davidson Fellowship for developing RIDA, a quantum error mitigation method. His research consistently achieved lower error than two leading approaches across 100,000 test\u2026",
+      "url": "https://timesofindia.indiatimes.com/science/discovery/meet-alexander-miller-the-18-year-old-california-student-who-built-a-quantum-error-mitigation-method-that-beat-two-leading-approaches-across-100000-test-cases-and-won-a-25000-davidson-scholarship/articleshow/134842836.cms",
+      "urlToImage": "https://static.toiimg.com/thumb/msid-134842843,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "publishedAt": "2026-10-09T22:05:48Z",
+      "content": "<ul><li>News</li>\r\n<li>Science News</li>\r\n<li>Meet Alexander Miller, the 18-year-old California student who built a quantum-error mitigation method that beat two leading approaches across 100,000 tes\u2026 [+1659 chars]"
+    },
+    {
+      "source": {
+        "id": "the-times-of-india",
+        "name": "The Times of India"
+      },
+      "author": "Anuja Jaiswal",
+      "title": "Chemists, wholesalers may need government nod to advertise prescription drugs",
+      "description": "NEW DELHI: Chemists, wholesalers and drug distributors may soon have to seek Centre's approval before advertising certain prescription medicines, with",
+      "url": "https://timesofindia.indiatimes.com/india/chemists-wholesalers-may-need-govt-nod-to-advertise-prescription-drugs/articleshow/134843039.cms",
+      "urlToImage": "https://static.toiimg.com/thumb/msid-134843207,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "publishedAt": "2026-10-09T22:05:43Z",
+      "content": "<ul><li>News</li>\r\n<li>India News</li>\r\n<li>Chemists, wholesalers may need government nod to advertise prescription drugs</li></ul>\r\nFollow Us On Social Media\r\nCongress stays away, Left &amp; AAP to \u2026 [+1535 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slickdeals.net"
+      },
+      "author": "LolaBunny21",
+      "title": "ETOSELL Women's Satin Sleeveless V-Neck Tank Top Blouse (Various) from $4.99 + Free Shipping w/ Prime or on $35+",
+      "description": "Etosell via Amazon [amazon.com] has *ETOSELL Women's Satin Sleeveless V-Neck Blouse Shirt (various)* on sale from $9.99 - 50% off when you apply promo code OIPB40ST at checkout = from *$4.99*....",
+      "url": "https://slickdeals.net/f/20136153-etosell-women-s-satin-sleeveless-v-neck-tank-top-blouse-various-from-4-99-free-shipping-w-prime-or-on-35",
+      "urlToImage": "https://slickdeals.net/attachment/3/1/7/1/9/9/0/1/450x450/21904818.thumb",
+      "publishedAt": "2026-10-09T22:05:37Z",
+      "content": "Etosell via Amazon[amazon.com] has ETOSELL Women's Satin Sleeveless V-Neck Blouse Shirt (various) on sale from $9.99 - 50% off when you apply promo code OIPB40ST at checkout = from $4.99. Shipping is\u2026 [+538 chars]"
+    },
+    {
+      "source": {
+        "id": "financial-post",
+        "name": "Financial Post"
+      },
+      "author": "GlobeNewswire",
+      "title": "Orca Energy Group Provides Update on Songo Songo Licence, Operations, and the Proposed Transaction",
+      "description": "TORTOLA, British Virgin Islands, Oct. 09, 2026 (GLOBE NEWSWIRE) \u2014 Orca Energy Group Inc.\u00a0(\u201cOrca\u201d or the \u201cCompany\u201d) (TSX-V: ORC.A, ORC.B) provides an update regarding a proposed extension of the Songo Songo Development Licence (the \u201cLicence\u201d), related operatio\u2026",
+      "url": "https://financialpost.com/globe-newswire/orca-energy-group-provides-update-on-songo-songo-licence-operations-and-the-proposed-transaction",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T22:04:59Z",
+      "content": "Forward-Looking Information\r\nThis news release contains forward-looking information (collectively, forward-looking information) within the meaning of applicable securities legislation. All informatio\u2026 [+4998 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Gothamist"
+      },
+      "author": "Jon Campbell",
+      "title": "NY will opt in Trump\u2019s school choice program, Hochul says",
+      "description": "New York Gov. Kathy Hochul on Sept. 2, 2026.\n \n\nDespite opposition from teachers unions and top state officials, the decision will allow taxpayers to receive a credit for donating to both public and private educational groups and programs. [ more \u203a ]",
+      "url": "https://gothamist.com/news/ny-will-opt-in-trumps-school-choice-program-hochul-says",
+      "urlToImage": "https://api-prod.gothamist.com/images/361905/fill-1200x650|format-webp|webpquality-85/",
+      "publishedAt": "2026-10-09T22:02:34Z",
+      "content": "Gov. Kathy Hochul announced Friday New York will opt in to the Trump administrations school choice program despite opposition from teachers unions, who fear it will divert money from public schools.\r\u2026 [+3697 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Deadline"
+      },
+      "author": "Liz Shackleton",
+      "title": "Vietnam\u2019s V Studios Seals Multiple Deals On \u2018Red Woman\u2019 Including Sales To North America & Japan",
+      "description": "EXCLUSIVE: V Studios, the Vietnamese production arm of Korean exhibitor CJ CGV, has closed multiple deals on supernatural fantasy Red Woman, including sales to NewGates Corporation for Japan and Mockingbird Pictures for the US and Canada. The film, which is V\u2026",
+      "url": "http://deadline.com/2026/10/v-studios-red-woman-minh-hang-1237150751/",
+      "urlToImage": "https://deadline.com/wp-content/uploads/2026/10/Red-Woman1.jpg?w=1024",
+      "publishedAt": "2026-10-09T22:00:00Z",
+      "content": "EXCLUSIVE:V Studios, the Vietnamese production arm of Korean exhibitor CJ CGV, has closed multiple deals on supernatural fantasy Red Woman, including sales to NewGates Corporation for Japan and Mocki\u2026 [+2644 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNA"
+      },
+      "author": null,
+      "title": "US green card crackdown clouds Indian tech workers' American dream",
+      "description": "Four Indian IT giants are among eight tech firms suspended from a key US permanent residency programme. Analysts tell CNA the immediate business impact may be limited, but workers face greater uncertainty.",
+      "url": "https://www.channelnewsasia.com/asia/us-green-card-crackdown-clouds-indian-tech-workers-american-dream-6446536",
+      "urlToImage": "https://dam.mediacorp.sg/image/upload/s--V3oeHttf--/c_crop,h_562,w_1000,x_0,y_59/c_fill,g_auto,h_676,w_1200/fl_relative,g_south_east,l_one-cms:core:watermark:ap_data-1,w_0.1/f_auto,q_auto/v1/one-cms/core/canada_us_border_deaths_14843.jpg?itok=nOKHY2mg",
+      "publishedAt": "2026-10-09T22:00:00Z",
+      "content": "Indian IT industry body NASSCOM stressed that the programme concerns permanent immigration and is distinct from\u00a0the H-1B visa programme for temporary workers, which is unaffected by the suspension.\r\n\u2026 [+1096 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slickdeals.net"
+      },
+      "author": "Red_Liz",
+      "title": "Avidlove One-Piece Lace Women's Lingerie V-Neck Bodysuit (Various) $5.50 + Free Shipping w/ Prime or on $35+",
+      "description": "Avidlove via Amazon [amazon.com] has *Avidlove One-Piece Lace Women's Lingerie V-Neck Bodysuit* (Various) on sale for *$5.49* w/ code CBW7B2AF at checkout. *Shipping is free* w/ Prime or $35+ orders.",
+      "url": "https://slickdeals.net/f/20136120-avidlove-one-piece-lace-women-s-lingerie-v-neck-bodysuit-various-5-50-free-shipping-w-prime-or-on-35",
+      "urlToImage": "https://slickdeals.net/attachment/3/0/6/6/3/5/5/9/450x450/21904743.thumb",
+      "publishedAt": "2026-10-09T21:57:38Z",
+      "content": "This collaborative space allows users to contribute additional information, tips, and insights to enhance the original deal post. Feel free to share your knowledge and help fellow shoppers make infor\u2026 [+26 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Bringatrailer.com"
+      },
+      "author": "bringatrailer",
+      "title": "2026 Harley-Davidson CVO Road Glide ST",
+      "description": "This 2026 Harley-Davidson CVO Road Glide ST is a Citrus Heat Re-Entry example that was purchased new by the current owner, and it now indicates 152 miles. Powered by a liquid-cooled 121ci Milwaukee-Eight High Output V-twin paired with a six-speed Cruise Drive\u2026",
+      "url": "https://bringatrailer.com/listing/2026-harley-davidson-road-glide/",
+      "urlToImage": "https://bringatrailer.com/wp-content/uploads/2026/09/Savoy_HDEVOST-scaled-copy-2026-10-02-pmc-56068.jpg",
+      "publishedAt": "2026-10-09T21:55:08Z",
+      "content": "This 2026 Harley-Davidson CVO Road Glide ST is a Citrus Heat Re-Entry example that was purchased new by the current owner, and it now indicates 152 miles. Powered by a liquid-cooled 121ci Milwaukee-E\u2026 [+1929 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "EFF"
+      },
+      "author": "Adam Schwartz, Mario Trujillo",
+      "title": "Resisting the Menace of Federal Data Consolidation",
+      "description": "In the past two years, the federal government has unlawfully consolidated data exposing our private information.\u00a0\r\n\nThis consolidation has been chaotic but generally came in three rolling waves: It started with DOGE, moved to agency-to-agency data sharing wit\u2026",
+      "url": "https://www.eff.org/deeplinks/2026/10/resisting-menace-federal-data-consolidation",
+      "urlToImage": "https://www.eff.org/files/banner_library/flag-surveillance-color.jpg",
+      "publishedAt": "2026-10-09T21:46:34Z",
+      "content": "In the past two years, the federal government has unlawfully consolidated data exposing our private information.\u00a0\r\nThis consolidation has been chaotic but generally came in three rolling waves: It st\u2026 [+10287 chars]"
+    }
+  ]
+}

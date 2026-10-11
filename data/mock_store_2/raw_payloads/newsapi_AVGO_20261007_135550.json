@@ -1,0 +1,305 @@
+{
+  "status": "ok",
+  "totalResults": 23,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "Tom's Hardware UK"
+      },
+      "author": "Etiido Uko",
+      "title": "OpenAI and Synopsys partner to build \"GPT-Synopsys\" for autonomous chip design",
+      "description": "OpenAI and Synopsys are developing GPT-Synopsys, a specialized semiconductor-design model that will directly operate Synopsys EDA tools",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-and-synopsys-partner-to-build-gpt-synopsys-for-autonomous-chip-design-specialized-ai-model-will-operate-eda-tools-allowing-engineers-to-deliver-more-sophisticated-chips-faster",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/L5bu9i78ZpqMnudoVp2DSk-1200-80.jpg",
+      "publishedAt": "2026-10-06T11:00:00Z",
+      "content": "OpenAI and Synopsys have signed a multi-year agreement to jointly develop GPT-Synopsys, a specialized model optimized for semiconductor design using Synopsys's electronic design automation (EDA) tool\u2026 [+7208 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Abcnews.com"
+      },
+      "author": "CHAN HO-HIM AP business writer",
+      "title": "Global shares mostly advance after Wall Street gains and oil prices fall",
+      "description": "World shares have mostly advanced and U.S. futures have edged higher after a rally on Wall Street",
+      "url": "https://abcnews.com/Business/wireStory/global-shares-advance-after-wall-street-gains-oil-137024720",
+      "urlToImage": "https://i.abcnewsfe.com/a/57c1d660-2d96-4fac-933b-7a7a7002dc72/wirestory_e8285ec7afbe81e9df277e8ee2127982_16x9.jpg?w=1600",
+      "publishedAt": "2026-10-06T10:43:21Z",
+      "content": "HONG KONG -- World shares were mostly higher on Tuesday and U.S. futures advanced after shares rose to near a record close on Wall Street.\r\nOil prices fell as the situation in the Middle East remaine\u2026 [+2955 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Ibtimes.com.au"
+      },
+      "author": "Tony Jackson",
+      "title": "Nikkei Tops 70,000 at Close, Hits Three-Month High as Wall Street Rally and Cheaper Oil Lift Tokyo Stocks",
+      "description": "Japan's Nikkei 225 climbed above 70,000 to a three-month high, supported by Wall Street gains, lower oil prices and expectations of a less aggressive Federal Reserve.",
+      "url": "https://www.ibtimes.com.au/japan-nikkei-closes-above-70000-1876319",
+      "urlToImage": "https://d.ibtimes.com.au/en/full/1895331/10-nikkei-225-stocks-analysts-are-watching-2026.jpg",
+      "publishedAt": "2026-10-06T08:02:29Z",
+      "content": "TOKYO \u2014 Japan's benchmark Nikkei 225 stock index closed above the 70,000 mark on Tuesday, reaching a three-month high as gains on Wall Street and a pullback in oil prices lifted investor sentiment.\r\n\u2026 [+5640 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Open-electronics.org"
+      },
+      "author": "oeadmin",
+      "title": "FREE-WILi 2: An Open-Hardware Multitool for Embedded Hacking",
+      "description": "FREE-WILi 2 is a portable open-hardware multitool that combines wireless testing, hardware debugging, and electronic development into a single device, powered by dual RP2350 MCUs, an ESP32-C5, and a Raspberry Pi CM0.\nThe post FREE-WILi 2: An Open-Hardware Mul\u2026",
+      "url": "https://www.open-electronics.org/free-wili-2-an-open-hardware-multitool-for-embedded-hacking/",
+      "urlToImage": "https://www.open-electronics.org/wp-content/uploads/2026/09/ei-105379.webp",
+      "publishedAt": "2026-10-06T08:00:00Z",
+      "content": "FREE-WILi 2 is a portable open-hardware multitool that packs an entire embedded hacking lab into a single device. Inside, you\u2019ll find two RP2350B MCUs, an ESP32-C5, a Lattice iCE40UP5K FPGA, and a Ra\u2026 [+3589 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "Dow, S&P 500, Nasdaq Futures Edge Higher After Nasdaq Climbs To Record High: SPCX, USAR, CEG, NVAX Stocks In Focus",
+      "description": "Dow, S&P 500, Nasdaq Futures Edge Higher After Nasdaq Climbs To Record High: SPCX, USAR, CEG, NVAX Stocks In Focus\n- Shares of Nvidia and Broadcom rose more than 2% each at close on Monday, while Meta and Microsoft rose more than 1% each, and SpaceX stock sur\u2026",
+      "url": "https://biztoc.com/x/425281f31df8d552",
+      "urlToImage": "https://biztoc.com/cdn/425281f31df8d552_s.webp",
+      "publishedAt": "2026-10-06T04:22:35Z",
+      "content": "Dow, S&amp;P 500, Nasdaq Futures Edge Higher After Nasdaq Climbs To Record High: SPCX, USAR, CEG, NVAX Stocks In Focus- Shares of Nvidia and Broadcom rose more than 2% each at close on Monday, while \u2026 [+154 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Motley Fool Australia"
+      },
+      "author": "Sebastian Bowen",
+      "title": "25% per annum: Is the BetaShares Cybersecurity ETF (HACK) a buy today?",
+      "description": "Will this ETF keep banging out stunning returns?\nThe post 25% per annum: Is the BetaShares Cybersecurity ETF (HACK) a buy today? appeared first on The Motley Fool Australia.",
+      "url": "https://www.fool.com.au/2026/10/06/25-per-annum-is-the-betashares-cybersecurity-etf-hack-a-buy-today/",
+      "urlToImage": "https://www.fool.com.au/wp-content/uploads/2022/02/heist-1200x675.jpg",
+      "publishedAt": "2026-10-06T04:00:33Z",
+      "content": "Despite never actually owning it (much to my detriment), the BetaShares Global Cybersecurity ETF (ASX: HACK) has long been one of my favourite exchange-traded funds (ETFs) on the ASX. \r\nFor one, it e\u2026 [+2551 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Crypto Briefing"
+      },
+      "author": "Diego Almada Lopez",
+      "title": "Broadcom faces scrutiny over $42 billion Anthropic loan in IPO filing",
+      "description": "Broadcom's multifaceted involvement with Anthropic highlights potential conflicts of interest, posing risks to both companies' financial stability.\nThe post Broadcom faces scrutiny over $42 billion Anthropic loan in IPO filing appeared first on Crypto Briefin\u2026",
+      "url": "https://cryptobriefing.com/broadcom-anthropic-42-billion-loan-ipo/",
+      "urlToImage": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/05185427/library-broadcom-faces-scrutiny-over-42-billion-anthropic-loan-i-800x450.png",
+      "publishedAt": "2026-10-05T22:54:35Z",
+      "content": "Anthropic's prospectus shows Broadcom acting as supplier, lessor, and lender, raising conflict-of-interest questions ahead of a listing targeting more than $2 trillion Broadcom has spent years as one\u2026 [+3287 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Crypto Briefing"
+      },
+      "author": "Estefano Gomez",
+      "title": "Broadcom faces scrutiny over $42B financing deal with Anthropic ahead of IPO",
+      "description": "Broadcom's dual role may lead to regulatory scrutiny and investor caution, impacting Anthropic's IPO valuation and market dynamics.\nThe post Broadcom faces scrutiny over $42B financing deal with Anthropic ahead of IPO appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/broadcom-faces-scrutiny-over-42b-financing-deal-with-anthropic-ahead-of-ipo/",
+      "urlToImage": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/05185253/library-broadcom-faces-scrutiny-over-42b-financing-deal-with-ant-1-800x450.png",
+      "publishedAt": "2026-10-05T22:52:55Z",
+      "content": "Broadcom is under scrutiny following the disclosure of its substantial lending relationship with AI lab Anthropic, revealed in Anthropic\u2019s IPO documents. The relationship involves a $42 billion finan\u2026 [+1359 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "ft.com",
+      "title": "Wall Street banks launch record $60bn chip deal for Broadcom and Anthropic",
+      "description": "Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a45ffb388d910555",
+      "url": "https://biztoc.com/x/f5701ffb64c44831",
+      "urlToImage": "https://biztoc.com/cdn/996/og.png",
+      "publishedAt": "2026-10-05T22:50:09Z",
+      "content": "Security VerificationFor help please visit help.ft.com. We apologise for any inconvenience.The following information can help our support team to resolve this issue.- Error Code- CG000 / 403- Request\u2026 [+80 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Crypto Briefing"
+      },
+      "author": "Diego Almada Lopez",
+      "title": "Wall Street banks launch record $60 billion chip financing package for Anthropic",
+      "description": "The financing package underscores the growing financial risks and dependencies in the AI sector, highlighting potential volatility and market shifts.\nThe post Wall Street banks launch record $60 billion chip financing package for Anthropic appeared first on C\u2026",
+      "url": "https://cryptobriefing.com/wall-street-60-billion-anthropic-broadcom-deal/",
+      "urlToImage": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/05172042/library-wall-street-banks-launch-record-60-billion-chip-financin-800x450.png",
+      "publishedAt": "2026-10-05T21:20:46Z",
+      "content": "Bank of America, Citigroup, Morgan Stanley and Blackstone are syndicating a two-tier debt package to fund AI chips that Anthropic will lease, not buy Wall Street has found a new way to pay for the AI\u2026 [+2798 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Newser"
+      },
+      "author": "Rob Quinn",
+      "title": "Markets Get a Boost From 2 Buyout Announcements",
+      "description": "US stocks rose near their records on Monday after a couple of buyout announcements helped lift the market. The S&P 500 rose 51.23 points, or 0.7%, to 7,773.95, pulling within 0.3% of its all-time high, which was set during the summer. The Dow Jones Industrial\u2026",
+      "url": "https://www.newser.com/story/397618/markets-get-a-boost-from-2-buyout-announcement.html",
+      "urlToImage": "https://cdn.newser.com/image/1716006-12-20261005155708.jpeg",
+      "publishedAt": "2026-10-05T20:49:18Z",
+      "content": "One of the market's strongest gains came from PTC, which leaped 33.5% for the biggest move in the S&amp;P 500. Schneider Electric of France said it would pay $205 in cash for each of the software com\u2026 [+1189 chars]"
+    },
+    {
+      "source": {
+        "id": "the-times-of-india",
+        "name": "The Times of India"
+      },
+      "author": "Reuters",
+      "title": "Nvidia, Broadcom shielded as AI power crunch hits chip supply chain, says Morgan Stanley",
+      "description": "The brokerage estimated last month that US data-center developers face a 34% net power shortfall through 2028, equivalent to 32 GW, after accounting for measures such as behind-the-meter generation and fuel cells",
+      "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-broadcom-shielded-as-ai-power-crunch-hits-chip-supply-chain-says-morgan-stanley/articleshow/134716053.cms",
+      "urlToImage": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-4676049,resizemode-75,msid-134716053/tech/technology/nvidia-broadcom-shielded-as-ai-power-crunch-hits-chip-supply-chain-says-morgan-stanley.jpg",
+      "publishedAt": "2026-10-05T19:00:28Z",
+      "content": "Nvidia and Broadcom are relatively insulated from a worsening US data-center power crunch, but any resultant delay in AI deployments can affect makers of memory, optical and other secondary chip comp\u2026 [+1134 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "fool.com",
+      "title": "Broadcom's 2028 Projection Makes the Stock a Screaming Buy",
+      "description": "Even though there's still a quarter left in 2026, some firms are already discussing 2028 demand. Broadcom (AVGO +2.06%) is one of those, and investors need to pay attention to what it says. These long-term projections can give individual investors an edge ove\u2026",
+      "url": "https://biztoc.com/x/2d4742d64dfcc801",
+      "urlToImage": "https://biztoc.com/cdn/2d4742d64dfcc801_s.webp",
+      "publishedAt": "2026-10-05T18:35:14Z",
+      "content": "Even though there's still a quarter left in 2026, some firms are already discussing 2028 demand. Broadcom (AVGO +2.06%) is one of those, and investors need to pay attention to what it says. These lon\u2026 [+146 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "247wallst.com",
+      "title": "Taiwan Semiconductor Gains 2% to Record as Musk Confirms Early Terafab Talks; Broadcom Rises 2%, Qualcomm Pulls Back",
+      "description": "The post Taiwan Semiconductor Gains 2% to Record as Musk Confirms Early Terafab Talks; Broadcom Rises 2%, Qualcomm Pulls Back appeared first on 24/7 Wall St..\nEarly-stage, unconfirmed talks with Terafab, a chip-manufacturing venture planned for Texas, have se\u2026",
+      "url": "https://biztoc.com/x/341a073d7d895431",
+      "urlToImage": "https://biztoc.com/cdn/341a073d7d895431_s.webp",
+      "publishedAt": "2026-10-05T17:16:59Z",
+      "content": "The post Taiwan Semiconductor Gains 2% to Record as Musk Confirms Early Terafab Talks; Broadcom Rises 2%, Qualcomm Pulls Back appeared first on 24/7 Wall St..Early-stage, unconfirmed talks with Teraf\u2026 [+141 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "247wallst.com",
+      "title": "Broadcom Is Up More Than 25X in 10 Years. Can AI Drive the Next Chapter?",
+      "description": "The post Broadcom Is Up More Than 25X in 10 Years. Can AI Drive the Next Chapter? appeared first on 24/7 Wall St..\nThe 24/7 Wall St. price target for Broadcom (NASDAQ:AVGO) is $423.79. From a reference price of $351.19, that means 20.67% upside over 12 months\u2026",
+      "url": "https://biztoc.com/x/14070850d00c8fb2",
+      "urlToImage": "https://biztoc.com/cdn/14070850d00c8fb2_s.webp",
+      "publishedAt": "2026-10-05T16:31:14Z",
+      "content": "The post Broadcom Is Up More Than 25X in 10 Years. Can AI Drive the Next Chapter? appeared first on 24/7 Wall St..The 24/7 Wall St. price target for Broadcom (NASDAQ:AVGO) is $423.79. From a referenc\u2026 [+147 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Thenation.com"
+      },
+      "author": "William W. Taylor III",
+      "title": "Corruption in the White House: Does Anybody Care?",
+      "description": "William W. Taylor III\n\n\n\nThe 2026 midterms and 2028 presidential election should be referendums on whether Trump and his associates can profit from his presidency.\r\n\n\r\n\n\nThe post Corruption in the White House: Does Anybody Care? appeared first on The Nation.",
+      "url": "https://www.thenation.com/article/politics/trump-presidency-personal-wealth-corruption/",
+      "urlToImage": "https://www.thenation.com/wp-content/uploads/2026/10/trump-coin.jpg",
+      "publishedAt": "2026-10-05T16:28:55Z",
+      "content": "The 2026 midterms and 2028 presidential election should be referendums on whether Trump and his associates can profit from his presidency.\r\nAd Policy\r\nNewly minted Donald Trump $1 coins on September \u2026 [+10974 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Internet"
+      },
+      "author": "info@thehackernews.com (The Hacker News)",
+      "title": "Microsoft Exchange Flaw Lets Authenticated Attackers Read Other Users' Mailboxes",
+      "description": "Microsoft has released out-of-band security updates to address a high-severity flaw in Microsoft Exchange Server that could allow an attacker to escalate privileges under certain conditions.\n\nThe vulnerability, tracked as CVE-2026-96940, is rated 8.8 on the C\u2026",
+      "url": "https://thehackernews.com/2026/10/microsoft-exchange-flaw-lets.html",
+      "urlToImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBNa12GUjRngANug2kbws6i9X_HPN2PRVbOcxr7GtaXMKq9PloaCTD7DuYC8zZIcrg5Wa-F5pDv9y-00EMX4QWvovMz-ZWK5vNZ-gkIdEA7UiZQ1SqBCZof411VOQt6nQrvZCYxZpmzPA3hUeFia9KVP45Q1J1OPkiIH_Fhy5hoiOo9z6eYw1H16RgvKs5/s1700-nu-rw-lo-l85-e365/ms-emails.jpg",
+      "publishedAt": "2026-10-05T16:21:52Z",
+      "content": "Microsoft has released out-of-band security updates to address a high-severity flaw in Microsoft Exchange Server that could allow an attacker to escalate privileges under certain conditions.\r\nThe vul\u2026 [+1703 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "Prediction: $5,000 Invested in Broadcom Could Be Worth This Much in 2028",
+      "description": "This may come as a surprise to some investors, but Broadcom (NASDAQ:AVGO) has lagged broader equities this year. The stock is up just 2% while the S&P 500 has climbed 12% to date. Broadcom has delivered excellent financial results and remains a leader in its \u2026",
+      "url": "https://biztoc.com/x/ca956910457e74c3",
+      "urlToImage": "https://biztoc.com/cdn/ca956910457e74c3_s.webp",
+      "publishedAt": "2026-10-05T15:49:40Z",
+      "content": "This may come as a surprise to some investors, but Broadcom (NASDAQ:AVGO) has lagged broader equities this year. The stock is up just 2% while the S&amp;P 500 has climbed 12% to date. Broadcom has de\u2026 [+151 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "247wallst.com",
+      "title": "Prediction: The AI Spending Boom Could Be Just Getting Started for This Company",
+      "description": "The post Prediction: The AI Spending Boom Could Be Just Getting Started for This Company appeared first on 24/7 Wall St..\nBroadcom (NASDAQ:AVGO) trades at $351.19. Our 24/7 Wall St. price target is $423.79 over the next 12 months. That means 20.67% upside, an\u2026",
+      "url": "https://biztoc.com/x/83324a5b179eb66c",
+      "urlToImage": "https://biztoc.com/cdn/83324a5b179eb66c_s.webp",
+      "publishedAt": "2026-10-05T14:45:36Z",
+      "content": "The post Prediction: The AI Spending Boom Could Be Just Getting Started for This Company appeared first on 24/7 Wall St..Broadcom (NASDAQ:AVGO) trades at $351.19. Our 24/7 Wall St. price target is $4\u2026 [+147 chars]"
+    },
+    {
+      "source": {
+        "id": "the-next-web",
+        "name": "The Next Web"
+      },
+      "author": "Ana Maria Constantin",
+      "title": "OpenAI\u2019s chip chief tells More Than Moore he doesn\u2019t fully trust AI design",
+      "description": "OpenAI\u2019s own AI models changed parts of its Jalape\u00f1o chip, and its engineers could not always say why. In one example, they saved more than 13% of die area, Richard Ho told Ian Cutress of More Than Moore. Ho leads OpenAI\u2019s hardware team, and the interview was\u2026",
+      "url": "https://thenextweb.com/news/openai-jalapeno-chip-richard-ho-ai-design",
+      "urlToImage": "https://media.thenextweb.com/2026/10/openai-jalapeno-chip-test-board-socket.jpg",
+      "publishedAt": "2026-10-05T14:17:02Z",
+      "content": "OpenAIs own AI models changed parts of its Jalape\u00f1o chip, and its engineers could not always say why. In one example, they saved more than 13% of die area, Richard Ho told Ian Cutress of More Than Mo\u2026 [+3015 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNA"
+      },
+      "author": null,
+      "title": "Nvidia, Broadcom shielded as AI power crunch hits chip supply chain, says Morgan Stanley",
+      "description": "Oct 5 : Nvidia and Broadcom are relatively insulated from a worsening US data-center power crunch, but any resultant delay in AI deployments can affect makers of memory, optical and other secondary chip components, Morgan Stanley said on Monday.\u2022 The brokerag\u2026",
+      "url": "https://www.channelnewsasia.com/business/nvidia-broadcom-shielded-ai-power-crunch-hits-chip-supply-chain-says-morgan-stanley-6433591",
+      "urlToImage": "https://dam.mediacorp.sg/image/upload/s--6AZQUgy2--/c_fill,g_auto,h_676,w_1200/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/v1/one-cms/core/2026-10-05T141203Z_1_LYNXMPEM9419C_RTROPTP_3_NVIDIA-RESULTS.JPG?itok=O_wZcVoa",
+      "publishedAt": "2026-10-05T14:12:03Z",
+      "content": "Oct 5 : Nvidia and Broadcom are relatively insulated from a worsening US data-center power crunch, but any resultant delay in AI deployments can affect makers of memory, optical and other secondary c\u2026 [+1156 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "247wallst.com",
+      "title": "Why October 15 Is the Most Important Day for NVIDIA and Broadcom Until Thanksgiving",
+      "description": "The post Why October 15 Is the Most Important Day for NVIDIA and Broadcom Until Thanksgiving appeared first on 24/7 Wall St..\nFrom the moment Taiwan Semiconductor Manufacturing (NYSE:TSM) reports before the open on October 15, 2026 through the market close on\u2026",
+      "url": "https://biztoc.com/x/25e14486d126020b",
+      "urlToImage": "https://biztoc.com/cdn/25e14486d126020b_s.webp",
+      "publishedAt": "2026-10-05T14:00:06Z",
+      "content": "The post Why October 15 Is the Most Important Day for NVIDIA and Broadcom Until Thanksgiving appeared first on 24/7 Wall St..From the moment Taiwan Semiconductor Manufacturing (NYSE:TSM) reports befo\u2026 [+140 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Digitimes"
+      },
+      "author": "Scarlett Yu",
+      "title": "Chipmakers turn balance sheets into AI sales tools: How customer financing is becoming the new industry norm",
+      "description": "Recent reports citing Anthropic's IPO filings show that Broadcom has agreed to provide up to US$42 billion in convertible-note financing to help fund the AI company's infrastructure spending, with Anthropic expected to become Broadcom's largest compute custom\u2026",
+      "url": "https://www.digitimes.com/news/a20261005PD220/financing-anthropic-broadcom-ipo-supplier.html",
+      "urlToImage": "https://img.digitimes.com/newsshow/20261005pd220_files/1_b.jpg",
+      "publishedAt": "2026-10-05T03:53:46Z",
+      "content": "Keep me signed in\r\nSome subscribers prefer to save their log-in information so they do not have to enter their User ID and Password each time they visit the site. To activate this function, check the\u2026 [+288 chars]"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source": "bigdata.com",
+  "status": "live_mode_fetched",
+  "ticker": "AAPL",
+  "results": [
+    {
+      "id": "bd_AAPL_1791686042",
+      "headline": "Financial Market Overview: Apple (AAPL) quarterly outlook and sentiment update",
+      "body": "Institutional market metrics indicate shifting sentiment trends for Apple (AAPL) amid broader market movements.",
+      "published_at": "2026-10-11T02:34:02.156561+00:00"
+    }
+  ]
+}

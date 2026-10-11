@@ -1,0 +1,24 @@
+{
+  "articles": [
+    {
+      "url": "https://economictimes.indiatimes.com/industry/auto/auto-news/tata-motors-raises-iveco-takeover-offer-price-to-14-40-euro-per-share/articleshow/134848656.cms",
+      "url_mobile": "https://m.economictimes.com/industry/auto/auto-news/tata-motors-raises-iveco-takeover-offer-price-to-14-40-euro-per-share/amp_articleshow/134848656.cms",
+      "title": "Tata Motors raises Iveco takeover offer price to 14 . 40 euro per share",
+      "seendate": "20261010T064500Z",
+      "socialimage": "https://img.etimg.com/thumb/msid-134848812,width-1200,height-900,imgsize-86950,overlay-economictimes/articleshow.jpg",
+      "domain": "economictimes.indiatimes.com",
+      "language": "English",
+      "sourcecountry": "India"
+    },
+    {
+      "url": "https://www.rediff.com/news/report/dear-pm-ambani-musks-latest-swipe-at-reliance-bjp/20261010.htm",
+      "url_mobile": "https://m.rediff.com/amp/news/report/dear-pm-ambani-musks-latest-swipe-at-reliance-bjp/20261010.htm",
+      "title": "  Dear PM Ambani : Musk latest swipe at Reliance , BJP",
+      "seendate": "20261010T064500Z",
+      "socialimage": "https://im.rediff.com/1200-630/news/2026/oct/10elon-musk-reliance-fued-1.jpg",
+      "domain": "rediff.com",
+      "language": "English",
+      "sourcecountry": "India"
+    }
+  ]
+}

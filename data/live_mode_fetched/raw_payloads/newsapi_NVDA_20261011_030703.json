@@ -1,0 +1,656 @@
+{
+  "status": "ok",
+  "totalResults": 233,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "BGR"
+      },
+      "author": "staff@bgr.com (Sead Fadilpasic)",
+      "title": "Why Are Nvidia GPUs Made By Different Brands?",
+      "description": "An Nvidia graphics card might also have MSI, Asus, or Gigabyte written on the box. Even cards with the same GPU don't always look or cost the same.",
+      "url": "https://www.bgr.com/2277756/why-nvidia-gpu-brands-different-explained/",
+      "urlToImage": "https://www.bgr.com/img/gallery/why-are-nvidia-gpus-made-by-different-brands/l-intro-1791223463.jpg",
+      "publishedAt": "2026-10-10T02:47:00Z",
+      "content": "Upgrading a PC is one of the most exciting things a gamer can do, especially if you're finally updating your graphics card. The basic (and oftentimes easiest) choice is picking between an Nvidia and \u2026 [+1276 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Dailymail.com"
+      },
+      "author": "Sadie Whitelocks",
+      "title": "Nearly HALF of Bay Area residents plan to flee California's wealthy tech hub as sky-high housing costs make staying impossible",
+      "description": "The soaring cost of living in the Bay Area is forcing many residents of one of America's most affluent regions to rethink their plans.",
+      "url": "https://www.dailymail.com/real-estate/article-16195767/bay-area-california-housing-crisis-exodus.html",
+      "urlToImage": "https://i.dailymail.com/1s/2026/10/09/19/111766641-0-image-m-103_1791571528140.jpg",
+      "publishedAt": "2026-10-10T02:44:12Z",
+      "content": "The California dream is becoming a financial nightmare for thousands of residents who love where they live but fear they can no longer afford to stay.\r\nNearly half of people living in the San Francis\u2026 [+7398 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "sunabako added to PyPI",
+      "description": "Container-native Linux sandboxes with a Rust runtime and an E2B-style Python SDK",
+      "url": "https://pypi.org/project/sunabako/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-10T02:27:10Z",
+      "content": "Linux sandboxes inside an existing container, without Docker-in-Docker. A\r\nRust runtime manages resource admission, isolation and lifecycle; a Python SDK\r\nprovides familiar Sandbox.create(), commands\u2026 [+16513 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slashdot.org"
+      },
+      "author": "feedfeeder",
+      "title": "The hazy OpenAI growth metric driving Wall Street - Financial Times",
+      "description": "The hazy OpenAI growth metric driving Wall StreetFinancial Times 'Black Box' Revenue From Anthropic and OpenAI Stumps TradersBloomberg.com Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue reportCNBC OpenAI's September annualized revenue ne\u2026",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186086540",
+      "urlToImage": null,
+      "publishedAt": "2026-10-10T01:12:20Z",
+      "content": "In seeking the unattainable, simplicity only gets in the way.\r\n-- Epigrams in Programming, ACM SIGPLAN Sept. 1982"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "What Is Physical AI? Nvidia Is the Stock I'd Buy to Own It",
+      "description": "Physical AI is the name Nvidia (NASDAQ:NVDA) uses for artificial intelligence (AI) that works in the real world instead of onscreen. Picture the software that lets a warehouse robot lift a box, or a car steer itself through traffic. A chatbot just has to writ\u2026",
+      "url": "https://biztoc.com/x/71a393749bf21238",
+      "urlToImage": "https://biztoc.com/cdn/71a393749bf21238_s.webp",
+      "publishedAt": "2026-10-10T00:47:13Z",
+      "content": "Physical AI is the name Nvidia (NASDAQ:NVDA) uses for artificial intelligence (AI) that works in the real world instead of onscreen. Picture the software that lets a warehouse robot lift a box, or a \u2026 [+151 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Kde.org"
+      },
+      "author": "Nate Graham",
+      "title": "This Week in Plasma: Finishing Touches on 6.8",
+      "description": "Welcome to a new issue of This Week in Plasma!\nThis week, Plasma contributors put the finishing touches on Plasma 6.8, which is due to be released early next week, on October 14th.\nA lot of the work was behind the scenes, and that\u2019s why this week\u2019s update may\u2026",
+      "url": "https://blogs.kde.org/2026/10/10/this-week-in-plasma-finishing-touches-on-6.8/",
+      "urlToImage": "https://blogs.kde.org/2026/10/10/this-week-in-plasma-finishing-touches-on-6.8/thumbnails-new.png",
+      "publishedAt": "2026-10-10T00:00:01Z",
+      "content": "Welcome to a new issue of This Week in Plasma!\r\nThis week, Plasma contributors put the finishing touches on Plasma 6.8, which is due to be released early next week, on October 14th.\r\nA lot of the wor\u2026 [+3311 chars]"
+    },
+    {
+      "source": {
+        "id": "techradar",
+        "name": "TechRadar"
+      },
+      "author": "alexblake.techradar@gmail.com (Alex Blake) , Alex Blake",
+      "title": "Man jailed for using 1,000 bots to fraudulently make $8m from his AI music",
+      "description": "A man has been sentenced to prison for fraudulently making $8 million from streams of his AI music.",
+      "url": "https://www.techradar.com/audio/audio-streaming/man-jailed-after-fraudulently-making-usd8m-from-ai-music-using-1-000-bots-as-google-reveals-its-watermarked-240-000-years-worth-of-ai-audio",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/hHnuFjdnhv4FTTTinaA7fP-2560-80.jpg",
+      "publishedAt": "2026-10-10T00:00:00Z",
+      "content": "<ul><li>A man fraudulently boosted his music streams using an army of bots</li><li>He was sentenced to 18 months in prison for his actions</li><li>He made over $8 million from the scheme across vario\u2026 [+4265 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": "jdyer@nvidia.com",
+      "title": "nemo-retriever 2026.10.9.dev240",
+      "description": "A modern RAG ingestion pipeline from Nvidia",
+      "url": "https://pypi.org/project/nemo-retriever/2026.10.9.dev240/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T23:41:19Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Kitploit.com"
+      },
+      "author": "Kitploit",
+      "title": "ToBAC",
+      "description": "Token by Token, Compromised: Backdoor Vulnerabilities in Unified Autoregressive Models (NeurIPS'26)",
+      "url": "https://kitploit.com/en/tools/github/multimodal-ai-lab/tobac/",
+      "urlToImage": "https://assets.kitploit.com/production/public/tools/57203/3389b993bf0190568ec57a19efddcece204aa70ef21d5500b92e675efff21169-social-v1.webp",
+      "publishedAt": "2026-10-09T23:33:35Z",
+      "content": "NeurIPS 2026 \u00b7 Official PyTorch implementationToken by Token, Compromised: Backdoor Vulnerabilities in Unified Autoregressive Models\r\nToBAC (Token by Token Backdoor Attack) studies how backdoors affe\u2026 [+5565 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "Elon Musk Just Made a Surprising Statement About AI Chips. Here's the Stock It Helps",
+      "description": "Elon Musk recently praised Nvidia (NASDAQ: NVDA) GPUs as the best available option for AI processing, while explaining that Space Exploration Technologies (NASDAQ: SPCX) will exclusively use them. Some of those Nvidia processors will head into space next year\u2026",
+      "url": "https://biztoc.com/x/f73284f7072b1dad",
+      "urlToImage": "https://biztoc.com/cdn/f73284f7072b1dad_s.webp",
+      "publishedAt": "2026-10-09T23:31:47Z",
+      "content": "Elon Musk recently praised Nvidia (NASDAQ: NVDA) GPUs as the best available option for AI processing, while explaining that Space Exploration Technologies (NASDAQ: SPCX) will exclusively use them. So\u2026 [+153 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "Is Dell Stock Paying You Enough For The Swings?",
+      "description": "Investors might still view Dell Technologies (DELL) as a traditional PC manufacturer, yet the company has emerged as a major vendor of Nvidia-based servers. Adding the stock to a portfolio of standard index funds changes how far your money moves during broad \u2026",
+      "url": "https://biztoc.com/x/67d4d0e8fa19b2ed",
+      "urlToImage": "https://biztoc.com/cdn/67d4d0e8fa19b2ed_s.webp",
+      "publishedAt": "2026-10-09T23:16:49Z",
+      "content": "Investors might still view Dell Technologies (DELL) as a traditional PC manufacturer, yet the company has emerged as a major vendor of Nvidia-based servers. Adding the stock to a portfolio of standar\u2026 [+151 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Wccftech"
+      },
+      "author": "Sebastian Castellanos",
+      "title": "NVIDIA App Ultimate Guide \u2014 Best Settings for Modern & Older Games, G-SYNC, DLSS, ShadowPlay, and More",
+      "description": "The NVIDIA App has changed considerably since replacing GeForce Experience. What started as a cleaner launcher for drivers, game optimization, and ShadowPlay has gradually absorbed virtually everything GeForce users previously had to dig through the old NVIDI\u2026",
+      "url": "https://wccftech.com/how-to/nvidia-app-ultimate-guide-best-settings-for-modern-older-games-g-sync-dlss-shadowplay-and-more/",
+      "urlToImage": "https://cdn.wccftech.com/wp-content/uploads/2026/10/Feature-Image-6.jpg",
+      "publishedAt": "2026-10-09T23:03:47Z",
+      "content": "The NVIDIA App has changed considerably since replacing GeForce Experience. What started as a cleaner launcher for drivers, game optimization, and ShadowPlay has gradually absorbed virtually everythi\u2026 [+41653 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slashdot.org"
+      },
+      "author": "feedfeeder",
+      "title": "Nvidia and Micron stocks bounce on OpenAI $70B revenue target - Yahoo Finance",
+      "description": "Nvidia and Micron stocks bounce on OpenAI $70B revenue targetYahoo Finance OpenAI's revenue scare, Delta earnings, what investors think of a Starbucks-Chipotle deal and more in Morning SquawkCNBC The hazy OpenAI growth metric driving Wall StreetFinancial Time\u2026",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186085686",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T22:52:48Z",
+      "content": "The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "pyceles added to PyPI",
+      "description": "GPU-oriented electromagnetic T-matrix multiple scattering with finite, MLFMM, and periodic solvers.",
+      "url": "https://pypi.org/project/pyceles/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T22:47:37Z",
+      "content": "pyceles is a GPU-oriented implementation of CELES-style multiple scattering\r\nwith the T-matrix method. It keeps a NumPy/SciPy reference path for portability,\r\nvalidation, and small CPU workflows, whi\u2026 [+6996 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNA"
+      },
+      "author": null,
+      "title": "Exclusive-Sequoia-backed chip startup Nuvacore raising funds at about a $2.5 billion valuation, sources say",
+      "description": "SAN FRANCISCO, Oct 9 : Six-month-old microchip startup Nuvacore, which does not yet have a product, is raising hundreds of millions of dollars at a roughly $2.5 billion valuation to develop a new central processor designed for data centers, according to two p\u2026",
+      "url": "https://www.channelnewsasia.com/business/exclusive-sequoia-backed-chip-startup-nuvacore-raising-funds-about-25-billion-valuation-sources-say-6448066",
+      "urlToImage": "https://dam.mediacorp.sg/image/upload/s--ILXq3FkD--/c_fill,g_auto,h_676,w_1200/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/v1/one-cms/core/2026-10-09T224151Z_1_LYNXMPEM981XA_RTROPTP_3_NETHERLANDS-GERMANY-CHIPS.JPG?itok=zT5vSxp7",
+      "publishedAt": "2026-10-09T22:37:56Z",
+      "content": "SAN FRANCISCO, Oct 9 : Six-month-old\u00a0microchip startup Nuvacore, which does not yet have a product, is raising hundreds of millions of dollars at a roughly $2.5 billion valuation to develop a new cen\u2026 [+2908 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Morningstar.com"
+      },
+      "author": "Dow Jones",
+      "title": "Dow Jones Top Company Headlines at 5 PM ET: Brands Say They're Pouring Tariff Refunds Into Marketing | Delta ...",
+      "description": "Dow Jones Top Company Headlines at 5 PM ET: Brands Say They're Pouring Tariff Refunds Into Marketing | Delta ...morningstar.com",
+      "url": "https://www.morningstar.com/news/dow-jones/202610097282/dow-jones-top-company-headlines-at-5-pm-et-brands-say-theyre-pouring-tariff-refunds-into-marketing-delta",
+      "urlToImage": "https://images.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blta7dd42ebdd7b93b8/61899b34a3c7df383578294c/morningstar-og.png",
+      "publishedAt": "2026-10-09T22:27:59Z",
+      "content": "Brands Say They're Pouring Tariff Refunds Into Marketing \r\nCash back from the government will help pay for advertising and branding, companies say, though the messages may partly be marketing of thei\u2026 [+3047 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": "hello@livekit.io",
+      "title": "livekit-plugins-nvidia 1.8.6",
+      "description": "LiveKit Agents Plugin for services from nvidia",
+      "url": "https://pypi.org/project/livekit-plugins-nvidia/1.8.6/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T22:14:00Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Crypto Briefing"
+      },
+      "author": "Diego Almada Lopez",
+      "title": "Super Micro contractor pleads guilty in Nvidia AI chip rerouting scheme",
+      "description": "The guilty plea highlights the ongoing challenges in enforcing export controls, potentially impacting US-China tech relations and market stability.\nThe post Super Micro contractor pleads guilty in Nvidia AI chip rerouting scheme appeared first on Crypto Brief\u2026",
+      "url": "https://cryptobriefing.com/super-micro-contractor-pleads-guilty-nvidia-chips/",
+      "urlToImage": "https://static.cryptobriefing.com/wp-content/uploads/2020/12/02092245/link-bull-1024x538.jpg",
+      "publishedAt": "2026-10-09T22:11:20Z",
+      "content": "Ting-Wei 'Willy' Sun admitted his role in a plot that allegedly diverted Nvidia-powered servers to China in violation of US export controls A former contractor for Super Micro Computer Inc. has admit\u2026 [+2920 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Dailyreckoning.com"
+      },
+      "author": "James Altucher",
+      "title": "Face-Off: Trump vs. Xi",
+      "description": "This post Face-Off: Trump vs. Xi appeared first on Daily Reckoning.\nCurrency and trade wars remain hot...\nThe post Face-Off: Trump vs. Xi appeared first on Daily Reckoning.",
+      "url": "https://dailyreckoning.com/face-off-trump-vs-xi/",
+      "urlToImage": "https://dailyreckoning.com/wp-content/uploads/2026/10/dr-hero-img-10-09-26.jpg",
+      "publishedAt": "2026-10-09T22:00:29Z",
+      "content": "President Trump hosted Chinese President Xi Jinping for a multi-day state visit beginning Sept. 23. There were a number of interesting aspects to this summit that call for closer examination. And the\u2026 [+7319 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Github.com"
+      },
+      "author": "tlack",
+      "title": "Show HN: Babytalk: Offline speech to text and text to speech on ESP32",
+      "description": "I have been playing with a lot of $20 devices with no keyboards or screens. I wanted to use speech to interact with them, but without it having to run through a cloud service or use a fixed command vocabulary.I worked with Claude to implement high performance\u2026",
+      "url": "https://github.com/tlack/babytalk",
+      "urlToImage": "https://opengraph.githubassets.com/99b25ff57d8505f87b3f816d0d1b7aa1078d05ca0a6ede3dca7674823b31e144/tlack/babytalk",
+      "publishedAt": "2026-10-09T21:33:56Z",
+      "content": "BabyTalk is a software library that lets an ESP32-S3 or ESP32-P4 understand what you\r\nsay and talk back, with no cloud and no internet, from C, MicroPython, or Erlang/Elixir on\r\nAtomVM:\r\nimportstt, t\u2026 [+23331 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Wccftech"
+      },
+      "author": "Hassan Mujtaba",
+      "title": "NVIDIA\u2019s Vera CPU Brings 2,000 Sandboxes Online Faster Than AMD\u2019s EPYC \u201cZen 5\u201d Can Boot Just 1,000 In Agentic AI",
+      "description": "NVIDIA's Vera CPU continues to showcase its strong per-core performance in Agentic AI workloads as demoed by Daytona. NVIDIA Vera Tackles AMD EPYC In New Agentic AI Benchmarks As The Arm CPU Drives Performance By 8x Over x86 Daytona is a dedicated runtime for\u2026",
+      "url": "https://wccftech.com/nvidia-vera-cpu-brings-2000-sandboxes-online-faster-than-amd-epyc-zen-5-agentic-ai/",
+      "urlToImage": "https://cdn.wccftech.com/wp-content/uploads/2026/04/NVIDIA-Vera-CPU-1920x1080.webp",
+      "publishedAt": "2026-10-09T21:25:11Z",
+      "content": "NVIDIA's Vera CPU continues to showcase its strong per-core performance in Agentic AI workloads as demoed by Daytona.\r\nDaytona is a dedicated runtime for AI-generated code execution and agent workflo\u2026 [+4027 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "New Horizon Aircraft Ltd. Q1 2027 Earnings Call Summary",
+      "description": "Strategic Execution and Operational Drivers\nOur analysts just identified a stock with the potential to be the next Nvidia. Tell us how you invest and we'll show you why it's our #1 pick. Tap here.\n- Transitioned from design validation to full-scale production\u2026",
+      "url": "https://biztoc.com/x/ff05865308334963",
+      "urlToImage": "https://biztoc.com/cdn/ff05865308334963_s.webp",
+      "publishedAt": "2026-10-09T21:15:46Z",
+      "content": "Strategic Execution and Operational DriversOur analysts just identified a stock with the potential to be the next Nvidia. Tell us how you invest and we'll show you why it's our #1 pick. Tap here.- Tr\u2026 [+140 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "linkgym 0.4.0",
+      "description": "A Gymnasium environment for 5G NR link adaptation (MCS selection) built on NVIDIA Sionna SYS, with classical baselines and a fixed evaluation protocol.",
+      "url": "https://pypi.org/project/linkgym/0.4.0/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T21:06:16Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "orblivion added to PyPI",
+      "description": "Trade on Robinhood Chain through Orblivion from an Orbio agent: every transaction is decoded and checked locally before the agent's key signs it.",
+      "url": "https://pypi.org/project/orblivion/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T21:00:34Z",
+      "content": "Trade on Robinhood Chain (chain 4663) through Orblivion, the trading layer for Orbio agents, from Python. Orblivion\r\nfinds the route, builds the transaction and simulates it. Your agent's own key sig\u2026 [+14137 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Entrepreneur"
+      },
+      "author": "Sherin Shibu",
+      "title": "She Grew Up on Food Stamps and Started a Hedge Fund at MIT. Now Her 8-Figure Startup Counts Nvidia and OpenAI as Clients.",
+      "description": "Christina Qi recently raised $97 million in Series B financing for her data-driven startup.",
+      "url": "https://www.entrepreneur.com/building-a-business/she-grew-up-on-food-stamps-how-she-built-a-million-dollar-company",
+      "urlToImage": "https://www.entrepreneur.com/wp-content/uploads/sites/2/2026/10/Christina-Qi-Credit-Databento-1.jpg",
+      "publishedAt": "2026-10-09T20:54:16Z",
+      "content": "Key Takeaways\r\n<ul><li>Christina Qi started a hedge fund as an undergraduate at MIT, building it to trade $7 billion per day.</li><li>A really bad year in 2020 caused the hedge fund to shut down. </l\u2026 [+5726 chars]"
+    },
+    {
+      "source": {
+        "id": "financial-post",
+        "name": "Financial Post"
+      },
+      "author": "Business Wire",
+      "title": "Absolute Security Acquires Phoenix Technologies\u2019 FirmGuard to Build on the Firmware Foundation Enterprises Need for Secure, Compliant, and Resilient AI",
+      "description": "World\u2019s Only AI Native Firmware Foundation Provides Security, Compliance, Control, and Resilience for Enterprise AI SEATTLE \u2014 Absolute Security, a leader in Autonomous Cyber Resilience, today announced it has acquired Phoenix Technologies\u2019 FirmGuard, a UEFI B\u2026",
+      "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/absolute-security-acquires-phoenix-technologies-firmguard-to-build-on-the-firmware-foundation-enterprises-need-for-secure-compliant-and-resilient-ai",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T20:43:54Z",
+      "content": "Worlds Only AI Native Firmware Foundation Provides Security, Compliance, Control, and Resilience for Enterprise AI\r\nTHIS CONTENT IS RESERVED FOR SUBSCRIBERS ONLY\r\nSubscribe now to read the latest new\u2026 [+7226 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "businessinsider.com",
+      "title": "Nvidia's head of corporate communications has left after roughly four months",
+      "description": "Nvidia.\nBenjamin Fanjoy/Getty Images\nNvidia's head of corporate communications has left after roughly four months.\nAnna Soellner joined the chip giant from Reddit around June.\nHer brief tenure coincided with Nvidia's deal with Hugging Face.\nNvidia's head of c\u2026",
+      "url": "https://biztoc.com/x/49514f00ba043b71",
+      "urlToImage": "https://biztoc.com/cdn/49514f00ba043b71_s.webp",
+      "publishedAt": "2026-10-09T20:38:40Z",
+      "content": "Nvidia.Benjamin Fanjoy/Getty ImagesNvidia's head of corporate communications has left after roughly four months.Anna Soellner joined the chip giant from Reddit around June.Her brief tenure coincided \u2026 [+147 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "gweiss@businessinsider.com (Geoff Weiss)",
+      "title": "Nvidia's head of corporate communications has left after roughly four months",
+      "description": "Anna Soellner has left Nvidia after roughly four months as head of corporate communications. She joined the AI chip giant from Reddit.",
+      "url": "https://www.businessinsider.com/nvidia-head-of-corporate-communications-leaves-after-four-months-2026-10#article",
+      "urlToImage": "https://i.insider.com/6ac928b1301bb0551f494549?width=1200&format=jpeg",
+      "publishedAt": "2026-10-09T20:35:32Z",
+      "content": "Nvidia's head of corporate communications has left the company after roughly four months on the job, Business Insider has learned.\r\nAnna Soellner joined the chip giant around June, per her Linkedin p\u2026 [+1295 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "Nvidia Stocks Edge Higher as $1 Billion Science Bet Tests Returns",
+      "description": "This article first appeared on GuruFocus.\nNvidia, the accelerated-computing leader (NASDAQ:NVDA), pledged $1 billion over five years for U.S. scientific research, while shares edge higher $230.48 at 10am EST Friday morning, October 9. The ambition is big: put\u2026",
+      "url": "https://biztoc.com/x/db1ea3814b6e3024",
+      "urlToImage": "https://biztoc.com/cdn/db1ea3814b6e3024_s.webp",
+      "publishedAt": "2026-10-09T20:30:58Z",
+      "content": "This article first appeared on GuruFocus.Nvidia, the accelerated-computing leader (NASDAQ:NVDA), pledged $1 billion over five years for U.S. scientific research, while shares edge higher $230.48 at 1\u2026 [+148 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slashdot.org"
+      },
+      "author": "feedfeeder",
+      "title": "'Black Box' Revenue From Anthropic and OpenAI Stumps Traders - Bloomberg.com",
+      "description": "'Black Box' Revenue From Anthropic and OpenAI Stumps TradersBloomberg.com OpenAI Expects $70 Billion in Annualized Revenue by End of 2026Yahoo Finance Stock Market Today: Nasdaq Leads Dow After Surprise Economic Data; Nutanix Nears Buy Point (Live Coverage)In\u2026",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186084622",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T20:13:00Z",
+      "content": "The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Crypto Briefing"
+      },
+      "author": "Diego Almada Lopez",
+      "title": "Big Tech is borrowing hundreds of billions for AI, and bond investors are getting cautious",
+      "description": "Big Tech's AI-driven borrowing surge may strain financial stability, prompting investor caution and potential reevaluation of credit risks.\nThe post Big Tech is borrowing hundreds of billions for AI, and bond investors are getting cautious appeared first on C\u2026",
+      "url": "https://cryptobriefing.com/hyperscalers-borrow-billions-ai-debt-concerns/",
+      "urlToImage": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/09161036/library-big-tech-is-borrowing-hundreds-of-billions-for-ai-and-bo-1-800x450.png",
+      "publishedAt": "2026-10-09T20:10:39Z",
+      "content": "Hyperscalers and chipmakers are leaning on debt to fund data centers, and leverage, lease commitments and bond spreads are climbing The companies that used to fund everything out of their couch cushi\u2026 [+2742 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Livedoor.jp"
+      },
+      "author": "kinisokua",
+      "title": "\u3010\u60b2\u5831\u3011\u30ed\u30b7\u30a2\u6700\u5927\u7d1a\u306e\u30c7\u30fc\u30bf\u30bb\u30f3\u30bf\u30fc\u3001\u5927\u708e\u4e0awwwww",
+      "description": "1\uff1a\u540d\u7121\u3057\n\uff1a2026/10/08(\u6728) 20:52:03.732ID:D8obX6NE4\nUkrainian attack drones struck Yandex's Sasovo Datacenter tonight, one of Russia's largest, setting it on fire. \n\nThe 35+ MW facility reportedly housed nearly 2,700 Nvidia A100 GPUs by 2021, imported be...",
+      "url": "http://blog.livedoor.jp/kinisoku/archives/5712966.html",
+      "urlToImage": "https://livedoor.blogimg.jp/kinisoku/imgs/9/c/9ca7d79b.jpg",
+      "publishedAt": "2026-10-09T20:00:26Z",
+      "content": "Ukrainian attack drones struck Yandex's Sasovo Datacenter tonight, one of Russia's largest, setting it on fire. \r\nThe 35+ MW facility reportedly housed nearly 2,700 Nvidia A100 GPUs by 2021, imported\u2026 [+125 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "SiliconANGLE News"
+      },
+      "author": "Mark Albertson",
+      "title": "Seismora builds a control plane to route AI workloads across devices and clouds",
+      "description": "A control plane for distributed AI could help applications decide which tasks to run on a device, at the edge or in the cloud. Seismora Inc. is developing networking technology to coordinate AI workloads across different providers and computing environments, \u2026",
+      "url": "https://siliconangle.com/2026/10/09/control-plane-agentic-ai-seismora-thecube-neo4jdatatoknowledge/",
+      "urlToImage": "https://images.siliconangle.com/blogs.dir/1/files/2026/10/Screenshot-596.png",
+      "publishedAt": "2026-10-09T19:59:44Z",
+      "content": "A control plane for distributed AI could help applications decide which tasks to run on a device, at the edge or in the cloud.\r\nSeismora Inc. is developing networking technology to coordinate AI work\u2026 [+4427 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slashdot.org"
+      },
+      "author": "feedfeeder",
+      "title": "Microsoft\u2019s new Nvidia PCs are cool for extreme power users \u2013 but I\u2019ll wait for AI PC 3.0 - ZDNET",
+      "description": "Microsoft\u2019s new Nvidia PCs are cool for extreme power users \u2013 but I\u2019ll wait for AI PC 3.0ZDNET Building Windows for hybrid intelligenceWindows Blog Microsoft Debuts Nvidia-Powered PCs with On-Device AI, Following Apple\u2019s Breakout HitThe Information Surface La\u2026",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186084486",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T19:53:30Z",
+      "content": "The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "nvmon 0.3.4",
+      "description": "A fancy NVIDIA GPU monitor for the terminal. One Python file, no dependencies.",
+      "url": "https://pypi.org/project/nvmon/0.3.4/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T19:30:14Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "SpaceX Puts a Satellite Shadow Over Deutsche Telekom",
+      "description": "THE GIST\nOur analysts just identified a stock with the potential to be the next Nvidia. Tell us how you invest and we'll show you why it's our #1 pick. Tap here.\nDeutsche Telekom's most valuable growth engine suddenly has a new potential competitor to worry a\u2026",
+      "url": "https://biztoc.com/x/ee3d6c168d6a8bd4",
+      "urlToImage": "https://biztoc.com/cdn/ee3d6c168d6a8bd4_s.webp",
+      "publishedAt": "2026-10-09T19:28:58Z",
+      "content": "THE GISTOur analysts just identified a stock with the potential to be the next Nvidia. Tell us how you invest and we'll show you why it's our #1 pick. Tap here.Deutsche Telekom's most valuable growth\u2026 [+143 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "ember-advise added to PyPI",
+      "description": "A local gut feeling for coding agents: calibrated advice over MCP from Cloudflare's Clef model on Apple Silicon.",
+      "url": "https://pypi.org/project/ember-advise/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T19:28:56Z",
+      "content": "A local gut feeling for coding agents. ember runs a decision model Cloudflare's\r\nClef-Flash, from its public Hugging Face repo\r\n on your Apple Silicon Mac and gives agents one MCP tool, advise: descr\u2026 [+33604 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Globalresearch.ca"
+      },
+      "author": "Dr. Paul Craig Roberts",
+      "title": "It Is Past Time to Write Off the Digital Revolution as a Huge Mistake",
+      "description": "Some time ago I warned about the unsustainable over investment in AI data centers. \nEach of the AI corporations is dependent on commitment from other AI corporations. \nOne was dependent on a purchase dependent on the purchaser securing funding depending \u2026\nThe\u2026",
+      "url": "https://www.globalresearch.ca/past-time-write-off-digital-revolution-huge-mistake/5943343",
+      "urlToImage": "https://www.globalresearch.ca/wp-content/uploads/2025/07/artificial-intelligence.jpeg",
+      "publishedAt": "2026-10-09T19:26:18Z",
+      "content": "Some time ago I warned about the unsustainable over investment in AI data centers. \r\nEach of the AI corporations is dependent on commitment from other AI corporations. \r\nOne was dependent on a purcha\u2026 [+2319 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Wccftech"
+      },
+      "author": "Rohail Saleem",
+      "title": "Intel Wants To Become The Go-To Foundry For ASICs And Specialized Chips, And Lip-Bu Tan\u2019s Secret Weapon Is A Former Marvell Exec",
+      "description": "Intel is currently in the process of shedding its notoriously labyrinthine bureaucratic layers and the attendant inertia, while eyeing new markets and product categories for its fledgling advanced fabrication nodes, with the scorching-hot ASIC market serving \u2026",
+      "url": "https://wccftech.com/intel-wants-to-become-the-go-to-foundry-for-asics-and-specialized-chips-and-lip-bu-tans-secret-weapon-is-a-former-marvell-exec/",
+      "urlToImage": "https://cdn.wccftech.com/wp-content/uploads/2026/08/Intel-Memory.jpg",
+      "publishedAt": "2026-10-09T19:17:47Z",
+      "content": "Intel is currently in the process of shedding its notoriously labyrinthine bureaucratic layers and the attendant inertia, while eyeing new markets and product categories for its fledgling advanced fa\u2026 [+4259 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "nvidia-dali-tf-plugin-nightly-cuda130 2.4.0.dev20261007",
+      "description": "NVIDIA DALI nightly TensorFlow plugin for CUDA 13.0. Git SHA: 5c9ffe40745c9e02e36f827d0ac82821c521f7b2",
+      "url": "https://pypi.org/project/nvidia-dali-tf-plugin-nightly-cuda130/2.4.0.dev20261007/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T19:14:23Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Creative Bloq"
+      },
+      "author": "Ian Evenden",
+      "title": "Tested: The Mac Studio M5 Max claims its crown as the best of all Apple computers",
+      "description": "The king of all desktop Macs is now more regal.",
+      "url": "https://www.creativebloq.com/reviews/tested-the-mac-studio-m5-max-claims-its-crown-as-the-best-of-all-apple-computers",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/vqfRj5Qr5sD3GLkS6dP5WD-2560-80.jpg",
+      "publishedAt": "2026-10-09T19:11:59Z",
+      "content": "Why you can trust Creative Bloq\r\nOur expert reviewers spend hours testing and comparing products and services so you can choose the best for you. Find out more about how we test.\r\nThe latest Mac Stud\u2026 [+10732 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "nvidia-dali-nightly-cuda130 2.4.0.dev20261007",
+      "description": "NVIDIA DALI nightly for CUDA 13.0. Git SHA: 5c9ffe40745c9e02e36f827d0ac82821c521f7b2",
+      "url": "https://pypi.org/project/nvidia-dali-nightly-cuda130/2.4.0.dev20261007/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T19:10:10Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": "techradar",
+        "name": "TechRadar"
+      },
+      "author": "waynewilliams@onmail.com (Wayne Williams) , Wayne Williams",
+      "title": "Nvidia RTX Spark laptops start at $2,599 \u2014 pre-orders are live now",
+      "description": "Pre-orders are now live for Nvidia RTX Spark laptops, but these are the three Blackwell-powered machines I'd buy if you're a small business running local AI.",
+      "url": "https://www.techradar.com/pro/pre-orders-open-for-nvidias-rtx-spark-workstations-and-these-are-the-3-local-ai-laptops-id-buy-for-business",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/NwkVJu2rkcHq8auFoUDAs3-2000-80.jpg",
+      "publishedAt": "2026-10-09T19:00:45Z",
+      "content": "Running AI locally is becoming an increasingly attractive option for small businesses that want more control over their data, predictable computing costs, and the ability to experiment with the techn\u2026 [+2194 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "Management Raised the Bar For NVIDIA Stock; Does The Chart Agree?",
+      "description": "Since management forecast higher sales for its fiscal third quarter on August 26, 2026, NVIDIA (NVDA) stock has gained 8.3%, compared with 1.1% for the S&P 500. A forecast is simply an expectation from executives, but trading charts reveal whether buyers are \u2026",
+      "url": "https://biztoc.com/x/bc7c43d546628b5b",
+      "urlToImage": "https://biztoc.com/cdn/bc7c43d546628b5b_s.webp",
+      "publishedAt": "2026-10-09T18:59:27Z",
+      "content": "Since management forecast higher sales for its fiscal third quarter on August 26, 2026, NVIDIA (NVDA) stock has gained 8.3%, compared with 1.1% for the S&amp;P 500. A forecast is simply an expectatio\u2026 [+156 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "finance.yahoo.com",
+      "title": "Nvidia-Backed Fermus Wanted $30 Billion Valuation on Just $51 Million in Revenue",
+      "description": "Benzinga and Yahoo Finance LLC may earn commission or revenue on some items through the links below.\nFirmus Grid Ltd. had backing from Nvidia Corp. (NASDAQ:NVDA) and computing deals with Meta Platforms Inc. (NASDAQ:META) and OpenAI. But investors balked at va\u2026",
+      "url": "https://biztoc.com/x/44e0107f6d1322e0",
+      "urlToImage": "https://biztoc.com/cdn/44e0107f6d1322e0_s.webp",
+      "publishedAt": "2026-10-09T18:59:11Z",
+      "content": "Benzinga and Yahoo Finance LLC may earn commission or revenue on some items through the links below.Firmus Grid Ltd. had backing from Nvidia Corp. (NASDAQ:NVDA) and computing deals with Meta Platform\u2026 [+145 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Biztoc.com"
+      },
+      "author": "cnbc.com",
+      "title": "Two massive trades just happened in Micron and Nvidia. What they could mean for chips",
+      "description": "Bears continued to build up positions against the semiconductor group on Friday, as a series of eyebrow-raising trades in Micron and Nvidia dominated the tape and called into question the move in chips.\nMore than 180,000 puts traded in SMH by midday, compared\u2026",
+      "url": "https://biztoc.com/x/88c96f1a42508c65",
+      "urlToImage": "https://biztoc.com/cdn/88c96f1a42508c65_s.webp",
+      "publishedAt": "2026-10-09T18:57:37Z",
+      "content": "Bears continued to build up positions against the semiconductor group on Friday, as a series of eyebrow-raising trades in Micron and Nvidia dominated the tape and called into question the move in chi\u2026 [+139 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "nvidia-dali-tf-plugin-nightly-cuda130 2.4.0.dev20261006",
+      "description": "NVIDIA DALI nightly TensorFlow plugin for CUDA 13.0. Git SHA: 5fdb0b6ab7f62a22da9089b77b1dfaad6633a877",
+      "url": "https://pypi.org/project/nvidia-dali-tf-plugin-nightly-cuda130/2.4.0.dev20261006/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T18:52:04Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Hot Hardware"
+      },
+      "author": "Chris Harper",
+      "title": "AnyPS5 Hits 100% GPU Shader Coverage For Playing PS5 Games On PC",
+      "description": "AnyPS5, a Proton-inspired, open-source translation layer for porting\u00a0PlayStation 5 games to PC has developed rapidly in the last couple of weeks since it was initially announced. In fact, the AnyPS5 project has already acheived 100% coverage of the PlayStatio\u2026",
+      "url": "https://hothardware.com/news/anyps5-hits-100-gpu-shader-coverage-for-playing-ps5-games-on-pc",
+      "urlToImage": "https://images.hothardware.com/contentimages/newsitem/71822/content/16x9_2133x1200_highres-dreamingsarah.jpg",
+      "publishedAt": "2026-10-09T18:52:00Z",
+      "content": "AnyPS5, the\u00a0Proton-inspired, open-source translation layer for porting\u00a0PlayStation 5 games to the PC has developed rapidly in the last couple of weeks since it was initially announced. In fact, the A\u2026 [+2058 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Oliver Renick",
+      "title": "Two massive trades just happened in Micron and Nvidia. What they could mean for chips",
+      "description": "Bears continued to build up positions against the semiconductor group on Friday.",
+      "url": "https://www.cnbc.com/2026/10/09/two-massive-trades-just-happened-in-micron-and-nvidia-what-they-could-mean-for-chips.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/108310210-17793162171779316215-46072347407-1080pnbcnews.jpg?v=1779316216&w=1920&h=1080",
+      "publishedAt": "2026-10-09T18:50:21Z",
+      "content": "Bears continued to build up positions against the semiconductor group on Friday, as a series of eyebrow-raising trades in Micron and Nvidia dominated the tape and called into question the move in chi\u2026 [+2169 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Pypi.org"
+      },
+      "author": null,
+      "title": "nvidia-dali-tf-plugin-nightly-cuda120 2.4.0.dev20261006",
+      "description": "NVIDIA DALI nightly TensorFlow plugin for CUDA 12.0. Git SHA: 5fdb0b6ab7f62a22da9089b77b1dfaad6633a877",
+      "url": "https://pypi.org/project/nvidia-dali-tf-plugin-nightly-cuda120/2.4.0.dev20261006/",
+      "urlToImage": null,
+      "publishedAt": "2026-10-09T18:42:40Z",
+      "content": "A required part of this site couldnt load. This may be due to a browser\r\n extension, network issues, or browser settings. Please check your\r\n connection, disable any ad blockers, or try using a diffe\u2026 [+12 chars]"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "file_id": "newsapi_NVDA_20261007_132612.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_NVDA_20261007_132612.json",
+    "source": "newsapi",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-07T13:26:12.063219+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_NVDA_20261007_132848.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_NVDA_20261007_132848.json",
+    "source": "newsapi",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-07T13:28:48.173857+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "gdelt_NVDA_20261007_132946.json",
+    "filepath": "./mock_store_2\\raw_payloads\\gdelt_NVDA_20261007_132946.json",
+    "source": "gdelt",
+    "ticker": "NVDA",
+    "ingested_at": "2026-10-07T13:29:46.009043+00:00",
+    "record_count": 5
+  },
+  {
+    "file_id": "newsapi_AAPL_20261007_132959.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_AAPL_20261007_132959.json",
+    "source": "newsapi",
+    "ticker": "AAPL",
+    "ingested_at": "2026-10-07T13:29:59.771894+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_MSFT_20261007_133109.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_MSFT_20261007_133109.json",
+    "source": "newsapi",
+    "ticker": "MSFT",
+    "ingested_at": "2026-10-07T13:31:09.746091+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_AMZN_20261007_133213.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_AMZN_20261007_133213.json",
+    "source": "newsapi",
+    "ticker": "AMZN",
+    "ingested_at": "2026-10-07T13:32:13.434334+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_GOOGL_20261007_133339.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_GOOGL_20261007_133339.json",
+    "source": "newsapi",
+    "ticker": "GOOGL",
+    "ingested_at": "2026-10-07T13:33:39.653230+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "newsapi_META_20261007_133454.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_META_20261007_133454.json",
+    "source": "newsapi",
+    "ticker": "META",
+    "ingested_at": "2026-10-07T13:34:54.454859+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_TSLA_20261007_133631.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_TSLA_20261007_133631.json",
+    "source": "newsapi",
+    "ticker": "TSLA",
+    "ingested_at": "2026-10-07T13:36:31.577197+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_BRK.B_20261007_133830.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_BRK.B_20261007_133830.json",
+    "source": "newsapi",
+    "ticker": "BRK.B",
+    "ingested_at": "2026-10-07T13:38:30.363583+00:00",
+    "record_count": 34
+  },
+  {
+    "file_id": "newsapi_LLY_20261007_134011.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_LLY_20261007_134011.json",
+    "source": "newsapi",
+    "ticker": "LLY",
+    "ingested_at": "2026-10-07T13:40:11.742972+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_JPM_20261007_134126.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_JPM_20261007_134126.json",
+    "source": "newsapi",
+    "ticker": "JPM",
+    "ingested_at": "2026-10-07T13:41:26.409754+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_WMT_20261007_134248.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_WMT_20261007_134248.json",
+    "source": "newsapi",
+    "ticker": "WMT",
+    "ingested_at": "2026-10-07T13:42:48.109022+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_V_20261007_134443.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_V_20261007_134443.json",
+    "source": "newsapi",
+    "ticker": "V",
+    "ingested_at": "2026-10-07T13:44:43.624220+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_XOM_20261007_134509.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_XOM_20261007_134509.json",
+    "source": "newsapi",
+    "ticker": "XOM",
+    "ingested_at": "2026-10-07T13:45:09.309164+00:00",
+    "record_count": 26
+  },
+  {
+    "file_id": "newsapi_JNJ_20261007_134625.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_JNJ_20261007_134625.json",
+    "source": "newsapi",
+    "ticker": "JNJ",
+    "ingested_at": "2026-10-07T13:46:25.305358+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_COST_20261007_134802.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_COST_20261007_134802.json",
+    "source": "newsapi",
+    "ticker": "COST",
+    "ingested_at": "2026-10-07T13:48:02.988147+00:00",
+    "record_count": 49
+  },
+  {
+    "file_id": "newsapi_MA_20261007_134942.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_MA_20261007_134942.json",
+    "source": "newsapi",
+    "ticker": "MA",
+    "ingested_at": "2026-10-07T13:49:42.215587+00:00",
+    "record_count": 50
+  },
+  {
+    "file_id": "newsapi_PG_20261007_135109.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_PG_20261007_135109.json",
+    "source": "newsapi",
+    "ticker": "PG",
+    "ingested_at": "2026-10-07T13:51:09.182249+00:00",
+    "record_count": 8
+  },
+  {
+    "file_id": "newsapi_UNH_20261007_135245.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_UNH_20261007_135245.json",
+    "source": "newsapi",
+    "ticker": "UNH",
+    "ingested_at": "2026-10-07T13:52:45.480356+00:00",
+    "record_count": 6
+  },
+  {
+    "file_id": "newsapi_HD_20261007_135412.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_HD_20261007_135412.json",
+    "source": "newsapi",
+    "ticker": "HD",
+    "ingested_at": "2026-10-07T13:54:12.034868+00:00",
+    "record_count": 48
+  },
+  {
+    "file_id": "newsapi_AVGO_20261007_135550.json",
+    "filepath": "./mock_store_2\\raw_payloads\\newsapi_AVGO_20261007_135550.json",
+    "source": "newsapi",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-07T13:55:50.246430+00:00",
+    "record_count": 23
+  },
+  {
+    "file_id": "gdelt_AVGO_20261007_135606.json",
+    "filepath": "./mock_store_2\\raw_payloads\\gdelt_AVGO_20261007_135606.json",
+    "source": "gdelt",
+    "ticker": "AVGO",
+    "ingested_at": "2026-10-07T13:56:06.827428+00:00",
+    "record_count": 5
+  }
+]
